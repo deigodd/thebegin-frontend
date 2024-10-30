@@ -36,23 +36,29 @@ Y más...
 1. Clonar el repositorio:
 
    ```bash
-   git clone https://github.com/usuario/nombre-del-proyecto.git
-   cd nombre-del-proyecto
+   git clone https://github.com/deigodd/thebegin-frontend.git
+   cd thebegin-frontend
    ```
 
-2. Instalar dependencias:
+2. Verifica las ramas existentes:
+
+   Este proyecto trabaja con Git Flow, no inicializar de nuevo.
+
+   ```bash
+   git branch -a
+   ```
+
+3. Instalar dependencias:
 
    ```bash
    npm install
    ```
 
-3. Ejecutar el entorno de desarrollo:
+4. Ejecutar el entorno de desarrollo:
 
    ```bash
    npm run dev
    ```
-
-4. Abrir en el navegador: [http://localhost:5173](http://localhost:5173)
 
 ---
 
@@ -71,12 +77,13 @@ Y más...
    ```
 4. **Archivos organizados por componentes**:  
    Cada componente puede tener su propia carpeta:
+
    ```bash
    src/components/UserCard/
    ├── UserCard.tsx
-   ├── UserCard.module.css
    └── index.ts
    ```
+
 5. **Uso de TypeScript**: Definir tipos e interfaces para mantener el código seguro.
    ```typescript
    interface User {
@@ -110,22 +117,36 @@ VITE_API_KEY=your-api-key
 
 ## 🌲 Flujo de trabajo con Git
 
-1. Crear una rama para cada nueva funcionalidad o corrección:
+1. Crear una rama para cada nueva funcionalidad:
+
+   Sin las extensiones de Git Flow
 
    ```bash
-   git checkout -b feature/nueva-funcionalidad
+   ggit checkout develop
+   git checkout -b feature_namefeature
    ```
 
-2. Seguir la convención **Conventional Commits** para los mensajes:
+   Con la extensión de Git Flow
 
    ```bash
-   git commit -m "feat: agregar autenticación de usuarios"
+   git flow feature start feature_namefeature
    ```
 
-3. Crear un Pull Request hacia la rama develop y solicitar revisión.
+   Una vez finalizado el desarrollo de la feature se debe finalizar:
+
+   ```bash
+   git checkout develop
+   git merge feature_branch
+   ```
+
+   Ó
+
+   ```bash
+   git flow feature finish feature_branch
+   ```
+
+   Esto creará un PR.
+
+   LEER DOCUMENTACIÓN.
 
 ---
-
-## 📄 Licencia
-
-Este proyecto está bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
