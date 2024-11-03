@@ -1,14 +1,16 @@
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 
-
-function App() {
-
+const App: React.FC = () => {
   return (
-    <>
-      <div className="h-screen flex items-center justify-center bg-gray-100">
-        <h1 className="text-4xl font-bold text-gray-800">TheBegin</h1>
-      </div>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
