@@ -1,4 +1,3 @@
-// src/pages/Membership.tsx
 import React from 'react';
 import Navbar from '../components/Navbar';
 import CategoriesSidebar from '../components/CategoriesSidebar';
@@ -139,7 +138,7 @@ const MembershipPage: React.FC = () => {
               {/* Seccion de beneficios adicionales */}
 
               <div className="mt-16 text-center">
-                <h2 className="text-2xl font-bold mb-8">Beneficios adicionales para todos los miembros</h2>
+                <h2 className="text-2xl font-bold mb-8">Beneficios adicionales para todas las miembros</h2>
                 <div className="grid md:grid-cols-3 gap-8">
                   <Card>
                     <CardContent>
