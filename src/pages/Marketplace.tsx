@@ -5,7 +5,7 @@ import CategoriesSidebar from '../components/CategoriesSidebar';
 import HomeContent from '../components/Marketplace/MarketContent';
 import Footer from '../components/Footer';
 
-const App: React.FC = () => {
+const MarketPlacePage: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <UserOptions />
@@ -19,4 +19,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default MarketPlacePage;
