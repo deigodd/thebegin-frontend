@@ -1,8 +1,10 @@
 import React from 'react';
+import SearchBar from '../SearchBar/SearchBar';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="flex-1 p-6 bg-gray-50">
+    <div className="flex-1 p-6">
+      <SearchBar/>
       <div className="bg-cover bg-center h-48 w-full mb-4 bg-gradient-to-r from-orange-200 to-yellow-300 flex items-center justify-center">
         <h1 className="text-3xl font-bold text-white">Bienvenido a The Begin</h1>
       </div>

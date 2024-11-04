@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar: React.FC = () => {
+const MarketNavbar: React.FC = () => {
   return (
     <nav className="bg-gradient-to-r from-yellow-400 to-orange-500 p-4 grid justify-center items-center text-white">
       {/* Logo y título */}
@@ -15,15 +15,12 @@ const Navbar: React.FC = () => {
       {/* Links de navegación */}
       <ul className="flex space-x-6">
         <li><a href="#" className="hover:text-gray-300">Home</a></li>
-        <li><a href="#" className="hover:text-gray-300">The Begin</a></li>
-        <li><a href="#" className="hover:text-gray-300">Pilares</a></li>
-        <li><a href="#" className="hover:text-gray-300">Begin Fest</a></li>
-        <li><a href="#" className="hover:text-gray-300">Trueque</a></li>
-        <li><a href="#" className="hover:text-gray-300">Marketplace</a></li>
-        <li><a href="#" className="hover:text-gray-300">Contacto</a></li>
+        <li><a href="#" className="hover:text-gray-300">Tienda</a></li>
+        <li><a href="#" className="hover:text-gray-300">Promociones</a></li>
+        <li><a href="#" className="hover:text-gray-300">Noticias</a></li>
       </ul>
     </nav>
   );
 };
 
-export default Navbar;
+export default MarketNavbar;
