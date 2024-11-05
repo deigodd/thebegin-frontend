@@ -3,7 +3,7 @@ import SearchBar from '../SearchBar/SearchBar';
 
 const MarketPlace: React.FC = () => {
   return (
-    <div className="flex-1 p-6">
+    <div className="flex-1 mx-2">
       <SearchBar/>
       <div className="bg-cover bg-center h-48 w-full mb-4 bg-gradient-to-r from-orange-200 to-yellow-300 flex items-center justify-center ">
         <h1 className="text-3xl font-bold text-white">Bienvenido a The Begin</h1>
