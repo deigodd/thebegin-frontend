@@ -12,7 +12,7 @@ const SearchBar = () => {
             <input
             type="text"
             placeholder="Buscar items..."
-            className="bg-[#ececea] w-full pl-2 md:pl-10 pr-4 py-2 border rounded-3xl focus:outline-none focus:border-orange-500"
+            className="bg-[#ececea] w-full pl-10 pr-4 py-2 border rounded-3xl focus:outline-none focus:border-orange-500"
             />
             <span className="absolute right-3 top-2.5 text-gray-400">
             <SearchIcon />
