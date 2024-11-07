@@ -1,6 +1,6 @@
 import { FeaturedProduct, ProductCard, SectionTitle } from '../components/Highlighs/ProductCard';
 import { mockData } from '../components/Highlighs/Product';
-import Footer from '../components/Footer';
+import Footer2 from '../components/Footer2';
 import Navbar from '../components/Marketplace/MarketNavbar';
 import UserOptions from '../components/UserOptions';
 
@@ -52,7 +52,7 @@ const Highlight = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer2 />
     </div>
   );
 };
