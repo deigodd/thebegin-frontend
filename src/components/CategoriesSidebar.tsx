@@ -28,7 +28,7 @@ const CategoriesSidebar: React.FC = () => {
       </button>
 
       {/* Sidebar: visible en pantallas grandes o cuando se abre el menú en pantallas pequeñas */}
-      <aside className={`w-64 md:block ${isOpen ? 'block' : 'hidden'} bg-white`}>
+      <aside className={`w-64 md:block ${isOpen ? 'block' : 'hidden'}`}>
         <h2 className="bg-[#766146] p-2 text-white text-lg rounded-sm font-bold">Categorías</h2>
         <ul className="space-y-1">
           {categories.map((category) => (
