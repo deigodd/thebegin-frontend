@@ -47,7 +47,7 @@ export const mockData = {
       originalPrice: 35,
       discount: 30,
       imageUrl: '/api/placeholder/400/300',
-      category: 'Decoración'
+      category: 'Decoración',
     },
     {
       id: 'sueter1',

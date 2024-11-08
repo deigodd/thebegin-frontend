@@ -1,4 +1,4 @@
-import { User } from "../../utils/User";
+import { User } from "../../data/User";
 import { MatchCard } from "./MatchCard";
 
 interface MatchGridProps {
