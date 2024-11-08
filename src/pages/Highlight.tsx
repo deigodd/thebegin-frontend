@@ -1,6 +1,6 @@
 import { FeaturedProduct, ProductCard, SectionTitle } from '../components/Highlighs/ProductCard';
 import { mockData } from '../components/Highlighs/Product';
-import Footer2 from '../components/Footer2';
+import Footer2 from '../components/Footer';
 import Navbar from '../components/Marketplace/MarketNavbar';
 import UserOptions from '../components/UserOptions';
 
