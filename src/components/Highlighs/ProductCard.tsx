@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Product, Timer } from './Product';
+import { Product, Timer } from '../../data/Product';
 
 interface CardProps {
   children: ReactNode;
