@@ -1,0 +1,26 @@
+{
+    "pilares": [
+      {
+        "id": 1,
+        "name": "Arte con sentido",
+        "image": "",
+        "colors": {
+          "primary": "#6b5b95",
+          "secondary": "#b8a9c9",
+          "tertiary": "#b1a9b5"
+        }
+      },
+
+      {
+        "id": 2,
+        "name": "Cultura local",
+        "image": "",
+        "colors": {
+          "primary": "#ff6f61",
+          "secondary": "#f7cac9",
+          "tertiary": "#b1b9c3"
+        }
+      }
+    ]
+  }
+  
