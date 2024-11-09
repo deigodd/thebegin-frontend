@@ -1,7 +1,7 @@
 import React from 'react';
-import { Product, Timer } from './Product';
+import { Product, Timer } from '../../data/Product';
 import { FeaturedProduct } from './FeaturedProduct';
-import { ProductCard } from './ProductCard';
+import { ProductCard } from '../Highlighs/ProductCard';
 
 interface TodaysOffersProps {
   featuredProduct: Product;

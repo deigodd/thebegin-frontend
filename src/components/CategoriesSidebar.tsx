@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const CategoriesSidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false); // Estado para el menú
-
   const categories = [
     "The Begin", "Arte con Sentido", "Consumo con Sentido", "Bienestar",
     "Salud Mental", "Medio Ambiente", "Trueque", "Membresía"

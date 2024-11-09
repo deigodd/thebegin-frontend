@@ -6,7 +6,7 @@ import MarketContent from '../components/Marketplace/MarketContent';
 import Footer from '../components/Footer';
 import Pilar from '../components/Marketplace/Pilares Market/PilarTemplate';
 
-const MarketPlacePage: React.FC = () => {
+const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <UserOptions />
@@ -25,4 +25,4 @@ const MarketPlacePage: React.FC = () => {
   );
 };
 
-export default MarketPlacePage;
+export default App;
