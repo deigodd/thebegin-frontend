@@ -2,10 +2,9 @@ import React from 'react';
 import UserOptions from '../components/UserOptions';
 import Navbar from '../components/Marketplace/MarketNavbar';
 import CategoriesSidebar from '../components/CategoriesSidebar';
-import HomeContent from '../components/Marketplace/MarketContent';
+import MarketContent from '../components/Marketplace/MarketContent';
 import Footer from '../components/Footer';
-import PilarArteMarketplace from '../components/Marketplace/Pilares Market/PilarArteConSentido';
-import PilarBienestar from '../components/Marketplace/Pilares Market/PilarBienestar';
+import Pilar from '../components/Marketplace/Pilares Market/PilarTemplate';
 
 const MarketPlacePage: React.FC = () => {
   return (
@@ -17,9 +16,8 @@ const MarketPlacePage: React.FC = () => {
           <CategoriesSidebar />
         </div>
         <div className='flex flex-col'>
-          <HomeContent />
-          <PilarArteMarketplace />
-          <PilarBienestar/>
+          <MarketContent />
+          <Pilar />
         </div>
       </div>
       <Footer />
