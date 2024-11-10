@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PilarNav from './PilarMarketNav'
 import PilarImage from './PilarMarketImage'
-import MarketProducts from '../MarketProduts'
+import PilarMarketProducts from '../Pilares Market/PilarProduts'
 
 interface PilarData {
   id: number;
@@ -12,16 +12,6 @@ interface PilarData {
     secondary: string;
     tertiary: string;
   };
-}
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  trueque?: boolean;
-  image: string;
-  discount?: number;
-  description?: string;
 }
 
 interface PilarTemplateProps {
@@ -58,7 +48,7 @@ const PilarTemplate: React.FC<PilarTemplateProps> = ({pilarId}) => {
       <div className="flex flex-col md:flex-row gap-4">
         <div className="md:w-3/4">
             <PilarNav colors={pilarData.colors}/>
-            <MarketProducts/>
+            <PilarMarketProducts pilarId={pilarData.id}/>
         </div>
         <PilarImage id={pilarData.id} name={pilarData.name} image={pilarData.image} colors={pilarData.colors}/>
       </div>
