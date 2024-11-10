@@ -3,7 +3,7 @@ import UserOptions from '../components/UserOptions';
 import Navbar from '../components/Marketplace/MarketNavbar';
 import CategoriesSidebar from '../components/CategoriesSidebar';
 import MarketContent from '../components/Marketplace/MarketContent';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 import PilarTemplate from '../components/Marketplace/Pilares Market/PilarTemplate';
 import PilarTemplate2 from '../components/Marketplace/Pilares Market/PilarTemplate2';
 

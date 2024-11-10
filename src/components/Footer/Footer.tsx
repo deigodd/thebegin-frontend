@@ -1,6 +1,6 @@
 import React from "react";
-import List from "./Footer/List";
-import RightsAndConnections from "./Footer/RightsAndConnections";
+import List from "./List";
+import RightsAndConnections from "./RightsAndConnections";
 //#4F2A1F FONDO
 //#6B362A
 //#FFFFFF texto
