@@ -1,0 +1,44 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name": "Taza de Cerámica",
+            "description": "Taza de cerámica hecha a mano, ideal para café o té.",
+            "price": 15,
+            "originalPrice": 20,
+            "trueque": true,
+            "discount": 25,
+            "imageUrl": "https://example.com/images/taza_ceramica.jpg",
+            "rankingSales": 150,
+            "isLimited": false,
+            "pilar": 1,
+            "category": "producto"
+        },
+        {
+            "id": 2,
+            "name": "Clase de Yoga",
+            "description": "Clase de yoga online de 1 hora para principiantes.",
+            "price": 10,
+            "trueque": false,
+            "imageUrl": "https://example.com/images/clase_yoga.jpg",
+            "rankingSales": 250,
+            "isLimited": true,
+            "pilar": 2,
+            "category": "servicio"
+        },
+        {
+            "id": 3,
+            "name": "Cuadro Decorativo",
+            "description": "Cuadro decorativo con marco de madera, estilo minimalista.",
+            "price": 50,
+            "originalPrice": 70,
+            "trueque": true,
+            "discount": 30,
+            "imageUrl": "https://example.com/images/cuadro_decorativo.jpg",
+            "rankingSales": 90,
+            "isLimited": true,
+            "pilar": 3,
+            "category": "producto"
+        }
+    ]
+}
