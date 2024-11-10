@@ -20,9 +20,9 @@ const MarketProducts: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-        fetch('/path/to/products.json')
+        fetch('https://raw.githubusercontent.com/deigodd/thebegin-frontend/refs/heads/feature/Products/src/data/Products.json')
             .then((response) => response.json())
-            .then((data) => setProducts(data))
+            .then((data) => setProducts(data.products))
             .catch((error) => console.error('Error al cargar productos:', error));
     }, []);
 
