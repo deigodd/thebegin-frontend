@@ -23,7 +23,7 @@
             "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD-VASbA-oLULsv1FkCo_PshDY2qOCUe_76Q&s",
             "rankingSales": 250,
             "isLimited": true,
-            "pilar": 2,
+            "pilar": 3,
             "category": "servicio"
         },
         {
@@ -37,7 +37,47 @@
             "imageUrl": "https://decocuadros.cl/wp-content/uploads/2023/12/cuadro-decorativo-floral-amarillo-y-turquesa-en-lienzo.jpg",
             "rankingSales": 90,
             "isLimited": true,
-            "pilar": 3,
+            "pilar": 1,
+            "category": "producto"
+        },
+        {
+            "id": 4,
+            "name": "Test Psicologico",
+            "description": "Hora conmigo para hacer una evaluación de tu estado mental.",
+            "price": 54,
+            "originalPrice": 70,
+            "trueque": true,
+            "discount": 20,
+            "imageUrl": "https://mentalmadrid.com/wp-content/uploads/2017/08/psicologia3.jpg",
+            "rankingSales": 150,
+            "isLimited": false,
+            "pilar": 4,
+            "category": "servicio"
+        },
+        {
+            "id": 5,
+            "name": "Cupcakes caseros",
+            "description": "Ricos cupcakes caseros.",
+            "price": 10,
+            "trueque": false,
+            "imageUrl": "https://camillelittlecookie.com/wp-content/uploads/2023/12/cupcakes-red-velvet-500x375.png",
+            "rankingSales": 250,
+            "isLimited": true,
+            "pilar": 2,
+            "category": "comida"
+        },
+        {
+            "id": 6,
+            "name": "Comida para perros natural",
+            "description": "Comida para tu mascota sin preservantes artificiales y con la cantidad justa de cada nutriente.",
+            "price": 50,
+            "originalPrice": 70,
+            "trueque": true,
+            "discount": 30,
+            "imageUrl": "https://www.zooplus.es/magazine/wp-content/uploads/2019/01/hundefutter-mit-hohem-fleischanteil.jpeg",
+            "rankingSales": 90,
+            "isLimited": true,
+            "pilar": 2,
             "category": "producto"
         }
     ]
