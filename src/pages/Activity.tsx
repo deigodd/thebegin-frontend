@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Match from '../components/Match';
+import Match from '../components/Match/Match';
 import UserOptions from '../components/UserOptions';
 import Navbar from '../components/Marketplace/MarketNavbar';
 import Banner from '../components/Match/Banner';
