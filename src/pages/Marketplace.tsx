@@ -4,7 +4,8 @@ import Navbar from '../components/Marketplace/MarketNavbar';
 import CategoriesSidebar from '../components/CategoriesSidebar';
 import MarketContent from '../components/Marketplace/MarketContent';
 import Footer from '../components/Footer';
-import Pilar from '../components/Marketplace/Pilares Market/PilarTemplate';
+import PilarTemplate from '../components/Marketplace/Pilares Market/PilarTemplate';
+import PilarTemplate2 from '../components/Marketplace/Pilares Market/PilarTemplate2';
 
 const App: React.FC = () => {
   return (
@@ -17,7 +18,11 @@ const App: React.FC = () => {
         </div>
         <div className='flex flex-col'>
           <MarketContent />
-          <Pilar />
+          <PilarTemplate pilarId={1} />
+          <PilarTemplate2 pilarId={2} />
+          <PilarTemplate pilarId={3} />
+          <PilarTemplate2 pilarId={4} />
+          <PilarTemplate pilarId={5} />
         </div>
       </div>
       <Footer />

@@ -5,20 +5,53 @@
         "name": "Arte con sentido",
         "image": "",
         "colors": {
-          "primary": "#6b5b95",
-          "secondary": "#b8a9c9",
-          "tertiary": "#b1a9b5"
+          "primary": "#4e1040",
+          "secondary": "#714066",
+          "tertiary": "#95708c"
         }
       },
 
       {
         "id": 2,
-        "name": "Cultura local",
+        "name": "Consumo con sentido",
         "image": "",
         "colors": {
-          "primary": "#ff6f61",
-          "secondary": "#f7cac9",
-          "tertiary": "#b1b9c3"
+          "primary": "#728756",
+          "secondary": "#8e9f78",
+          "tertiary": "#aab79a"
+        }
+      },
+
+      {
+        "id": 3,
+        "name": "Bienestar",
+        "image": "",
+        "colors": {
+          "primary": "#dc8954",
+          "secondary": "#e3a176",
+          "tertiary": "#eab898"
+        }
+      },
+
+      {
+        "id": 4,
+        "name": "Salud mental",
+        "image": "",
+        "colors": {
+          "primary": "#cfa746",
+          "secondary": "#d9b66b",
+          "tertiary": "#e3c890"
+        }
+      },
+
+      {
+        "id": 5,
+        "name": "Medio ambiente",
+        "image": "",
+        "colors": {
+          "primary": "#7e685f",
+          "secondary": "#98867f",
+          "tertiary": "#b2a49f"
         }
       }
     ]

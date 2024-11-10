@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const CategoriesSidebar: React.FC = () => {
+  // Estado para controlar si el sidebar está abierto o cerrado en pantallas pequeñas
+  const [isOpen, setIsOpen] = useState(false);
+
   const categories = [
     "The Begin", "Arte con Sentido", "Consumo con Sentido", "Bienestar",
     "Salud Mental", "Medio Ambiente", "Trueque", "Membresía"
