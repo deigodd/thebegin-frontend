@@ -5,7 +5,7 @@ import Navbar from '../components/Marketplace/MarketNavbar';
 import Banner from '../components/Match/Banner';
 import { SearchBar2 } from '../components/SearchBar/SearchBar2';
 import { ActivityHeader } from '../components/Match/ActivityHeader';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 
 const Activity: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
