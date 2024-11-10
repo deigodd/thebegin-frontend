@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MatchGrid } from "./Match/MatchGrid";
-import { ProfileDialog } from "./Match/MatchGrid";
-import { User, MOCK_USERS } from "../data/User";
+import { MatchGrid } from "./MatchGrid";
+import { ProfileDialog } from "./MatchGrid";
+import { User, MOCK_USERS } from "../../data/User";
 
 interface MatchProps {
   searchQuery: string; // Adding searchQuery as a prop
