@@ -1,9 +1,19 @@
-import React from 'react';
+import React from "react";
+import List from "./Footer/List";
+import RightsAndConnections from "./Footer/RightsAndConnections";
+//#4F2A1F FONDO
+//#6B362A
+//#FFFFFF texto
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white p-4 text-center">
-      <p>&copy; 2024 The Begin. Todos los derechos reservados.</p>
+    <footer className="bg-[#a56441] ">
+      <div className="mx-auto w-full max-w-screen-xl">
+        
+        <List/>
+        <RightsAndConnections/>
+        
+      </div>
     </footer>
   );
 };
