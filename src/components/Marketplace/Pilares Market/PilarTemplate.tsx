@@ -27,7 +27,6 @@ const PilarTemplate: React.FC<PilarTemplateProps> = ({pilarId}) => {
       try {
         const response = await fetch(`https://raw.githubusercontent.com/deigodd/thebegin-frontend/refs/heads/develop/src/data/Pilres.json`);
         const data = await response.json();
-        // Buscar el pilar que coincide con el id proporcionado (pilarId)
         const pilar = data.pilares.find((p: PilarData) => p.id === pilarId);
         setPilarData(pilar || null);
       } catch (error) {

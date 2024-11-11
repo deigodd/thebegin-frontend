@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import iconPath from '../assets/icons/tb-icon-outline.svg';
 
 const CategoriesSidebar: React.FC = () => {
   // Estado para controlar si el sidebar está abierto o cerrado en pantallas pequeñas
@@ -34,7 +35,7 @@ const CategoriesSidebar: React.FC = () => {
         <ul className="space-y-1">
           {categories.map((category) => (
             <li key={category} className="bg-[#fefeff] p-2 rounded-sm flex items-center">
-              <div className="w-4 h-4 bg-orange-500 mr-2 rounded-full"></div>
+              <img src={iconPath} className='w-8 h-8' alt="TBicon" />
               <span className="text-gray-700">{category}</span>
             </li>
           ))}
