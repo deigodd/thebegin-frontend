@@ -32,6 +32,16 @@ const App: React.FC = () => {
             </>
           }
         />
+        {/* Ruta del Trueque */}
+        <Route
+          path="/trueque"
+          element={
+            <>
+              <Marketplace />
+              <PageTitle title="Trueque" />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
