@@ -1,27 +1,25 @@
-import React, { useState } from 'react';
-import Match from '../components/Match/Match';
-import UserOptions from '../components/UserOptions';
-import Navbar from '../components/Marketplace/MarketNavbar';
-import Banner from '../components/Match/Banner';
-import { SearchBar2 } from '../components/SearchBar/SearchBar2';
-import { ActivityHeader } from '../components/Match/ActivityHeader';
-import Footer from '../components/Footer/Footer';
+import React, { useState } from "react";
+import Match from "../components/Match/Match";
+import Navbar from "../components/Navbar";
+import Banner from "../components/Match/Banner";
+import { SearchBar2 } from "../components/SearchBar/SearchBar2";
+import { ActivityHeader } from "../components/Match/ActivityHeader";
+import Footer from "../components/Footer/Footer";
 
 const Activity: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  
+  const [searchQuery, setSearchQuery] = useState("");
+
   const handleSearch = (value: string) => {
     setSearchQuery(value);
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f4f0]">
-      <UserOptions />
       <Navbar />
-      
+
       <div className="flex-1">
         {/* Banner Section */}
-        <Banner/>
+        <Banner />
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 py-5">
@@ -39,7 +37,7 @@ const Activity: React.FC = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
