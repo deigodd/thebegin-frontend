@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PilarNav from './PilarMarketNav'
 import PilarImage from './PilarMarketImage'
-import MarketProducts from '../MarketProduts'
+import PilarMarketProducts from '../Pilares Market/PilarProduts'
 
 interface PilarData {
   id: number;
@@ -12,16 +12,6 @@ interface PilarData {
     secondary: string;
     tertiary: string;
   };
-}
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  trueque?: boolean;
-  image: string;
-  discount?: number;
-  description?: string;
 }
 
 interface PilarTemplateProps {
@@ -37,7 +27,6 @@ const PilarTemplate: React.FC<PilarTemplateProps> = ({pilarId}) => {
       try {
         const response = await fetch(`https://raw.githubusercontent.com/deigodd/thebegin-frontend/refs/heads/develop/src/data/Pilres.json`);
         const data = await response.json();
-        // Buscar el pilar que coincide con el id proporcionado (pilarId)
         const pilar = data.pilares.find((p: PilarData) => p.id === pilarId);
         setPilarData(pilar || null);
       } catch (error) {
@@ -54,12 +43,12 @@ const PilarTemplate: React.FC<PilarTemplateProps> = ({pilarId}) => {
 
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-4 space-y-4">
+    <div className="w-full mx-auto space-y-4">
       <div className="flex flex-col md:flex-row gap-4">
       <PilarImage id={pilarData.id} name={pilarData.name} image={pilarData.image} colors={pilarData.colors}/>
         <div className="md:w-3/4">
             <PilarNav colors={pilarData.colors}/>
-            <MarketProducts/>
+            <PilarMarketProducts pilarId={pilarData.id}/>
         </div>
       </div>
     </div>
