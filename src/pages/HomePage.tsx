@@ -85,47 +85,59 @@ const HomePage: React.FC = () => {
 
       <PageSeparator title="The Begin" />
 
-      <div className="mx-auto">
-        <div className="mt-10 mb-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-1">
-          <Card
-            className="max-w-sm col-start-1"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc="/images/blog/image-1.jpg"
-          >
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
-          </Card>
-          <Card
-            className="max-w-sm col-start-2"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc="/images/blog/image-1.jpg"
-          >
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
-          </Card>
-          <Card
-            className="max-w-sm col-start-3"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc="/images/blog/image-1.jpg"
-          >
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
-          </Card>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div className="mt-10 mb-10 grid gap-4 sm:mt-16 grid-cols-1 lg:grid-cols-3 lg:grid-rows-1">
+          <div className="relative flex flex-col h-full">
+            <Card
+              className="max-w-sm flex flex-col h-full"
+              imgAlt="Meaningful alt text for an image that is not purely decorative"
+              imgSrc="/src/assets/hands.jpg"
+            >
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                ¿Qué es y para qué TB?
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+                aliquam doloremque est corrupti qui voluptate, porro excepturi
+                blanditiis quo dolor autem sunt, hic consequatur minus!
+                Cupiditate, eligendi. Eum, aspernatur odit.
+              </p>
+            </Card>
+          </div>
+          <div className="relative flex flex-col h-full">
+            <Card
+              className="max-w-sm flex flex-col h-full"
+              imgAlt="Meaningful alt text for an image that is not purely decorative"
+              imgSrc="/src/assets/hands.jpg"
+            >
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Como funciona TB
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                possimus hic et soluta quasi beatae suscipit ducimus impedit
+                enim, quos quod repellat, fugiat quis ratione corporis ex.
+                Doloribus, fugiat iusto!
+              </p>
+            </Card>
+          </div>
+          <div className="relative flex flex-col h-full">
+            <Card
+              className="max-w-sm flex flex-col h-full"
+              imgAlt="Meaningful alt text for an image that is not purely decorative"
+              imgSrc="/src/assets/hands.jpg"
+            >
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Beneficios para ti
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                ipsam atque dicta sint nesciunt eius, excepturi exercitationem
+                impedit? Sint neque dolor eos? Quibusdam minima, quis magnam
+                laboriosam sit totam labore?
+              </p>
+            </Card>
+          </div>
         </div>
       </div>
       <PageSeparator title="Comunidad" />
