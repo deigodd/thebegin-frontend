@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import UserOptions from '../components/UserOptions';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ProfileHeader from '../components/Profile/ProfileHeader';
-import ProfilePresentation from '../components/Profile/ProfilePresentation';
-import ProfileProjects from '../components/Profile/ProfileProjects';
-import ProfileServiceProduct from '../components/Profile/ProfileServiceProduct';
-import ProfileWorkshops from '../components/Profile/ProfileWorkshops';
-import ProfileTrueque from '../components/Profile/ProfileTrueque';
-import ProfileMarketplace from '../components/Profile/ProfileMarketplace';
-import ProfileMembership from '../components/Profile/ProfileMembership';
-import ProfileCalendar from '../components/Profile/ProfileCalendar';
-import ProfileNews from '../components/Profile/ProfileNews';
-import ProfileContact from '../components/Profile/ProfileContact';
+import ProfileHeader from '../components/Profile/Sections/ProfileHeader';
+import ProfileProjects from '../components/Profile/Sections/ProfileProjects';
+import ProfileServiceProduct from '../components/Profile/Sections/ProfileServiceProduct';
+import ProfileWorkshops from '../components/Profile/Sections/ProfileWorkshops';
+import ProfileTrueque from '../components/Profile/Sections/ProfileTrueque';
+import ProfileMarketplace from '../components/Profile/Sections/ProfileMarketplace';
+import ProfileMembership from '../components/Profile/Sections/ProfileMembership';
+import ProfileCalendar from '../components/Profile/Sections/ProfileCalendar';
+import ProfileNews from '../components/Profile/Sections/ProfileNews';
+import ProfileContact from '../components/Profile/Sections/ProfileContact';
+import ProfilePresentation from '../components/Profile/Sections/ProfilePresentation';
 
 const Profile = () => {
 
