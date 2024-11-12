@@ -1,8 +1,5 @@
 //import React from 'react';
-import SearchIcon from './SearchIcon';
-import HeartIcon from './HeartIcon';
-import CartIcon from './CartIcon';
-import StarIcon from './StarIcon';
+import { Heart, Star, Search, ShoppingCart } from 'lucide-react';
 
 const SearchBar:React.FC = () => {
   return (
@@ -15,19 +12,19 @@ const SearchBar:React.FC = () => {
             className="bg-tbc-secondarygreen-100 w-full pl-10 pr-4 py-2 border rounded-3xl focus:outline-none focus:border-orange-500"
             />
             <span className="absolute right-3 top-2.5 text-gray-400">
-            <SearchIcon />
+            <Search />
             </span>
         </div>
         </div>
         <div className="flex items-center gap-4">
         <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-tbc-primarybrown-600">
-            <HeartIcon />
+            <Heart />
         </button>
         <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-tbc-primarybrown-600">
-            <StarIcon />
+            <Star />
         </button>
         <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-tbc-primarybrown-600">
-            <CartIcon />
+            <ShoppingCart />
         </button>
         </div>
     </div>
