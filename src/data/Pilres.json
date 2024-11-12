@@ -3,7 +3,7 @@
       {
         "id": 1,
         "name": "Arte con sentido",
-        "image": "",
+        "image": "https://st4.depositphotos.com/32224188/38091/i/1600/depositphotos_380910246-stock-photo-summer-lifestyle-portrait-young-woman.jpg",
         "colors": {
           "primary": "#4e1040",
           "secondary": "#714066",
@@ -14,7 +14,7 @@
       {
         "id": 2,
         "name": "Consumo con sentido",
-        "image": "",
+        "image": "https://i.pinimg.com/736x/58/c9/7e/58c97ed2f879f0832d5619e6a8683f19.jpg",
         "colors": {
           "primary": "#728756",
           "secondary": "#8e9f78",
