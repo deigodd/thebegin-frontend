@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect, useState } from 'react';
 import UserOptions from '../components/UserOptions';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ProfileHeader2 from '../components/Profile/Sections/ProfileHeader';
-import ProfileProjects from '../components/Profile/Sections/ProfileProjects';
+//import ProfileHeader from '../components/Profile/SectionsVegan/ProfileHeader';
+//import ProfileProjects from '../components/Profile/Sections/ProfileProjects';
 import ProfileServiceProduct from '../components/Profile/Sections/ProfileServiceProduct';
 import ProfileWorkshops from '../components/Profile/Sections/ProfileWorkshops';
 import ProfileTrueque from '../components/Profile/Sections/ProfileTrueque';
@@ -13,6 +13,10 @@ import ProfileCalendar from '../components/Profile/Sections/ProfileCalendar';
 import ProfileNews from '../components/Profile/Sections/ProfileNews';
 import ProfileContact from '../components/Profile/Sections/ProfileContact';
 import ProfilePresentation from '../components/Profile/Sections/ProfilePresentation';
+import { profileData } from '../data/profileData';
+import ProfileHeader2 from '../components/Profile/SectionsVegan/ProfileHeader';
+import { projectsData } from '../data/ProjectsData';
+import ProfileProjects from '../components/Profile/SectionsVegan/ProfileProjects';
 
 const Profile = () => {
 
@@ -24,9 +28,9 @@ const Profile = () => {
       <div className="bg-white">
         {/* Encabezado */}
         
-        <ProfileHeader2 />
+        <ProfileHeader2 data={profileData.header}/>
         <ProfilePresentation />
-        <ProfileProjects />
+        <ProfileProjects data={projectsData} />
         <ProfileServiceProduct />
         <ProfileWorkshops />
         <ProfileTrueque/>
