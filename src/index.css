@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  transition: top 0.3s ease-in-out;
+}
+
+.hidden-navbar {
+  top: -100px; /* Ajusta este valor según la altura de tu navbar */
+}

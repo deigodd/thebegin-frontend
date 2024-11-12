@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           ) : (
             <a
               href="/login"
-              className="text-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center bg-[#a56441] hover:bg-[#7c513a]"
+              className="text-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center bg-[#a56441] hover:bg-[#7c513a] transition-colors duration-300 ease-in-out"
             >
               INICIAR SESIÓN
             </a>
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="/"
-                className={`block py-2 px-3 md:p-0 text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                className={`block py-2 px-3 md:p-0 text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/") ? activeStyle : {}}
               >
                 HOME
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="/the-begin"
-                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/the-begin") ? activeStyle : {}}
               >
                 THE BEGIN
@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="/pilares"
-                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/pilares") ? activeStyle : {}}
               >
                 PILARES
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="/begin-fest"
-                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/begin-fest") ? activeStyle : {}}
               >
                 BEGIN FEST
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="/trueque"
-                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/trueque") ? activeStyle : {}}
               >
                 TRUEQUE
@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="/marketplace"
-                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/marketplace") ? activeStyle : {}}
               >
                 MARKETPLACE
@@ -150,7 +150,7 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="/contacto"
-                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/contacto") ? activeStyle : {}}
               >
                 CONTACTO
