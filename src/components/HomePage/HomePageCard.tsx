@@ -65,7 +65,7 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
               </p>
               <a
                 href={href}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#d2bb90] rounded-lg hover:bg-[#a56441] focus:ring-1 focus:outline-none focus:ring-white "
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#d2bb90] rounded-lg hover:bg-[#a56441] focus:ring-1 focus:outline-none focus:ring-white transition-colors duration-75 ease-out"
               >
                 {buttonText}
                 <svg
@@ -119,7 +119,7 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
               </p>
               <a
                 href={href}
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#d2bb90] rounded-lg hover:bg-[#a56441] focus:ring-1 focus:outline-none focus:ring-white "
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#d2bb90] rounded-lg hover:bg-[#a56441] focus:ring-1 focus:outline-none focus:ring-white transition-colors duration-75 ease-out"
               >
                 {buttonText}
                 <svg
