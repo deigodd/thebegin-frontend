@@ -43,10 +43,10 @@ const PilarTemplate: React.FC<PilarTemplateProps> = ({pilarId}) => {
 
 
   return (
-    <div className="w-full mx-auto space-y-4">
+    <div className="w-full  space-y-4">
       <div className="flex flex-col md:flex-row gap-1">
       <PilarImage pilar={pilarData}/>
-        <div className="md:w-3/4">
+        <div className="">
             <PilarNav colors={pilarData.colors}/>
             <PilarMarketProducts pilarId={pilarData.id}/>
         </div>
