@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import iconPath from '../assets/icons/tb-icon-outline.svg';
+import iconPath from '../assets/icons/svg/tb-icon-outline-brown.svg';
 
 const CategoriesSidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
