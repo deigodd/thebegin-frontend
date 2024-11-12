@@ -4,7 +4,7 @@ import HeartIcon from './HeartIcon';
 import CartIcon from './CartIcon';
 import StarIcon from './StarIcon';
 
-const SearchBar = () => {
+const SearchBar:React.FC = () => {
   return (
     <div className="bg-tbc-primaryred-600 rounded-lg shadow-sm mb-6 p-4 flex items-center justify-between">
         <div className="flex-1 mx-4">
@@ -20,13 +20,13 @@ const SearchBar = () => {
         </div>
         </div>
         <div className="flex items-center gap-4">
-        <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-gray-600">
+        <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-tbc-primarybrown-600">
             <HeartIcon />
         </button>
-        <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-gray-600">
+        <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-tbc-primarybrown-600">
             <StarIcon />
         </button>
-        <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-gray-600">
+        <button className="bg-tbc-secondarygreen-100 p-2 hover:bg-white rounded-full text-tbc-primarybrown-600">
             <CartIcon />
         </button>
         </div>

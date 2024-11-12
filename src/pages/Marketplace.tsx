@@ -9,23 +9,25 @@ import MarketProducts from '../components/Marketplace/MarketProduts';
 
 const Marketplace: React.FC = () => {
   return (
-    <div className="bg-[#f8f4f0] flex flex-col min-h-screen">
+    <div className='bg-[#f8f4f0]'>
       <Navbar />
-      <div className="flex justify-around space-x-8 items-start flex-col md:flex-row flex-1 p-1 md:p-4 md:px-10">
-        <div className="">
-          <CategoriesSidebar />
-        </div>
-        <div className="flex flex-col grow space-y-4">
-          <MarketContent />
-        </div>
-      </div>
-      <div className="flex flex-col space-y-4 md:p-4 md:px-10">
-          <MarketProducts />
-          <PilarTemplate pilarId={1} />
-          <PilarTemplate2 pilarId={2} />
-          <PilarTemplate pilarId={3} />
-          <PilarTemplate2 pilarId={4} />
-          <PilarTemplate pilarId={5} />
+        <div className="flex flex-col justify-self-center w-full md:max-w-7xl p-1">
+          <div className='flex flex-col space-x-1 w-full md:flex-row'>
+            <div className="">
+              <CategoriesSidebar />
+            </div>
+            <div className="flex-1">
+              <MarketContent />
+            </div>
+          </div>
+          <div className='flex flex-col space-y-4'>
+            <MarketProducts />
+            <PilarTemplate pilarId={1} />
+            <PilarTemplate2 pilarId={2} />
+            <PilarTemplate pilarId={3} />
+            <PilarTemplate2 pilarId={4} />
+            <PilarTemplate pilarId={5} />
+          </div>
         </div>
       <Footer />
     </div>
