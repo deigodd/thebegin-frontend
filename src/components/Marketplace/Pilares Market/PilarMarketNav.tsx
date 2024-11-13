@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "flowbite-react"
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "flowbite-react";
 
 interface PilarMarketNavProps {
   colors: {
@@ -7,11 +7,13 @@ interface PilarMarketNavProps {
     secondary: string;
     tertiary: string;
   };
+  onPrevPage: () => void;
+  onNextPage: () => void;
 }
 
-const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors }) => {
+const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors, onPrevPage, onNextPage }) => {
   return (
-    <div className="flex items-center justify-between mb-4 px-2" style={{background: colors.primary}}>
+    <div className="flex items-center justify-between mb-4 px-2" style={{ background: colors.primary }}>
       <div
         className="flex gap-2 text-white h-auto p-1 overflow-x-auto flex-nowrap rounded-lg"
         style={{ backgroundColor: colors.primary }}
@@ -36,11 +38,11 @@ const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors }) => {
         </button>
       </div>
       <div className="flex gap-2">
-        <Button className="bg-white rounded-full" size="xs" aria-label="Previous page">
-          <ChevronLeft className="h-6 w-6" strokeWidth={5} style={{color: colors.primary}} />
+        <Button className="bg-white rounded-full" size="xs" aria-label="Previous page" onClick={onPrevPage}>
+          <ChevronLeft className="h-6 w-6" strokeWidth={5} style={{ color: colors.primary }} />
         </Button>
-        <Button className="bg-white rounded-full" size="xs" aria-label="Next page">
-          <ChevronRight className="h-6 w-" strokeWidth={5} style={{color: colors.primary}}/>
+        <Button className="bg-white rounded-full" size="xs" aria-label="Next page" onClick={onNextPage}>
+          <ChevronRight className="h-6 w-" strokeWidth={5} style={{ color: colors.primary }} />
         </Button>
       </div>
     </div>

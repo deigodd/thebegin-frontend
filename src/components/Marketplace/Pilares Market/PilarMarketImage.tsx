@@ -16,7 +16,7 @@ const PilarMarketImage: React.FC<PilarMarketProps> = ({ pilar }) => {
   const {name, image, colors} = pilar;
   return (
     <div
-      className="md:w-56 relative aspect-[3/4] rounded-sm overflow-hidden"
+      className="md:w-56 h-full relative rounded-sm overflow-hidden"
       style={{
         /*background: `linear-gradient(to bottom, ${colors.primary}, ${colors.secondary})`*/
       }}
@@ -24,7 +24,7 @@ const PilarMarketImage: React.FC<PilarMarketProps> = ({ pilar }) => {
       <img
         src={image}
         alt={name}
-        className="object-cover w-full h-full"
+        className="object-cover w-full h-56 md:h-full"
       />
       <div
         className="absolute inset-0 flex items-end p-6"
