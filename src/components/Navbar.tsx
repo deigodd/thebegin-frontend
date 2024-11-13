@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="border-gray-200 bg-[#d2bb90]">
+    <nav className="border-gray-200 bg-tbc-pilarorange-600">
       {/*padre*/}
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
           } w-full md:flex md:w-auto md:order-1`}
           id="navbar-cta"
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-[#D1B190] md:bg-[#d2bb90]">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-[#D1B190] md:bg-tbc-pilarorange-600">
             <li>
               <a
                 href="/"
@@ -136,6 +136,15 @@ const Navbar: React.FC = () => {
                 style={isActive("/marketplace") ? activeStyle : {}}
               >
                 MARKETPLACE
+              </a>
+            </li>
+            <li>
+              <a
+                href="/marketplace"
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
+                style={isActive("/marketplace") ? activeStyle : {}}
+              >
+                TECITO
               </a>
             </li>
             <li>

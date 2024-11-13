@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
 import HomePageCard from "../components/HomePage/HomePageCard";
 import PageSeparator from "../components/PageSeparator";
 import backgroundImage from "../assets/background-home.svg";
-import { motion } from "framer-motion";
 import { Card } from "flowbite-react";
 import videoHome from "../assets/que_es_tb_720p.mp4";
 
 const HomePage: React.FC = () => {
   const [isNavbarFixed, setIsNavbarFixed] = useState(true);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,19 +65,25 @@ const HomePage: React.FC = () => {
           backgroundPosition: "center",
         }}
       >
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: -50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1 }}
-        >
-          <div className="py-24 sm:py-32">
-            <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div className="flex-grow">
+          <div className="pb-16 sm:pb-20">
+            <div className="mx-auto lg:max-w-7xl lg:px-8 px-4 sm:px-6">
               <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                 {/*Marketplace*/}
                 <HomePageCard
                   centerCard={false}
                   rowStart={1}
+                  colStart={1}
+                  imageIndex={0}
+                  alt="Pilares"
+                  href="/pilares"
+                  cardTitle="PILARES"
+                  buttonText="Descubre Nuestros Pilares"
+                  cardSubtitle="Nuestros Pilares"
+                />
+                <HomePageCard
+                  centerCard={false}
+                  rowStart={2}
                   colStart={1}
                   imageIndex={1}
                   alt="Marketplace"
@@ -93,17 +93,17 @@ const HomePage: React.FC = () => {
                   cardSubtitle="Tu Tienda en 2 pasos"
                 />
 
-                {/*Comunidad*/}
                 <HomePageCard
                   centerCard={true}
-                  rowStart={0}
-                  colStart={0}
+                  rowStart={2}
+                  colStart={1}
                   imageIndex={1}
                   alt="Comunidad"
                   href="/"
                   cardTitle="COMUNIDAD"
-                  buttonText="Conoce de nuestra comunidad"
+                  buttonText="Descubre la Comunidad"
                   cardSubtitle="Un espacio de encuentro y apoyo colaborativo entre mujeres"
+                  cardDescription="Un espacio donde podrás armar tu página web personal, para utilizarla por ejemplo, como presentación personal, muestrario de productos, servicios y actividades."
                 />
 
                 {/*Trueque*/}
@@ -122,7 +122,7 @@ const HomePage: React.FC = () => {
                 {/*Begin Fest*/}
                 <HomePageCard
                   centerCard={false}
-                  rowStart={1}
+                  rowStart={3}
                   colStart={3}
                   imageIndex={3}
                   alt="Begin Fest"
@@ -134,7 +134,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <PageSeparator title="The Begin" />
 
