@@ -14,31 +14,34 @@ const Test: React.FC = () => {
             .catch((error) => console.error('Error al cargar productos:', error));
     }, []);
 
-    const selectedCategory = "Producto";
+    const selectedCategory = true;
     const filteredProducts = selectedCategory
-        ? products.filter(product => product.category === selectedCategory)
+        ? products.filter(product => product.discount)
         : products;
 
     return (
-        <div className="bg-tbc-secondarybrown-200 rounded-md">
-            <div className="">
-                {filteredProducts.map((product) => (
-                    product.id === 1 ? (
-                        <LargeCards key={product.id} product={product} />
-                    ) : null
-                ))}
-                {filteredProducts.map((product) => (
-                    product.id === 3 ? (
-                        <MediumCards key={product.id} product={product} />
-                    ) : null
-                ))}
-                {filteredProducts.map((product) => (
-                    product.id === 3 ? (
+        <div className="relative grid grid-cols-1 rounded-md sm:grid-flow-row-dense sm:space-x-4 lg:grid-cols-3">
+        <div className="bg-white grid col-span-2 content-between">
+            {filteredProducts.slice(0, 1).map((product) => (
+                <LargeCards key={product.id} product={product} />
+            ))}
+
+            {/* Contenedor scrolleable para ExtraSmallCards */}
+            <div className="flex gap-4 overflow-x-auto lg:overflow-visible">
+                {filteredProducts.slice(1, 6).map((product) => (
+                    <div className="min-w-[150px]"> {/* Ajusta el ancho mínimo */}
                         <ExtraSmallCards key={product.id} product={product} />
-                    ) : null
+                    </div>
                 ))}
             </div>
         </div>
+
+        <div className="">
+            {filteredProducts.slice(5, 9).map((product) => (
+                <MediumCards key={product.id} product={product} />
+            ))}
+        </div>
+    </div>
     );
 };
 
