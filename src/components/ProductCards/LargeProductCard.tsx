@@ -46,42 +46,47 @@ const FeaturedProduct: React.FC<FeaturedProductProps> = ({ product }) => {
   }, [product.discountDateEnd]);
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
-    <div className="bg-gray-100 p-2 rounded">
-      <div className="text-xl font-bold text-[#8B4513]">{value}</div>
-      <div className="text-sm text-gray-600">{label}</div>
+    <div>
+        <div className="bg-gray-100 p-2 rounded">
+            <div className="text-xl font-bold text-tbc-primarybrown-600">{value}</div>
+        </div>
+        <div className="text-sm text-gray-600">{label}</div>
     </div>
   );
 
   return (
     <div className="flex flex-col md:flex-row gap-8 p-6 bg-white rounded-lg shadow-md">
-      <div className="md:w-1/2">
+      <div className="w-80 h-96">
         <img 
           src={product.imageUrl} 
           alt={product.name}
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
-      <div className="md:w-1/2 space-y-4">
-        <h2 className="text-2xl font-serif text-[#8B4513]">{product.name}</h2>
-        <p className="text-gray-600 font-light">{product.description}</p>
+      <div className="md:w-1/2 grid items-between">
+      <div className='space-y-2'>
+        <h2 className="text-3xl font-bold text-tbc-primaryred-600">{product.name}</h2>
+        <hr className="border-2 border-tbc-secondarygray-600 my-2" />
+        <p className="text-gray-600 ">{product.description}</p>
+      </div>
         {product.isLimited && (
-          <p className="text-[#B25D43] font-semibold">¡Edición Limitada!</p>
+          <p className="text-tbc-primaryred-600 font-semibold">¡Edición Limitada!</p>
         )}
         <div className="flex items-center gap-4">
-          <span className="text-2xl font-bold text-[#B25D43]">USD {product.price}</span>
+          <span className="text-2xl font-bold text-tbc-primaryred-600">USD {product.price}</span>
           {product.originalPrice && (
             <span className="text-gray-400 line-through">USD {product.originalPrice}</span>
           )}
         </div>
-        <div className="grid grid-cols-4 gap-4 text-center">
+        <button className="w-48 h-8 bg-tbc-primaryred-600 text-white rounded-md hover:bg-tbc-primarybrown-600 transition-colors duration-300 hover:scale-105">
+          Agregar al carro
+        </button>
+        <div className="grid grid-cols-4 gap-4 text-center w-72">
           <TimeBox value={timer.days} label="días" />
           <TimeBox value={timer.hours} label="horas" />
           <TimeBox value={timer.minutes} label="min" />
           <TimeBox value={timer.seconds} label="seg" />
         </div>
-        <button className="w-full bg-[#B25D43] text-white py-3 rounded-md hover:bg-[#8B4513] transition-colors duration-300">
-          Agregar al carro
-        </button>
       </div>
     </div>
   );
