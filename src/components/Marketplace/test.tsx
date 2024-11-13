@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LargeCards from '../ProductCards/LargeProductCard';
 import MediumCards from '../ProductCards/MediumProductCard';
+import ExtraSmallCards from '../ProductCards/ExtraSmallProductCard';
 import Product from '../../types/Product';
 
 const Test: React.FC = () => {
@@ -29,6 +30,11 @@ const Test: React.FC = () => {
                 {filteredProducts.map((product) => (
                     product.id === 3 ? (
                         <MediumCards key={product.id} product={product} />
+                    ) : null
+                ))}
+                {filteredProducts.map((product) => (
+                    product.id === 3 ? (
+                        <ExtraSmallCards key={product.id} product={product} />
                     ) : null
                 ))}
             </div>
