@@ -1,4 +1,4 @@
-import { User } from "../../data/User";
+import { User } from "../../types/User";
 
 interface MatchCardProps {
     user: User;
