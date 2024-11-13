@@ -24,8 +24,8 @@ const SmallProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
     return (
         <div 
-        className="border bg-white rounded-sm shadow-md px-4 py-5 w-64 transition-transform duration-300 transform hover:scale-90 
-        sm:hover:scale-105 hover:shadow-lg scale-75 sm:scale-100 md:scale-95 xl:scale-95"
+        className="bg-white rounded-sm shadow-md px-4 py-5 w-56 md:w-64 scale-90 transition-transform duration-300 transform hover:scale-90 
+        sm:hover:scale-105 hover:shadow-lg sm:scale-95"
         >
             <div className="relative">
                 <img 

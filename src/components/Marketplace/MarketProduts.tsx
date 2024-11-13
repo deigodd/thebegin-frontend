@@ -27,7 +27,7 @@ const MarketProducts: React.FC = () => {
     }, []);
 
     return (
-        <div className="grid grid-cols-2 justify-items-center xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
+        <div className="grid grid-cols-2 justify-items-center xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3">
             {products.map((product) => (
                 <SmallCards key={product.id} product={product} />
             ))}
