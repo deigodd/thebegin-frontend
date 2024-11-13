@@ -23,7 +23,7 @@ const CategoriesSidebar: React.FC = () => {
     <div>
       {/* Botón de hamburguesa solo visible en pantallas pequeñas */}
       <button
-        className="md:hidden bg-[#766146] text-white p-2 rounded-sm mb-2"
+        className="md:hidden bg-[#766146] text-white p-2 mb-2"
         onClick={toggleMenu}
       >
         <svg

@@ -1,24 +1,31 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import CategoriesSidebar from '../components/CategoriesSidebar';
-import MarketContent from '../components/Marketplace/MarketContent';
 import Footer from '../components/Footer/Footer';
 import PilarTemplate from '../components/Marketplace/Pilares Market/PilarTemplate';
 import PilarTemplate2 from '../components/Marketplace/Pilares Market/PilarTemplate2';
 import MarketProducts from '../components/Marketplace/MarketProduts';
+import SearchBar from '../components/SearchBar/SearchBar';
+import MarketVisual from '../components/Marketplace/MarketVisual';
 
 const Marketplace: React.FC = () => {
   return (
     <div className='bg-[#f8f4f0]'>
       <Navbar />
-        <div className="flex flex-col justify-self-center w-full md:max-w-7xl p-1">
-          <div className='flex flex-col space-x-1 w-full md:flex-row'>
+        <div className="flex flex-col justify-self-center w-full md:max-w-7xl">
+          <div className='flex md:space-x-1 w-full'>
             <div className="">
               <CategoriesSidebar />
             </div>
-            <div className="flex-1">
-              <MarketContent />
+            <div className="flex-1 space-y-8">
+              <SearchBar/>
+              <div className='hidden md:block'>
+                <MarketVisual/> 
+              </div>         
             </div>
+          </div>
+          <div className='w-full md:hidden'>
+            <MarketVisual/>  
           </div>
           <div className='flex flex-col space-y-4'>
             <MarketProducts />

@@ -23,7 +23,10 @@ const SmallProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const { name, price, originalPrice, discount, imageUrl } = product;
 
     return (
-        <div className="border bg-white rounded-sm shadow-md px-4 py-5 w-64 transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
+        <div 
+        className="border bg-white rounded-sm shadow-md px-4 py-5 w-64 transition-transform duration-300 transform hover:scale-90 
+        sm:hover:scale-105 hover:shadow-lg scale-75 sm:scale-100"
+        >
             <div className="relative">
                 <img 
                 src={imageUrl} 
