@@ -43,7 +43,7 @@ const PilarTemplate: React.FC<PilarTemplateProps> = ({pilarId}) => {
 
 
   return (
-    <div className="w-full  space-y-4">
+    <div id={pilarData.name.toLowerCase().replace(/\s+/g, '-')} className="w-full  space-y-4">
       <div className="flex flex-col md:flex-row gap-1">
       <PilarImage pilar={pilarData}/>
         <div className="">
