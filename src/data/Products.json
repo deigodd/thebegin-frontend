@@ -13,7 +13,7 @@
             "discountDateEnd":"2025-01-01",
             "imageUrl": "https://i.pinimg.com/736x/58/c9/7e/58c97ed2f879f0832d5619e6a8683f19.jpg",
             "rankingSales": 150,
-            "isLimited": false,
+            "isLimited": true,
             "pilar": 1,
             "category": "Producto"
         },
