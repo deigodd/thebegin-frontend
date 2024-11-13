@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer';
 import PilarTemplate from '../components/Marketplace/Pilares Market/PilarTemplate';
 import PilarTemplate2 from '../components/Marketplace/Pilares Market/PilarTemplate2';
 import MarketProducts from '../components/Marketplace/MarketProduts';
-import SearchBar from '../components/Marketplace/MarketSearchBar/MarketSearchBar';
+import MarketSearchBar from '../components/Marketplace/MarketSearchBar/MarketSearchBar';
 import MarketVisual from '../components/Marketplace/MarketVisual';
 import backgroundImage from '../assets/background-marketplace.svg'
 
@@ -28,7 +28,7 @@ const Marketplace: React.FC = () => {
             </div>
             <div className="flex-1">
               <div className='z-30'>
-                <SearchBar onCategorySelect={setSelectedCategory}/>
+                <MarketSearchBar onCategorySelect={setSelectedCategory}/>
               </div>
               <div className='hidden md:block z-10'>
                 <MarketVisual/> 

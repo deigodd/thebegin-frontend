@@ -4,7 +4,7 @@ import { useState } from 'react';
 const CategoriesSearchBar: React.FC<{ onSelectCategory: (category: string) => void }> = ({ onSelectCategory }) => {
   const [isHovering, setIsHovering] = useState(false);
 
-  const categories = ["Producto", "Servicio", "Comida"];
+  const categories = ["" ,"Producto", "Servicio", "Comida"];
 
   return (
     <div
@@ -25,6 +25,7 @@ const CategoriesSearchBar: React.FC<{ onSelectCategory: (category: string) => vo
               onClick={() => onSelectCategory(category)}
             >
               {category}
+              {category==="" && ("Todas")}
             </li>
           ))}
         </ul>
