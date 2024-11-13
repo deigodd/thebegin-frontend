@@ -55,39 +55,44 @@ const FeaturedProduct: React.FC<FeaturedProductProps> = ({ product }) => {
   );
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-6 bg-white rounded-lg shadow-md">
-      <div className="w-80 h-96">
-        <img 
-          src={product.imageUrl} 
-          alt={product.name}
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
-      <div className="md:w-1/2 grid items-between">
-      <div className='space-y-2'>
-        <h2 className="text-3xl font-bold text-tbc-primaryred-600">{product.name}</h2>
-        <hr className="border-2 border-tbc-secondarygray-600 my-2" />
-        <p className="text-gray-600 ">{product.description}</p>
-      </div>
-        {product.isLimited && (
-          <p className="text-tbc-primaryred-600 font-semibold">¡Edición Limitada!</p>
+    <div className="relative flex flex-col md:flex-row gap-8 p-6 bg-white rounded-lg ">
+        <div className="w-80 h-96">
+            <img 
+            src={product.imageUrl} 
+            alt={product.name}
+            className="w-full h-full object-cover rounded-lg"
+            />
+        </div>
+        {product.discount && (
+            <span className="absolute top-2 right-2 bg-tbc-primaryred-600 text-white text-sm font-bold px-2 py-4 rounded-full">
+                -{product.discount}%
+            </span>
         )}
-        <div className="flex items-center gap-4">
-          <span className="text-2xl font-bold text-tbc-primaryred-600">USD {product.price}</span>
-          {product.originalPrice && (
-            <span className="text-gray-400 line-through">USD {product.originalPrice}</span>
-          )}
+        <div className="md:w-1/2 grid items-between space-y-2">
+            <div className='space-y-2'>
+                    <h2 className="text-3xl font-bold text-tbc-primaryred-600">{product.name}</h2>
+                    <hr className="border-2 border-tbc-secondarygray-600 my-2" />
+                    <p className="text-gray-600 ">{product.description}</p>
+            </div>
+                {product.isLimited && (
+                <p className="text-tbc-pilargray-600 text-xl font-semibold">¡Edición Limitada!</p>
+                )}
+            <div className="flex items-center gap-4">
+                <span className="text-2xl font-bold text-tbc-primaryred-600">USD {product.price}</span>
+                {product.originalPrice && (
+                    <span className="text-gray-400 line-through">USD {product.originalPrice}</span>
+                )}
+            </div>
+            <button className="w-48 h-8 bg-tbc-primaryred-600 text-white rounded-md hover:bg-tbc-primarybrown-600 transition-colors duration-300 hover:scale-105">
+                Agregar al carro
+            </button>
+            <div className="grid grid-cols-4 gap-4 text-center w-72">
+                <TimeBox value={timer.days} label="días" />
+                <TimeBox value={timer.hours} label="horas" />
+                <TimeBox value={timer.minutes} label="min" />
+                <TimeBox value={timer.seconds} label="seg" />
+            </div>
         </div>
-        <button className="w-48 h-8 bg-tbc-primaryred-600 text-white rounded-md hover:bg-tbc-primarybrown-600 transition-colors duration-300 hover:scale-105">
-          Agregar al carro
-        </button>
-        <div className="grid grid-cols-4 gap-4 text-center w-72">
-          <TimeBox value={timer.days} label="días" />
-          <TimeBox value={timer.hours} label="horas" />
-          <TimeBox value={timer.minutes} label="min" />
-          <TimeBox value={timer.seconds} label="seg" />
-        </div>
-      </div>
     </div>
   );
 };
