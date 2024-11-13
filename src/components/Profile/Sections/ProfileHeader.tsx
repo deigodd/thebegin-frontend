@@ -8,19 +8,18 @@ interface UserProfile {
 
 const ProfileHeader: React.FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfile>({
-    name: 'Sofía Valverde',
+    name: 'Sofía Monteverde', // Nombre fijo
     image: 'https://lh3.googleusercontent.com/pelsDJaccSJIJBNMCsrXAJpC3A0AMdY53PXs6uYjfP_YwDj64thnVVHxNiuvTDp07xYFzPvFs95VVv_4N4upBTmx45NM8-IhTuBKBrAPfndn19XtXNA-79TpyIs7PoPYYEHv23Uy',
     role: 'Fotógrafa',
   });
   const [editingRole, setEditingRole] = useState(false);
 
   useEffect(() => {
-    const savedName = localStorage.getItem('userName');
     const savedImage = localStorage.getItem('profileImage');
     const savedRole = localStorage.getItem('userRole');
 
     setUserProfile((prevProfile) => ({
-      name: savedName || prevProfile.name,
+      ...prevProfile,
       image: savedImage || prevProfile.image,
       role: savedRole || prevProfile.role,
     }));

@@ -1,42 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const AboutCard: React.FC = () => {
-  const [aboutText, setAboutText] = useState('Escribe algo sobre ti...');
-  const [isEditing, setIsEditing] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setAboutText(e.target.value);
-  };
-
-  const handleBlur = () => {
-    if (!aboutText.trim()) {
-      setAboutText('Escribe algo sobre ti...');
-    }
-    setIsEditing(false);
-  };
-
   return (
-    <div className="relative w-80 h-96 bg-gray-100 rounded-lg shadow-xl flex flex-col justify-center items-center p-4">
-      <h1 className="text-2xl font-semibold text-gray-700 mb-4">Sobre Mí</h1>
-      <div className="relative w-full text-center">
-        {isEditing ? (
-          <textarea
-            value={aboutText}
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-            className="w-full h-24 p-2 text-lg font-light text-gray-600 border border-gray-300 rounded resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            autoFocus
-          />
-        ) : (
-          <p
-            className="text-lg font-light text-gray-600 cursor-pointer whitespace-pre-wrap"
-            onClick={() => setIsEditing(true)}
-          >
-            {aboutText}
-          </p>
-        )}
-      </div>
-    </div>
+    <div className="relative w-[500px] h-[700px] max-h-[700px] rounded-lg border border-gray-400 shadow-xl flex flex-col justify-center items-center p-8">
+      <h2 className="text-3xl italic font-semibold text-white mb-4">Sobre mí</h2>
+      <p className="text-center text-white text-lg leading-relaxed tracking-wide">
+        Soy licenciada en comunicación, con el fin de crecer y brindar un producto mejor. Durante los últimos 4 años realicé numerosos cursos con importantes profesionales de la fotografía. Hoy te ofrezco mi mirada para guardar tus recuerdos para siempre.
+      </p>
+    </div>  
   );
 };
 
