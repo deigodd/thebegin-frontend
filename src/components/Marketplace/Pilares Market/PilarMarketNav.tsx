@@ -7,13 +7,15 @@ interface PilarMarketNavProps {
     secondary: string;
     tertiary: string;
   };
+  currentPage: number;
+  totalPages: number;
   onPrevPage: () => void;
   onNextPage: () => void;
 }
 
-const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors, onPrevPage, onNextPage }) => {
+const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors, currentPage, totalPages, onPrevPage, onNextPage }) => {
   return (
-    <div className="flex items-center justify-between mb-4 px-2" style={{ background: colors.primary }}>
+    <div className="flex flex-col lg:flex-row items-center justify-between mb-2 px-2" style={{ background: colors.primary }}>
       <div
         className="flex gap-2 text-white h-auto p-1 overflow-x-auto flex-nowrap rounded-lg"
         style={{ backgroundColor: colors.primary }}
@@ -37,10 +39,17 @@ const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors, onPrevPage, onN
           MÁS VISITADOS
         </button>
       </div>
-      <div className="flex gap-2">
+
+      <div className="flex items-center gap-2 m-2">
         <Button className="bg-white rounded-full" size="xs" aria-label="Previous page" onClick={onPrevPage}>
           <ChevronLeft className="h-6 w-6" strokeWidth={5} style={{ color: colors.primary }} />
         </Button>
+        
+        {/* Mostrar el número de página */}
+        <span className="text-sm font-semibold" style={{ color: "white" }}>
+          {currentPage} / {totalPages}
+        </span>
+        
         <Button className="bg-white rounded-full" size="xs" aria-label="Next page" onClick={onNextPage}>
           <ChevronRight className="h-6 w-" strokeWidth={5} style={{ color: colors.primary }} />
         </Button>
