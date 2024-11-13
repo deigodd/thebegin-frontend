@@ -8,6 +8,7 @@ import MarketProducts from '../components/Marketplace/MarketProduts';
 import MarketSearchBar from '../components/Marketplace/MarketSearchBar/MarketSearchBar';
 import MarketVisual from '../components/Marketplace/MarketVisual';
 import backgroundImage from '../assets/background-marketplace.svg'
+import Test from '../components/Marketplace/test'
 
 
 const Marketplace: React.FC = () => {
@@ -39,6 +40,7 @@ const Marketplace: React.FC = () => {
             <MarketVisual/>  
           </div>
           <div className='flex flex-col space-y-8 mt-8'>
+            <Test/>
             <MarketProducts selectedCategory={selectedCategory}/>
             <PilarTemplate pilarId={1} />
             <PilarTemplate2 pilarId={2} />
