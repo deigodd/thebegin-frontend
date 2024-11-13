@@ -7,10 +7,16 @@ import PilarTemplate2 from '../components/Marketplace/Pilares Market/PilarTempla
 import MarketProducts from '../components/Marketplace/MarketProduts';
 import SearchBar from '../components/SearchBar/SearchBar';
 import MarketVisual from '../components/Marketplace/MarketVisual';
+import backgroundImage from '../assets/background-marketplace.svg'
 
 const Marketplace: React.FC = () => {
   return (
-    <div className='bg-[#f8f4f0]'>
+    <div className='bg-[#f8f4f0]'
+    style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
       <Navbar />
         <div className="flex flex-col justify-self-center w-full md:max-w-7xl md:mt-1">
           <div className='flex md:space-x-1 w-full'>
