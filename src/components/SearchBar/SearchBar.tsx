@@ -3,10 +3,10 @@ import { Heart, Star, Search, ShoppingCart, ChevronRight } from 'lucide-react';
 
 const SearchBar:React.FC = () => {
   return (
-    <div className="bg-tbc-primaryred-600 md:rounded-lg sm:gap-2 shadow-sm mb-6 md:p-4 flex">
+    <div className="bg-tbc-primaryred-600 md:rounded-lg sm:gap-2 shadow-sm md:p-4 flex">
         <div className="flex scale-75 md:scale-100 w-full">
             <div className='bg-tbc-secondarygreen-100 w-16 md:w-32 flex place-items-center rounded-l-2xl'>
-                <span className='hidden pl-4 sm:block'>Categorias</span>
+                <span className='hidden pl-4 md:block'>Categorias</span>
                 <ChevronRight/>
             </div>
             <div className="relative ml-1 grow">

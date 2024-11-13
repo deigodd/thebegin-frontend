@@ -4,7 +4,7 @@ import { Carousel } from "flowbite-react";
 import React from 'react';
 const MarketVisual: React.FC = () => {
     return (
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+        <div className="h-56 md:h-96">
         <Carousel pauseOnHover>
           <img src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0046/4988/512X250_CMR_RANKIA-BANNER.png?1636972707" alt="..." />
           <img src="https://cdn.mallmarina.cl/mallmarina/uploads/2022/05/Logo-Natura-1024x771-1.jpg" alt="..." />
