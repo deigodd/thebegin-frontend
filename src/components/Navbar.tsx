@@ -140,6 +140,15 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
+                href="/tecito"
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a]`}
+                style={isActive("/tecito") ? activeStyle : {}}
+              >
+                TECITO
+              </a>
+            </li>
+            <li>
+              <a
                 href="/contacto"
                 className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
                 style={isActive("/contacto") ? activeStyle : {}}

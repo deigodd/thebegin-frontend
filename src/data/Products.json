@@ -1,5 +1,5 @@
 {
-    "products":[
+    "products": [
         {
             "id": 1,
             "name": "Taza de Cerámica",
@@ -42,7 +42,7 @@
         },
         {
             "id": 4,
-            "name": "Test Psicologico",
+            "name": "Test Psicológico",
             "description": "Hora conmigo para hacer una evaluación de tu estado mental.",
             "price": 54,
             "originalPrice": 70,
@@ -56,7 +56,7 @@
         },
         {
             "id": 5,
-            "name": "Cupcakes caseros",
+            "name": "Cupcakes Caseros",
             "description": "Ricos cupcakes caseros.",
             "price": 10,
             "trueque": false,
@@ -68,7 +68,7 @@
         },
         {
             "id": 6,
-            "name": "Comida para perros natural",
+            "name": "Comida para Perros Natural",
             "description": "Comida para tu mascota sin preservantes artificiales y con la cantidad justa de cada nutriente.",
             "price": 50,
             "originalPrice": 70,
@@ -79,6 +79,182 @@
             "isLimited": true,
             "pilar": 2,
             "category": "producto"
+        },
+        {
+            "id": 7,
+            "name": "Libro de Poesía",
+            "description": "Colección de poemas inspiradores de autores locales.",
+            "price": 25,
+            "originalPrice": 30,
+            "trueque": false,
+            "discount": 17,
+            "imageUrl": "https://editorial.uv.cl/templates/yootheme/cache/3c/PO_Pedro%20Lastra_Poesia%20Completa_2da%20edicion-3c779b52.jpeg",
+            "rankingSales": 85,
+            "isLimited": true,
+            "pilar": 1,
+            "category": "producto"
+        },
+        {
+            "id": 8,
+            "name": "Clase de Cocina Italiana",
+            "description": "Clase virtual de cocina italiana, aprende a hacer pasta desde cero.",
+            "price": 40,
+            "trueque": false,
+            "imageUrl": "https://www.kitchencenter.cl/cdn/shop/files/Image_20240829_093324_336.jpg?v=1724939446&width=1445",
+            "rankingSales": 200,
+            "isLimited": false,
+            "pilar": 3,
+            "category": "servicio"
+        },
+        {
+            "id": 9,
+            "name": "Cojín Decorativo",
+            "description": "Cojín con funda de lino de colores neutros.",
+            "price": 18,
+            "trueque": true,
+            "discount": 20,
+            "imageUrl": "https://cdnx.jumpseller.com/click-ventas/image/46110810/resize/610/610?1709595541",
+            "rankingSales": 95,
+            "isLimited": false,
+            "pilar": 1,
+            "category": "producto"
+        },
+        {
+            "id": 10,
+            "name": "Entrenamiento Personalizado",
+            "description": "Programa de entrenamiento personalizado de 4 semanas.",
+            "price": 100,
+            "trueque": false,
+            "imageUrl": "https://vivir100.com/wp-content/uploads/2022/02/entrenamiento-personalizado-vivir100-2-824x402.jpeg",
+            "rankingSales": 120,
+            "isLimited": true,
+            "pilar": 4,
+            "category": "servicio"
+        },
+        {
+            "id": 11,
+            "name": "Arreglo Floral",
+            "description": "Arreglo de flores frescas para cualquier ocasión.",
+            "price": 35,
+            "originalPrice": 45,
+            "trueque": true,
+            "discount": 22,
+            "imageUrl": "https://www.centerflowers.com.ar/wp-content/uploads/2021/07/WhatsApp-Image-2023-09-11-at-19.40.47-600x600.jpeg",
+            "rankingSales": 300,
+            "isLimited": true,
+            "pilar": 2,
+            "category": "producto"
+        },
+        {
+            "id": 12,
+            "name": "Curso de Fotografía",
+            "description": "Curso básico de fotografía digital, nivel principiante.",
+            "price": 60,
+            "trueque": false,
+            "imageUrl": "https://www.fotodng.com/wp-content/uploads/2016/08/curso-fotografia-imaginacion.jpg",
+            "rankingSales": 170,
+            "isLimited": false,
+            "pilar": 3,
+            "category": "servicio"
+        },
+        {
+            "id": 13,
+            "name": "Planificador Semanal",
+            "description": "Planificador de actividades semanal para una mejor organización.",
+            "price": 8,
+            "trueque": true,
+            "imageUrl": "https://librerialapaloma.cl/wp-content/uploads/2021/10/planificador-semanal.jpg.webp",
+            "rankingSales": 70,
+            "isLimited": false,
+            "pilar": 5,
+            "category": "producto"
+        },
+        {
+            "id": 14,
+            "name": "Galletas Artesanales",
+            "description": "Galletas artesanales de distintos sabores y sin conservantes.",
+            "price": 12,
+            "trueque": false,
+            "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006",
+            "rankingSales": 225,
+            "isLimited": true,
+            "pilar": 2,
+            "category": "comida"
+        },
+        {
+            "id": 15,
+            "name": "Servicio de Jardinería",
+            "description": "Mantenimiento y diseño de jardines.",
+            "price": 150,
+            "trueque": true,
+            "discount": 10,
+            "imageUrl": "https://www.elmueble.com/medio/2019/02/25/00427667_20133c54_1280x650.jpg",
+            "rankingSales": 75,
+            "isLimited": false,
+            "pilar": 4,
+            "category": "servicio"
+        },
+        {
+            "id": 16,
+            "name": "Suscripción a Revista",
+            "description": "Suscripción anual a revista de diseño.",
+            "price": 30,
+            "originalPrice": 40,
+            "trueque": false,
+            "discount": 25,
+            "imageUrl": "https://cdn.venngage.com/template/thumbnail/310/ff819a47-12b5-4948-82c7-15e6a3c13e66.webp",
+            "rankingSales": 180,
+            "isLimited": false,
+            "pilar": 1,
+            "category": "producto"
+        },
+        {
+            "id": 17,
+            "name": "Clases de Pintura",
+            "description": "Clases presenciales de pintura en acuarela.",
+            "price": 45,
+            "trueque": false,
+            "imageUrl": "https://api.buscatuprofesor.mx/news_image/Kh/88/Kh88cWipXxZ1jmr3f8koS3dDaowWBoEbkA0r2bBD.jpg",
+            "rankingSales": 95,
+            "isLimited": true,
+            "pilar": 5,
+            "category": "servicio"
+        },
+        {
+            "id": 18,
+            "name": "Bolso de Tela Ecológica",
+            "description": "Bolso de tela reutilizable y ecológica.",
+            "price": 10,
+            "trueque": true,
+            "imageUrl": "https://www.miparque.cl/wp-content/uploads/2017/11/Bolsa_02.jpg",
+            "rankingSales": 145,
+            "isLimited": false,
+            "pilar": 1,
+            "category": "producto"
+        },
+        {
+            "id": 19,
+            "name": "Experiencia de Cata de Vinos",
+            "description": "Degustación guiada de vinos con sommelier.",
+            "price": 120,
+            "trueque": false,
+            "imageUrl": "https://vinasantacruz.cl/wp-content/uploads/2019/06/Diferencia-entre-una-cata-de-vinos-y-degustacion-de-vinos-360x235.jpg",
+            "rankingSales": 65,
+            "isLimited": true,
+            "pilar": 5,
+            "category": "servicio"
+        },
+        {
+            "id": 20,
+            "name": "Curso de Escritura Creativa",
+            "description": "Curso de escritura para mejorar tus habilidades narrativas.",
+            "price": 75,
+            "trueque": true,
+            "imageUrl": "https://www.sech.cl/wp-content/uploads/2022/09/documento-Yury-800x445.jpg",
+            "rankingSales": 110,
+            "isLimited": false,
+            "pilar": 3,
+            "category": "servicio"
         }
     ]
 }

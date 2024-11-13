@@ -11,7 +11,7 @@ interface PilarMarketNavProps {
 
 const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors }) => {
   return (
-    <div className="flex items-center justify-between mb-4">
+    <div className="flex items-center justify-between mb-4 px-2" style={{background: colors.primary}}>
       <div
         className="flex gap-2 text-white h-auto p-1 overflow-x-auto flex-nowrap rounded-lg"
         style={{ backgroundColor: colors.primary }}
@@ -36,11 +36,11 @@ const PilarMarketNav: React.FC<PilarMarketNavProps> = ({ colors }) => {
         </button>
       </div>
       <div className="flex gap-2">
-        <Button outline size="sm" aria-label="Previous page">
-          <ChevronLeft className="h-4 w-4" />
+        <Button className="bg-white rounded-full" size="xs" aria-label="Previous page">
+          <ChevronLeft className="h-6 w-6" strokeWidth={5} style={{color: colors.primary}} />
         </Button>
-        <Button outline size="sm" aria-label="Next page">
-          <ChevronRight className="h-4 w-4" />
+        <Button className="bg-white rounded-full" size="xs" aria-label="Next page">
+          <ChevronRight className="h-6 w-" strokeWidth={5} style={{color: colors.primary}}/>
         </Button>
       </div>
     </div>

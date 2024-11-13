@@ -23,11 +23,18 @@ const SmallProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const { name, price, originalPrice, discount, imageUrl } = product;
 
     return (
-        <div className="border bg-white rounded-sm shadow-md p-4 w-64">
+        <div 
+        className="border bg-white rounded-sm shadow-md px-4 py-5 w-64 transition-transform duration-300 transform hover:scale-90 
+        sm:hover:scale-105 hover:shadow-lg scale-75 sm:scale-100"
+        >
             <div className="relative">
-                <img src={imageUrl} alt={name} className="w-full h-32 object-cover rounded-t-sm" />
+                <img 
+                src={imageUrl} 
+                alt={name} 
+                className="w-full h-64 object-cover rounded-t-sm transition-transform duration-300 transform hover:scale-105" 
+                />
                 {discount && (
-                    <span className="absolute top-2 right-2 bg-tbc-primaryred-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    <span className="absolute -top-2 -right-2 bg-tbc-primaryred-600 text-white text-sm font-bold px-2 py-4 rounded-full">
                         -{discount}%
                     </span>
                 )}
