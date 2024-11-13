@@ -1,22 +1,8 @@
 import React from 'react';
+import Product from '../../types/Product'
 
 interface ProductCardProps {
   product: Product;
-}
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number; // precio actual
-  originalPrice?: number;
-  trueque?: boolean; // si se puede intercambiar es true
-  discount?: number;
-  imageUrl: string;
-  rankingSales?: number; // raking basado en cuanto se ha vendido
-  isLimited?: boolean;
-  pilar: number; // son nuestras categorias 1-5
-  category: string; // categoria producto (servicio, producto, etc)
 }
 
 const SmallProductCard: React.FC<ProductCardProps> = ({ product }) => {

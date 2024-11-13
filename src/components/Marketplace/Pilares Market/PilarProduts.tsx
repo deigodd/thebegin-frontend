@@ -1,20 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SmallCards from '../../ProductCards/SmallProductCard';
+import Product from '../../../types/Product'
 
-interface Product {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    originalPrice?: number;
-    trueque?: boolean;
-    discount?: number;
-    imageUrl: string;
-    rankingSales?: number;
-    isLimited?: boolean;
-    pilar: number;
-    category: string;
-}
 interface PilarProductsProps {
     pilarId: number;
   }
@@ -23,7 +10,7 @@ const PilarProducts: React.FC<PilarProductsProps> = ({pilarId}) => {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/deigodd/thebegin-frontend/refs/heads/feature/Products/src/data/Products.json')
+        fetch('https://raw.githubusercontent.com/deigodd/thebegin-frontend/refs/heads/feature/Market/Update/src/data/Products.json')
             .then((response) => response.json())
             .then((data) => {
                 const filteredProducts = data.products.filter((product: Product) => product.pilar === pilarId);
