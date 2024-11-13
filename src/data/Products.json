@@ -314,6 +314,50 @@
             "isLimited": false,
             "pilar": 3,
             "category": "Servicio"
+        },
+        {
+            "id": 21,
+            "sellerId":1,
+            "uploadDate":"2024-07-15",
+            "name": "Pintura en Spray",
+            "description": "Bolso de tela reutilizable y ecológica.",
+            "price": 10,
+            "trueque": true,
+            "discountDateEnd":"2024-08-15",
+            "imageUrl": "https://m.media-amazon.com/images/I/51dqHBfN-7L.jpg",
+            "rankingSales": 145,
+            "isLimited": false,
+            "pilar": 1,
+            "category": "Producto"
+        },
+        {
+            "id": 22,
+            "sellerId":1,
+            "uploadDate":"2024-07-15",
+            "name": "Pintura rupestre",
+            "description": "Degustación guiada de vinos con sommelier.",
+            "price": 120,
+            "trueque": false,
+            "discountDateEnd":"2024-08-15",
+            "imageUrl": "https://services.meteored.com/img/article/pinturas-rupestres-en-clave-climatica-189121-3_1280.jpg",
+            "rankingSales": 65,
+            "isLimited": true,
+            "pilar": 1,
+            "category": "Servicio"
+        },
+        {
+            "id": 23,
+            "sellerId":1,
+            "uploadDate":"2024-07-15",
+            "name": "Curso de Canto",
+            "description": "Curso de escritura para mejorar tus habilidades narrativas.",
+            "price": 75,
+            "trueque": true,
+            "imageUrl": "https://clasesdecantopro.com/wp-content/uploads/2023/10/Yellow-Pink-Green-English-Writing-a-Persuasive-Blog-Presentation.jpg",
+            "rankingSales": 110,
+            "isLimited": false,
+            "pilar": 1,
+            "category": "Servicio"
         }
     ]
 }
