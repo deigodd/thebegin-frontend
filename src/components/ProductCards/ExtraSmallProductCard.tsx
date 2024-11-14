@@ -10,7 +10,7 @@ const ExtraSmallProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
     return (
         <div 
-        className="bg-white rounded-sm shadow-md px-4 py-5 w-40 transition-transform duration-300 transform hover:scale-105 
+        className="bg-white rounded-sm px-4 py-5 w-40 transition-transform duration-300 transform hover:scale-105 
          hover:shadow-lg"
         >
             <div className="relative">

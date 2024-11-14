@@ -3,8 +3,9 @@ import LargeCards from '../ProductCards/LargeProductCard';
 import MediumCards from '../ProductCards/MediumProductCard';
 import ExtraSmallCards from '../ProductCards/ExtraSmallProductCard';
 import Product from '../../types/Product';
+import logo from '../../assets/icons/svg/tb-icon-fill-gray.svg'
 
-const Test: React.FC = () => {
+const Offers: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
@@ -20,7 +21,9 @@ const Test: React.FC = () => {
         : products;
 
     return (
-        <div className="relative grid grid-cols-1 rounded-md sm:grid-flow-row-dense sm:space-x-4 lg:grid-cols-3">
+        <div className="relative grid grid-cols-1 rounded-md sm:grid-flow-row-dense space-x-4 lg:grid-cols-3">
+            <div className='bg-red-600 w-72 absolute h-16 rounded-full left-4 -top-4'>
+            </div>
         <div className="bg-white grid col-span-2 content-between">
             {filteredProducts.slice(0, 1).map((product) => (
                 <LargeCards key={product.id} product={product} />
@@ -29,20 +32,29 @@ const Test: React.FC = () => {
             {/* Contenedor scrolleable para ExtraSmallCards */}
             <div className="flex gap-4 overflow-x-auto lg:overflow-visible">
                 {filteredProducts.slice(1, 6).map((product) => (
-                    <div className="min-w-[150px]"> {/* Ajusta el ancho mínimo */}
+                    <div className="scale-95"> {/* Ajusta el ancho mínimo */}
                         <ExtraSmallCards key={product.id} product={product} />
                     </div>
                 ))}
             </div>
         </div>
+        <div className='bg-red-600 w-56 absolute h-8 rounded-b-full text-center font-bold pt-1 text-white left-4 -top-3'>
+            OFERTAS DE HOY
+        </div>
 
-        <div className="">
+        <div className="bg-white">
+            <div className='flex bg-purple-300 p-2 pl-4 text-tbc-secondarygray-600 font-bold text-center'>
+            <img src={logo} className='w-12'></img>
+                <span className='ml-4 pt-2'>MÁS VENDIDOS</span>
+            </div>
             {filteredProducts.slice(5, 9).map((product) => (
-                <MediumCards key={product.id} product={product} />
+                <div className='scale-95'>
+                    <MediumCards key={product.id} product={product} />
+                </div>
             ))}
         </div>
     </div>
     );
 };
 
-export default Test;
+export default Offers;

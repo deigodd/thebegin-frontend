@@ -9,7 +9,7 @@ const MediumProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const { name, price, originalPrice, discount, imageUrl } = product;
 
     return (
-        <div className="bg-white rounded-sm shadow-md flex px-4 py-5 w-full max-w-lg 
+        <div className="bg-white rounded-sm flex px-4 py-5 w-full max-w-lg 
         transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
             <img 
                 src={imageUrl} 

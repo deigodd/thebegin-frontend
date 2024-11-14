@@ -55,7 +55,7 @@ const FeaturedProduct: React.FC<FeaturedProductProps> = ({ product }) => {
   );
 
   return (
-    <div className="relative flex flex-col md:flex-row gap-8 p-6 bg-white rounded-lg ">
+    <div className="relative flex flex-col md:flex-row gap-8 p-6 bg-white rounded-sm ">
         <div className="w-80 h-96">
             <img 
             src={product.imageUrl} 
