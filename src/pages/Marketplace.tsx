@@ -22,7 +22,7 @@ const Marketplace: React.FC = () => {
       backgroundPosition: "center",
     }}>
       <Navbar />
-        <div className="flex flex-col justify-self-center w-full md:max-w-7xl md:mt-1">
+        <div className="flex flex-col mx-auto justify-self-center w-full md:max-w-7xl md:mt-1">
           <div className='flex md:space-x-1 w-full'>
             <div className="">
               <CategoriesSidebar />
