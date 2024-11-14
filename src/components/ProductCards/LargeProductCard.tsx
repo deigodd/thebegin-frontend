@@ -75,7 +75,7 @@ const FeaturedProduct: React.FC<FeaturedProductProps> = ({ product }) => {
                     <p className="text-gray-600 ">{product.description}</p>
             </div>
                 {product.isLimited && (
-                <p className="text-tbc-pilargray-600 text-xl font-semibold">¡Edición Limitada!</p>
+                <p className="text-tbc-pilargray-600 text-xl font-bold">¡Edición Limitada!</p>
                 )}
             <div className="flex items-center gap-4">
                 <span className="text-2xl font-bold text-tbc-primaryred-600">USD {product.price}</span>
