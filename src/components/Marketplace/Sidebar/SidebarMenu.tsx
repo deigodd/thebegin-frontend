@@ -26,7 +26,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ onClose }) => {
 
   return (
     <div>
-      <h2 className="bg-[#766146] p-2 text-white text-lg rounded-sm font-bold">
+      <h2 className="bg-tbc-primarybrown-600 p-2 text-white text-lg rounded-sm font-bold">
         Categorías
       </h2>
       <ul className="space-y-1">
