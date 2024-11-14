@@ -142,7 +142,7 @@ const Navbar: React.FC = () => {
               <a
                 href="/marketplace"
                 className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
-                style={isActive("/marketplace") ? activeStyle : {}}
+                style={isActive("/tecito") ? activeStyle : {}}
               >
                 TECITO
               </a>

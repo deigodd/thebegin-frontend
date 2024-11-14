@@ -64,7 +64,7 @@ const HomePage: React.FC = () => {
         <div className="pb-16 sm:pb-20">
           <div className="mx-auto lg:max-w-7xl lg:px-8 px-4 sm:px-6">
             <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-              {/*Marketplace*/}
+              {/*Pilares*/}
               <HomePageCard
                 centerCard={false}
                 rowStart={1}
@@ -75,17 +75,6 @@ const HomePage: React.FC = () => {
                 cardTitle="PILARES"
                 buttonText="Descubre Nuestros Pilares"
                 cardSubtitle="Nuestros Pilares"
-              />
-              <HomePageCard
-                centerCard={false}
-                rowStart={2}
-                colStart={1}
-                imageIndex={1}
-                alt="Marketplace"
-                href="/marketplace"
-                cardTitle="MARKETPLACE"
-                buttonText="Visita el Marketplace"
-                cardSubtitle="Tu Tienda en 2 pasos"
               />
 
               <HomePageCard
@@ -100,7 +89,17 @@ const HomePage: React.FC = () => {
                 cardSubtitle="Un espacio de encuentro y apoyo colaborativo entre mujeres"
                 cardDescription="Un espacio donde podrás armar tu página web personal, para utilizarla por ejemplo, como presentación personal, muestrario de productos, servicios y actividades."
               />
-
+              <HomePageCard
+                centerCard={false}
+                rowStart={2}
+                colStart={1}
+                imageIndex={1}
+                alt="Marketplace"
+                href="/marketplace"
+                cardTitle="MARKETPLACE"
+                buttonText="Visita el Marketplace"
+                cardSubtitle="Tu Tienda en 2 pasos"
+              />
               {/*Trueque*/}
               <HomePageCard
                 centerCard={false}
