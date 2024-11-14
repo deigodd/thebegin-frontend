@@ -37,10 +37,10 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
     <>
       {centerCard ? (
         <div className={`relative lg:row-span-2 lg:col-start-2`}>
-          <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow h-full">
+          <div className="bg-white border border-gray-200 rounded-lg shadow h-full w-full lg:w-auto mx-auto">
             <a href={href}>
               <img
-                className="h-1/2 w-full object-cover rounded-t-lg"
+                className="h-1/2 object-cover rounded-t-lg"
                 src={imagesCards[imageIndex]}
                 alt={alt}
               />
@@ -60,7 +60,7 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
                 </div>
               </a>
               <h5 className="mt-4 text-2xl font-semibold">{cardSubtitle}</h5>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <p className="font-normal text-gray-700 dark:text-gray-400">
                 {cardDescription || defaultDescription}
               </p>
               <a
@@ -77,9 +77,9 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
@@ -89,9 +89,9 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
         </div>
       ) : (
         <div
-          className={`relative lg:row-start-${rowStart} lg:col-start-${colStart}`}
+          className={`relative lg:row-start-${rowStart} lg:col-start-${colStart} flex flex-col h-full w-full`}
         >
-          <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow">
+          <div className="bg-white border border-gray-200 rounded-lg shadow flex flex-col h-full w-80 mx-auto">
             <a href={href}>
               <img
                 className="rounded-t-lg"
@@ -99,7 +99,7 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
                 alt={alt}
               />
             </a>
-            <div className="relative p-5 text-center">
+            <div className="relative p-5 text-center flex-grow">
               <a href={href}>
                 <div
                   className={`absolute inset-x-0 top-0 mx-auto -mt-8 h-12 bg-white flex items-center justify-center shadow-lg ${
@@ -131,9 +131,9 @@ const HomePageCard: React.FC<HomePageCardProps> = ({
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
