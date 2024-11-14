@@ -42,15 +42,36 @@ const ProfilePresentation = () => {
   };
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen bg-[#343c3c] text-white">
-      <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/40 to-black opacity-80 pointer-events-none"></div>
+    <section className="relative flex items-center justify-center min-h-screen bg-[#343c3c] text-white overflow-hidden">
+      {/* Versión para móviles y tablets: la imagen como fondo de la sección */}
+      <div 
+        className="lg:hidden w-full h-full relative flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat p-4 space-y-4"
+        style={{
+          backgroundImage: `url('https://img.freepik.com/fotos-premium/fotografo-irreconocible-sosteniendo-camara-fotos-cinturon_201836-2732.jpg')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        
+        <div className="z-10 w-full max-w-md mx-auto space-y-4">
+          {/* AudioCard y WriteCard dentro de la pantalla en móviles y tablets */}
+          <div className="flex justify-center items-center common-border rounded-md space-y-4">
+            <AudioCard />
+          </div>
+          <div className="text-3xl sm:text-4xl font-semibold">{userProfile.name}</div>
+          <p className="text-sm sm:text-base mt-2 tracking-widest">{userProfile.role}</p>
+          <p className="text-sm sm:text-base">{userProfile.pname}</p>
+          <div className="flex justify-center items-center common-border rounded-md space-y-4">
+            <WriteCard />
+          </div>
+        </div>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center w-full max-w-full h-full relative z-10">
+      {/* Versión para pantallas grandes (lg en adelante): diseño original */}
+      <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-3 items-center w-full max-w-full h-full relative gap-8 px-8">
         <div className="flex justify-center items-center common-border rounded-md space-y-4 w-full h-auto">
           <AudioCard />
         </div>
-
-        <div className="relative flex flex-col items-center text-center object-cover max-h-full h-full">
+        <div className="relative flex flex-col items-center text-center object-cover max-h-full h-screen">
           <img 
             src="https://img.freepik.com/fotos-premium/fotografo-irreconocible-sosteniendo-camara-fotos-cinturon_201836-2732.jpg" 
             alt="Sofía Monteverde" 
@@ -63,9 +84,8 @@ const ProfilePresentation = () => {
           </div>
           <p className="text-sm sm:text-base absolute bottom-4">{userProfile.pname}</p>
         </div>
-
         <div className="flex justify-center items-center common-border rounded-md space-y-4 w-full h-auto">
-          <WriteCard/>
+          <WriteCard />
         </div>
       </div>
     </section>

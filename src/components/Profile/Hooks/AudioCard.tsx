@@ -29,12 +29,12 @@ const AudioCard: React.FC<AudioCardProps> = ({ defaultInnerImageUrl = 'default-i
   };
 
   return (
-    <div className="relative border border-gray-400 w-[500px] h-[700px] max-h-[650px] rounded-lg shadow-xl overflow-hidden flex flex-col justify-between items-center p-4 common-border">
+    <div className="relative border border-gray-400 w-[450px] h-[700px] max-h-[600px] rounded-lg shadow-xl overflow-hidden flex flex-col justify-between items-center p-4 common-border">
       {/* Imagen interna */}
-      <div className="relative w-full h-[60%] overflow-hidden rounded-lg mb-4 shadow-md">
-        <img src={innerImageUrl} alt="Inner" className="w-full h-full object-cover rounded-lg" />
+      <div className="relative w-full h-[60%] overflow-hidden rounded-lg mb-4">
+        <img src={innerImageUrl} alt="Inner" className="object-cover rounded-lg w-full h-full" />
         
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity rounded-lg">
+        <div className="absolute inset-0 flex items-center justify-center pt-4 px-10 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
           <label className="text-white cursor-pointer text-lg">
             Cambiar imagen
             <input
@@ -47,14 +47,15 @@ const AudioCard: React.FC<AudioCardProps> = ({ defaultInnerImageUrl = 'default-i
         </div>
       </div>
 
+
       {/* Texto */}
-      <div className="text-gray-500 text-center w-full mb-3">
+      <div className="text-gray-500 text-center w-full mb-5">
         <h1 className="text-3xl font-semibold">¡Hola!</h1>
         <p className="text-lg font-light">Me presento</p>
       </div>
 
       {/* Controles de audio */}
-      <div className="flex items-center justify-center gap-6 text-gray-500">
+      <div className="flex items-center justify-center gap-6 text-gray-500 mb-8">
         <button className="text-2xl">
           <FaBackward />
         </button>

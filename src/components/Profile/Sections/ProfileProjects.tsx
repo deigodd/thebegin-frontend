@@ -1,17 +1,56 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import WriteCard from '../Hooks/WriteCard';
 import { PiStarFourFill } from "react-icons/pi";
 import itemData from '../../../data/itemData.json';
+import ChangeImage from '../Hooks/ChangeImage';
+
+interface UserProfile {
+  name: string;
+  pname: string;
+  role: string;
+  image: string;
+}
 
 const ProfileProjects: React.FC = () => {
-  return (
-    <section className="flex items-center justify-center min-h-screen bg-[#242c34]">
-      <div className="flex w-full h-full">
+  const [userProfile, setUserProfile] = useState<UserProfile>({
+    name: 'Sofía Monteverde',
+    pname: '@sofiamonteverde',
+    image: 'https://lh3.googleusercontent.com/pelsDJaccSJIJBNMCsrXAJpC3A0AMdY53PXs6uYjfP_YwDj64thnVVHxNiuvTDp07xYFzPvFs95VVv_4N4upBTmx45NM8-IhTuBKBrAPfndn19XtXNA-79TpyIs7PoPYYEHv23Uy',
+    role: 'Fotógrafa',
+  });
 
-        {/* Primer div (lado izquierdo) */}
-        <div className="flex-1 flex justify-center text-center text-xl font-semibold text-gray-700 mb-4">
+  useEffect(() => {
+    const savedImage = localStorage.getItem('profileImage');
+    const savedRole = localStorage.getItem('userRole');
+
+    setUserProfile((prevProfile) => ({
+      ...prevProfile,
+      image: savedImage || prevProfile.image,
+      role: savedRole || prevProfile.role,
+    }));
+  }, []);
+
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result as string;
+        setUserProfile((prevProfile) => ({ ...prevProfile, image: result }));
+        localStorage.setItem('profileImage', result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  return (
+    <section className="relative flex items-center min-h-screen bg-[#242c34]">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full h-screen gap-3 relative">
+
+        {/* Primera columna, siempre visible */}
+        <div className="flex flex-col rounded-lg ml-10 justify-center items-center h-screen">
           <ul className="space-y-2">
-            <h2 className='text-white mb-4 text-4xl'>Sesiones</h2> {/* Título más grande */}
+            <h2 className="text-white mb-4 text-4xl">Sesiones</h2> {/* Título más grande */}
             {itemData.items.map((item) => (
               <li key={item.id} className="flex items-center">
                 <PiStarFourFill className="text-white mr-5" /> {/* Ícono personalizado */}
@@ -21,12 +60,37 @@ const ProfileProjects: React.FC = () => {
           </ul>
         </div>
 
-        {/* Línea vertical para separar ambos divs */}
-        <div className="hidden sm:block w-px bg-white h-full" />
+        {/* Columnas de las imágenes (ocultas en pantallas pequeñas) */}
+        <div className="grid grid-cols-3 rounded-lg gap-2 mr-10 h-screen hidden sm:grid">
+          
+          {/* Segunda columna */}
+          <div className="bg-red-700 rounded-b-3xl min-h-[150px] col-span-2 ml-5 overflow-hidden"></div>
 
-        {/* Segundo div (lado derecho) */}
-        <div className="flex-1 flex justify-center text-center text-2xl font-semibold text-gray-700 mb-4">
-          <WriteCard />
+          {/* Tercera columna */}
+          <div className="bg-purple-700 rounded-b-3xl min-h-[150px] overflow-hidden mr-10"></div>
+
+          {/* Columna de imagen de perfil */}
+          <div className="bg-red-700 rounded-3xl min-h-[200px] overflow-hidden ml-5">
+            {/* Profile image */}
+            <img src={userProfile.image} alt="Profile" className="object-cover w-full h-full rounded-3xl" />
+          </div>
+
+          {/* Columna con texto */}
+          <div className="rounded-lg bg-blue-950 min-h-[200px] col-span-2 mr-10 flex flex-col items-end justify-center text-white">
+            <h2 className="text-4xl font-light tracking-wide">{userProfile.role}</h2>
+            {['APASIONADA', 'CURIOSA', 'INQUIETA'].map((word, index) => (
+              <p key={index} className="text-lg tracking-widest">{word}</p>
+            ))}
+          </div>
+
+          {/* Más columnas con imágenes */}
+          <div className="bg-red-700 rounded-3xl min-h-[250px] overflow-hidden mb-5 ml-5">
+            <ChangeImage />
+          </div>
+          <div className="bg-red-700 rounded-t-3xl min-h-[250px] col-span-2 overflow-hidden mr-10">
+            <ChangeImage />
+          </div>
+
         </div>
 
       </div>
