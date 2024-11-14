@@ -11,7 +11,7 @@ import ProfileMarketplace from '../components/Profile/Sections/ProfileMarketplac
 import ProfileMembership from '../components/Profile/Sections/ProfileMembership';
 import ProfileCalendar from '../components/Profile/Sections/ProfileCalendar';
 import ProfileNews from '../components/Profile/Sections/ProfileNews';
-import ProfileContact from '../components/Profile/Sections/ProfileContact';
+import ProfileContact from '../components/Profile/SectionsVegan/ProfileContact';
 import ProfilePresentation from '../components/Profile/Sections/ProfilePresentation';
 //import { profileData } from '../data/profileData';
 //import ProfileHeader from '../components/Profile/SectionsVegan/ProfileHeader';
