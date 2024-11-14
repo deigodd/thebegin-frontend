@@ -8,7 +8,7 @@ import { Card } from "flowbite-react";
 import videoHome from "../assets/que_es_tb_720p.mp4";
 import videoTheBegin from "../assets/thebegin.mp4";
 import comunidadVideo from "../assets/comunidadVideo.mp4";
-import iconSvg from "../assets/icons/tb-icon-fill.svg";
+import iconSvg from "../assets/icons/svg/tb-icon-fill-gray.svg";
 
 const HomePage: React.FC = () => {
   const [isNavbarFixed, setIsNavbarFixed] = useState(true);
