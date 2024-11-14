@@ -1,4 +1,4 @@
-interface PilarDataProps {
+interface PilarData {
   id: number;
   name: string;
   image: string;
@@ -8,19 +8,23 @@ interface PilarDataProps {
     tertiary: string;
   };
 }
+interface PilarMarketProps {
+  pilar: PilarData;
+}
 
-const PilarMarketImage: React.FC<PilarDataProps> = ({ name, image, colors }) => {
+const PilarMarketImage: React.FC<PilarMarketProps> = ({ pilar }) => {
+  const {name, image, colors} = pilar;
   return (
     <div
-      className="md:w-1/4 relative aspect-[3/4] rounded-lg overflow-hidden"
+      className="md:w-56 h-full relative rounded-sm overflow-hidden"
       style={{
-        background: `linear-gradient(to bottom, ${colors.primary}, ${colors.secondary})`
+        /*background: `linear-gradient(to bottom, ${colors.primary}, ${colors.secondary})`*/
       }}
     >
       <img
         src={image}
         alt={name}
-        className="object-cover w-full h-full"
+        className="object-cover w-full h-56 md:h-full"
       />
       <div
         className="absolute inset-0 flex items-end p-6"

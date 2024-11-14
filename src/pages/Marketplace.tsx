@@ -1,31 +1,53 @@
-import React from 'react';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
-import CategoriesSidebar from '../components/CategoriesSidebar';
-import MarketContent from '../components/Marketplace/MarketContent';
+import CategoriesSidebar from '../components/Marketplace/Sidebar/CategoriesSidebar';
 import Footer from '../components/Footer/Footer';
 import PilarTemplate from '../components/Marketplace/Pilares Market/PilarTemplate';
 import PilarTemplate2 from '../components/Marketplace/Pilares Market/PilarTemplate2';
 import MarketProducts from '../components/Marketplace/MarketProduts';
+import MarketSearchBar from '../components/Marketplace/MarketSearchBar/MarketSearchBar';
+import MarketVisual from '../components/Marketplace/MarketVisual';
+import backgroundImage from '../assets/background-marketplace.svg'
+import Test from '../components/Marketplace/test'
+
 
 const Marketplace: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
   return (
-    <div className="bg-[#f8f4f0] flex flex-col min-h-screen">
+    <div className='bg-[#f8f4f0]'
+    style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
       <Navbar />
-      <div className="flex justify-around space-x-8 items-start flex-col md:flex-row flex-1 p-1 md:p-4 md:px-10">
-        <div className="">
-          <CategoriesSidebar />
-        </div>
-        <div className="flex flex-col grow space-y-4">
-          <MarketContent />
-        </div>
-      </div>
-      <div className="flex flex-col space-y-4 md:p-4 md:px-10">
-          <MarketProducts />
-          <PilarTemplate pilarId={1} />
-          <PilarTemplate2 pilarId={2} />
-          <PilarTemplate pilarId={3} />
-          <PilarTemplate2 pilarId={4} />
-          <PilarTemplate pilarId={5} />
+        <div className="flex flex-col justify-self-center w-full md:max-w-7xl md:mt-1">
+          <div className='flex md:space-x-1 w-full'>
+            <div className="">
+              <CategoriesSidebar />
+            </div>
+            <div className="flex-1">
+              <div className='z-30'>
+                <MarketSearchBar onCategorySelect={setSelectedCategory}/>
+              </div>
+              <div className='hidden md:block z-10'>
+                <MarketVisual/> 
+              </div>         
+            </div>
+          </div>
+          <div className='w-full md:hidden'>
+            <MarketVisual/>  
+          </div>
+          <div className='flex flex-col space-y-8 mt-8'>
+            <Test/>
+            <MarketProducts selectedCategory={selectedCategory}/>
+            <PilarTemplate pilarId={1} />
+            <PilarTemplate2 pilarId={2} />
+            <PilarTemplate pilarId={3} />
+            <PilarTemplate2 pilarId={4} />
+            <PilarTemplate pilarId={5} />
+          </div>
         </div>
       <Footer />
     </div>
