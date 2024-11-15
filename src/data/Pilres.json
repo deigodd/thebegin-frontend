@@ -3,7 +3,7 @@
       {
         "id": 1,
         "name": "Arte con sentido",
-        "image": "",
+        "image": "https://images.pexels.com/photos/5935419/pexels-photo-5935419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "colors": {
           "primary": "#4e1040",
           "secondary": "#714066",
@@ -14,7 +14,7 @@
       {
         "id": 2,
         "name": "Consumo con sentido",
-        "image": "",
+        "image": "https://images.pexels.com/photos/8530883/pexels-photo-8530883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "colors": {
           "primary": "#728756",
           "secondary": "#8e9f78",
@@ -25,7 +25,7 @@
       {
         "id": 3,
         "name": "Bienestar",
-        "image": "",
+        "image": "https://images.pexels.com/photos/28437416/pexels-photo-28437416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "colors": {
           "primary": "#dc8954",
           "secondary": "#e3a176",
@@ -36,7 +36,7 @@
       {
         "id": 4,
         "name": "Salud mental",
-        "image": "",
+        "image": "https://images.pexels.com/photos/5761054/pexels-photo-5761054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "colors": {
           "primary": "#cfa746",
           "secondary": "#d9b66b",
@@ -47,7 +47,7 @@
       {
         "id": 5,
         "name": "Medio ambiente",
-        "image": "",
+        "image": "https://images.pexels.com/photos/6303385/pexels-photo-6303385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "colors": {
           "primary": "#7e685f",
           "secondary": "#98867f",

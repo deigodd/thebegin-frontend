@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { MatchGrid } from "./MatchGrid";
 import { ProfileDialog } from "./MatchGrid";
-import { User, MOCK_USERS } from "../../data/User";
+import { User, MOCK_USERS } from "../../types/User";
 
 interface MatchProps {
   searchQuery: string; // Adding searchQuery as a prop
