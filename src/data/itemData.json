@@ -1,0 +1,28 @@
+{
+    "items": [
+      {
+        "id": "1",
+        "sections": "MODA Y PRODUCTO"
+      },
+      {
+        "id": "2",
+        "sections": "RETRATOS FIN ART"
+      },
+      {
+        "id": "3",
+        "sections": "RETRATO PROFESIONAL"
+      },
+      {
+        "id": "4",
+        "sections": "BOOK DE MODELO"
+      },
+      {
+        "id": "5",
+        "sections": "QUINCEAÑERAS"
+      },
+      {
+        "id": "6",
+        "sections": "RETRATOS FAMILIARES"
+      }
+    ]
+  }
