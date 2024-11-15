@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Match from "../components/Match/Match";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Match/Banner";
-import { SearchBar2 } from "../components/SearchBar/SearchBar2";
+import { SearchBar2 } from "../components/SearchBar/SearchBar";
 import { ActivityHeader } from "../components/Match/ActivityHeader";
 import Footer from "../components/Footer/Footer";
 
