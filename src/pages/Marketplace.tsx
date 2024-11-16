@@ -9,7 +9,7 @@ import MarketSearchBar from '../components/Marketplace/MarketSearchBar/MarketSea
 import MarketVisual from '../components/Marketplace/MarketVisual';
 import backgroundImage from '../assets/background-marketplace.svg'
 import Offers from '../components/Marketplace/Offers'
-
+import TheBeginMarketProducts from '../components/Marketplace/TheBeginMarketProducts'
 
 const Marketplace: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -40,6 +40,7 @@ const Marketplace: React.FC = () => {
             <MarketVisual/>  
           </div>
           <div className='flex flex-col space-y-8 mt-8'>
+            <TheBeginMarketProducts selectedCategory={"Producto"}/>
             <Offers/>
             <MarketProducts selectedCategory={selectedCategory}/>
             <PilarTemplate pilarId={1} />
