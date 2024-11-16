@@ -21,7 +21,7 @@ const Offers: React.FC = () => {
         : products;
 
     return (
-    <div className="relative grid grid-cols-1 gap-5 rounded-md sm:grid-flow-row-dense lg:grid-cols-3">
+    <div className="relative grid grid-cols-1 md:gap-5 rounded-md sm:grid-flow-row-dense lg:grid-cols-3">
         <div className='bg-red-600 w-72 absolute h-16 rounded-full z-10 left-0 -top-4'>
         </div>
         <div className="bg-white grid col-span-2 z-20 shadow-lg">
