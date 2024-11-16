@@ -6,8 +6,6 @@ const ProfileContact = () => {
 
     <div className="min-h-screen bg-tbc-primarybrown-100 flex flex-col">
       
-
-
       <section 
   className="font-sans antialiased leading-normal tracking-wider" 
   style={{
@@ -27,7 +25,7 @@ const ProfileContact = () => {
           backgroundPosition: 'center',
         }}
       >
-        {/* Aquí podrías agregar otros elementos si es necesario, por ejemplo, un texto sobre la imagen */}
+        {/* Aqui se podria agregar otros elementos si es necesario, por ejemplo, un texto sobre la imagen */}
       </div>
     </div>
   </div>
@@ -39,7 +37,7 @@ const ProfileContact = () => {
           <div className="text-center">
           <h1 className="flex justify-center items-center font-bold text-6xl mb-4">
               <span className="mr-2 font-serif text-white">Ribero</span>
-              <span className="font-sans">Analia</span>
+              <span className="font-serif">Analia</span>
             </h1>
           </div>
 

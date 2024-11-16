@@ -10,7 +10,7 @@ import ProfileMembership from '../components/Profile/Sections/ProfileMembership'
 import ProfileCalendar from '../components/Profile/Sections/ProfileCalendar';
 import ProfileNews from '../components/Profile/Sections/ProfileNews';
 import ProfileContact from '../components/Profile/SectionsVegan/ProfileContact';
-import ProfilePresentation from '../components/Profile/Sections/ProfilePresentation';
+import ProfilePresentation from '../components/Profile/SectionsVegan/ProfilePresentation';
 import ProfileProjects from '../components/Profile/SectionsVegan/ProfileProjects';
 import ProfileHeader2 from '../components/Profile/SectionsVegan/ProfileHeader';
 
