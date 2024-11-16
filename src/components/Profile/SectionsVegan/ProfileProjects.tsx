@@ -37,7 +37,7 @@ const ProfileProject = () => {
         <div className="space-y-6 mt-16">
           <div>
             <h2 className="text-[#2C4A3B] text-3xl font-serif mb-2">¿Porqué tener una huerta?</h2>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-xl ">
               Es una forma sana, natural y económica de producir alimentos sanos durante todo el año.
             </p>
           </div>
