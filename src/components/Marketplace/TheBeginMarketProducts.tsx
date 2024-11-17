@@ -17,14 +17,14 @@ const MarketProducts: React.FC<{ selectedCategory: string | null }> = ({ selecte
         : products;
 
     return (
-        <div className='grid grid-cols-4 grid-rows-3 bg-tbc-secondarybrown-200'>
+        <div className='grid grid-cols-4 grid-rows-2 bg-tbc-secondarybrown-200'>
             <div className="col-span-3 row-span-3">
                 {filteredProducts.slice(0,1).map((product) => (
                     <TheBeginCard key={product.id} product={product} />
                 ))}
             </div>
-            <div className="h-80">
-                {filteredProducts.slice(1,4).map((product) => (
+            <div className="h-40 sm:h-80">
+                {filteredProducts.slice(1,3).map((product) => (
                     <TheBeginCard key={product.id} product={product} />
                 ))}
             </div>
