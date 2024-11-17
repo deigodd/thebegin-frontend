@@ -59,7 +59,7 @@ const PilarProducts: React.FC<PilarProductsProps> = ({ pilarId, colors }) => {
         onPrevPage={prevPage}
         onNextPage={nextPage}
       />
-      <div className="grid h-7xl grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid h-7xl grid-cols-2 grid-rows-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {currentProducts.map((product) => (
           <SmallCards key={product.id} product={product} />
         ))}
