@@ -20,7 +20,7 @@ const ProfileContact = () => {
       <div 
         className="flex flex-col items-center justify-center text-center w-96 h-96 rounded-full bg-cover"
         style={{
-          backgroundImage: `url(https://img.freepik.com/fotos-premium/fotografo-irreconocible-sosteniendo-camara-fotos-cinturon_201836-2732.jpg)`,
+          backgroundImage: `url(https://cdn.pixabay.com/photo/2019/11/06/05/57/woman-4605248_1280.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
