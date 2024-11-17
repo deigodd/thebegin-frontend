@@ -1,16 +1,77 @@
-import React from 'react'
+//import React from 'react';
+import Background from '../Hooks/BackgroundImage';
+import CardPresentation from '../Hooks/CardPresentation';
+import Checkbox from '../Hooks/CheckBox';
 
-type Props = {}
+const searches = [
+  "Proveedoras de macetas",
+  "Jardinera ornamental",
+  "Proveedora de tierra para cactus",
+  "Asistente para mantenimiento de hinvernadero"
+];
 
-const ProfileNews = (props: Props) => {
+const ProfileNews = () => {
   return (
-    <section className="flex items-center justify-center min-h-screen bg-gray-900 p-10">
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-white mb-4">Noticias</h2>
-            <p className="text-white">Sección para comunicados, pedidos y ofrecimientos con opción de respuesta.</p>
+    <Background>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="container max-w-5xl px-4 py-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Columna izquierda - News */}
+            <CardPresentation
+              title='NEWS'
+              className="bg-[#D0B7A5]"
+              titleTextColor="text-white"
+              contentTextColor="text-[#836D63]"
+            >
+              <ul className="space-y-4 font-serif text-xl divide-y divide-[#836D63]/30">
+                <li className="flex items-center space-x-3 py-2 cursor-pointer ">
+                  <span className="w-2 h-2 rounded-full bg-[#E4D9D3]"></span>
+                  <span className='text-[#6E5B51] hover:text-white transition-colors'>AVISOS</span>
+                </li>
+                <li className="flex items-center space-x-3 py-2 cursor-pointer ">
+                  <span className="w-2 h-2 rounded-full bg-[#E4D9D3]"></span>
+                  <span className='text-[#6E5B51] hover:text-white transition-colors'>BÚSQUEDAS</span>
+                </li>
+                <li className="flex items-center space-x-3 py-2 cursor-pointer ">
+                  <span className="w-2 h-2 rounded-full bg-[#E4D9D3]"></span>
+                  <span className='text-[#6E5B51] hover:text-white transition-colors'>PEDIDOS</span>
+                </li>
+                <li className="flex items-center space-x-3 py-2 cursor-pointer ">
+                  <span className="w-2 h-2 rounded-full bg-[#E4D9D3]"></span>
+                  <span className='text-[#6E5B51] hover:text-white transition-colors'>OTROS</span>
+                </li>
+              </ul>
+            </CardPresentation>
+            
+            {/* Columna derecha - Búsquedas */}
+            <div className="space-y-10 bg-white/40 p-5">
+              <h2 className="font-serif text-3xl mb-6 text-[#718755]">Búsquedas</h2>
+              <div className="space-y-4">
+                {searches.map((search, index) => (
+                  <div 
+                    key={index}
+                    className="bg-[#718755] text-white cursor-pointer hover:bg-[#3A5331] transition-colors"
+                  >
+                    <div className="flex items-center p-4 gap-4">
+                      <div className="flex-shrink-0 w-8 px-7">
+                        <Checkbox />
+                      </div>
+                      <span className=" ">{search}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="pt-4">
+                <button className="w-full font-serif text-xl bg-[#877869] text-white p-4 hover:bg-[#665B52] transition-colors">
+                  CONSULTAR
+                </button>
+              </div>
+            </div>
           </div>
-    </section>
-  )
-}
+        </div>
+      </div>
+    </Background>
+  );
+};
 
-export default ProfileNews
+export default ProfileNews;
