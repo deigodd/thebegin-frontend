@@ -1,4 +1,7 @@
 import Product from '../../types/Product'
+import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
+import PopUpCard from './PopUpCard';
 
 interface ProductCardProps {
     product: Product;
@@ -6,9 +9,15 @@ interface ProductCardProps {
 
 const TheBeginCard: React.FC<ProductCardProps> = ({ product }) => {
     const { name, price, originalPrice, discount, imageUrl } = product;
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const handleOpenPopup = () => setIsPopupOpen(true);
+    const handleClosePopup = () => setIsPopupOpen(false);
+
 
     return (
-        <div className="relative group bg-white w-full h-full overflow-hidden">
+    <div className='h-full w-full'>
+        <div className="relative group bg-white w-full h-full overflow-hidden" onClick={handleOpenPopup} >
             <div className="grid object-cover w-full h-full group-hover:translate-y-[-70%] sm:group-hover:translate-y-[-30%] transition-transform duration-500 ease-in-out"
                 style={{
                     backgroundImage: `url(${imageUrl})`,
@@ -35,6 +44,22 @@ const TheBeginCard: React.FC<ProductCardProps> = ({ product }) => {
                 </div>
             </div>
         </div>
+
+        {isPopupOpen && ReactDOM.createPortal(
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-tbc-primaryred-600 bg-opacity-50">
+            <div className="relative mr-80 md:mr-96 mb-96 scale-90">
+                <PopUpCard product={product} />
+                <button 
+                    onClick={handleClosePopup} 
+                    className="bg-tbc-primarybrown-500 w-10 h-10 rounded-full absolute top-0 right-0 text-white text-xl font-bold"
+                >
+                    ×
+                </button>
+            </div>
+        </div>,
+        document.body
+        )}
+    </div>
     )
 }
 export default TheBeginCard;
