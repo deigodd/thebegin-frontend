@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import PilarNav from './PilarMarketNav'
 import PilarImage from './PilarMarketImage'
 import PilarMarketProducts from '../Pilares Market/PilarProduts'
 
@@ -43,12 +42,13 @@ const PilarTemplate: React.FC<PilarTemplateProps> = ({pilarId}) => {
 
 
   return (
-    <div className="w-full  space-y-4">
+    <div id={pilarData.name.toLowerCase().replace(/\s+/g, '-')} className="w-full space-y-4">
       <div className="flex flex-col md:flex-row gap-1">
+      <span>
       <PilarImage pilar={pilarData}/>
-        <div className="">
-            <PilarNav colors={pilarData.colors}/>
-            <PilarMarketProducts pilarId={pilarData.id}/>
+      </span>
+        <div className="grow">
+            <PilarMarketProducts pilarId={pilarData.id} colors={pilarData.colors}/>
         </div>
       </div>
     </div>

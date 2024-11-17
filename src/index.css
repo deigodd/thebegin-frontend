@@ -14,3 +14,7 @@
 .hidden-navbar {
   top: -100px; /* Ajusta este valor según la altura de tu navbar */
 }
+
+.carousel-slide {
+  transition: transform 0.5s ease-in-out;
+}
