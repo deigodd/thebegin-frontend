@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TheBeginCard from '../ProductCards/TheBeginCard';
 import Product from '../../types/Product';
 
-const MarketProducts: React.FC<{ selectedCategory: string | null }> = ({ selectedCategory }) => {
+const MarketProducts: React.FC<{ selectedCategory: number | null }> = ({ selectedCategory }) => {
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const MarketProducts: React.FC<{ selectedCategory: string | null }> = ({ selecte
     }, []);
 
     const filteredProducts = selectedCategory
-        ? products.filter(product => product.category === selectedCategory)
+        ? products.filter(product => product.pilar === selectedCategory)
         : products;
 
     return (
