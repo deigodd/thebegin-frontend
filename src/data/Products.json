@@ -371,7 +371,7 @@
             "imageUrl": "https://github.com/deigodd/thebegin-frontend/blob/feature/Market/Update/src/assets/TB-Products/set_trabajo.png?raw=true",
             "rankingSales": 145,
             "isLimited": false,
-            "pilar": 0,
+            "pilar": 777,
             "category": "Producto"
         },
         {
@@ -385,7 +385,7 @@
             "imageUrl": "https://github.com/deigodd/thebegin-frontend/blob/feature/Market/Update/src/assets/TB-Products/polera.png?raw=true",
             "rankingSales": 110,
             "isLimited": false,
-            "pilar": 0,
+            "pilar": 777,
             "category": "Servicio"
         },
         {
@@ -400,7 +400,7 @@
             "imageUrl": "https://github.com/deigodd/thebegin-frontend/blob/feature/Market/Update/src/assets/TB-Products/cuaderno.png?raw=true",
             "rankingSales": 65,
             "isLimited": true,
-            "pilar": 0,
+            "pilar": 777,
             "category": "Servicio"
         },
         {
@@ -415,7 +415,7 @@
             "imageUrl": "https://github.com/deigodd/thebegin-frontend/blob/feature/Market/Update/src/assets/TB-Products/taza.png?raw=true",
             "rankingSales": 65,
             "isLimited": true,
-            "pilar": 0,
+            "pilar": 777,
             "category": "Servicio"
         },
         {
@@ -429,7 +429,7 @@
             "imageUrl": "https://github.com/deigodd/thebegin-frontend/blob/feature/Market/Update/src/assets/TB-Products/tote.png?raw=true",
             "rankingSales": 110,
             "isLimited": false,
-            "pilar": 0,
+            "pilar": 777,
             "category": "Servicio"
         }
     ]
