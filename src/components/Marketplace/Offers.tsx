@@ -3,7 +3,7 @@ import LargeCards from '../ProductCards/LargeProductCard';
 import MediumCards from '../ProductCards/MediumProductCard';
 import ExtraSmallCards from '../ProductCards/ExtraSmallProductCard';
 import Product from '../../types/Product';
-import logo from '../../assets/icons/svg/tb-icon-fill-brown.svg'
+import logo from '../../assets/icons/svg/tb-icon-fill-white.svg'
 
 const Offers: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
@@ -43,7 +43,7 @@ const Offers: React.FC = () => {
         </div>
 
         <div className="bg-white shadow-lg">
-            <div className='flex bg-purple-300 p-2 pl-4 text-tbc-primarybrown-600 font-bold text-center'>
+            <div className='flex bg-purple-300 p-2 pl-4 text-white font-bold text-center'>
             <img src={logo} className='w-12'></img>
                 <span className='ml-4 pt-2'>MÁS VENDIDOS</span>
             </div>
