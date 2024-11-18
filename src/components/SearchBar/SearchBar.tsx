@@ -8,7 +8,7 @@ const SearchBar: React.FC<{ onCategorySelect: (category: string) => void }> = ({
   };
 
   return (
-    <div className="flex scale-75 md:scale-100 w-full z-20">
+    <div className="flex scale-75 lg:scale-100 w-full z-20">
       <CategoriesSearchBar onSelectCategory={handleCategorySelect} />
       <Bar />
       <SearchButton />

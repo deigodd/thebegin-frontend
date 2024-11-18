@@ -55,20 +55,20 @@ const FeaturedProduct: React.FC<FeaturedProductProps> = ({ product }) => {
   );
 
   return (
-    <div className="relative flex flex-col md:flex-row gap-8 p-6 bg-white rounded-lg ">
+    <div className="relative flex flex-col md:flex-row pt-12 gap-8 px-6 bg-white rounded-sm scale-95 ">
         <div className="w-80 h-96">
             <img 
             src={product.imageUrl} 
             alt={product.name}
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-sm"
             />
         </div>
         {product.discount && (
-            <span className="absolute top-2 right-2 bg-tbc-primaryred-600 text-white text-sm font-bold px-2 py-4 rounded-full">
+            <span className="absolute top-10 right-10 bg-tbc-primaryred-600 text-white text-sm font-bold px-2 py-4 rounded-full">
                 -{product.discount}%
             </span>
         )}
-        <div className="md:w-1/2 grid items-between space-y-2">
+        <div className="md:w-1/2 grid mt-6">
             <div className='space-y-2'>
                     <h2 className="text-3xl font-bold text-tbc-primaryred-600">{product.name}</h2>
                     <hr className="border-2 border-tbc-secondarygray-600 my-2" />
