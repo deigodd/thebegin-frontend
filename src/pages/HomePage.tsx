@@ -5,12 +5,12 @@ import HomePageCard from "../components/HomePage/HomePageCard";
 import PageSeparator from "../components/PageSeparator";
 import backgroundImage from "../assets/background-home.svg";
 import { Card } from "flowbite-react";
-import videoHome from "../assets/que_es_tb_720p.mp4";
-import videoTheBegin from "../assets/thebegin.mp4";
-import comunidadVideo from "../assets/comunidadVideo.mp4";
+import videoHome from "../assets/Home/que_es_tb_720p.mp4";
+import videoTheBegin from "../assets/Home/thebegin.mp4";
+import comunidadVideo from "../assets/Home/comunidadVideo.mp4";
 import iconSvg from "../assets/icons/svg/tb-icon-outline-orange.svg";
 import CommunitySectionCard from "../components/HomePage/CommunitySectionCard";
-import poleraTB from "../assets/poleraTB.png";
+import poleraTB from "../assets/Home/poleraTB.png";
 import ProductCard from "../components/HomePage/ProductCard";
 
 const HomePage: React.FC = () => {
@@ -151,7 +151,7 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/hands.jpg"
+                imgSrc="/src/assets/Home/hands.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   ¿Qué es y para qué TB?
@@ -168,7 +168,7 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/hands.jpg"
+                imgSrc="/src/assets/Home/hands.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Como funciona TB
@@ -185,7 +185,7 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/hands.jpg"
+                imgSrc="/src/assets/Home/hands.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Beneficios para ti

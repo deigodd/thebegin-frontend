@@ -1,8 +1,8 @@
 import React from "react";
-import pilarImage from "../../assets/hands.jpg";
-import marketImage from "../../assets/marketplace-home.jpg";
-import truequeImage from "../../assets/trueque-home.jpg";
-import festImage from "../../assets/fest-home.jpg";
+import pilarImage from "../../assets/Home/hands.jpg";
+import marketImage from "../../assets/Home/marketplace-home.jpg";
+import truequeImage from "../../assets/Home/trueque-home.jpg";
+import festImage from "../../assets/Home/fest-home.jpg";
 
 interface HomePageCardProps {
   centerCard: boolean;

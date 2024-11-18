@@ -5,6 +5,8 @@ import Marketplace from "./pages/Marketplace";
 import HomePage from "./pages/HomePage";
 import PageTitle from "./components/App/PageTitle";
 import TheBegin from "./pages/TheBeginPage"
+import Login from "./pages/Login";
+
 //import Activity from "./pages/Activity";
 
 // Mantener el orden, ty
@@ -50,6 +52,13 @@ const App: React.FC = () => {
             <>
               <TheBegin />
               <PageTitle title="The Begin" />
+        {/* Ruta del Login */}
+        <Route
+          path="/login"
+          element={
+            <>
+              <Login />
+              <PageTitle title="Iniciar Sesión" />
             </>
           }
         />
