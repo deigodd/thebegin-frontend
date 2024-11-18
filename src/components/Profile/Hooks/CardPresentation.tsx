@@ -28,7 +28,7 @@ const CardPresentation = ({
 }: CardPresentationProps) => {
   if (image) {
     return (
-      <div className={`${bgColor}  ${className}`}>
+      <div className={`${bgColor}  ${className} transition-transform hover:scale-105`}>
         <div className="h-64 w-full relative overflow-hidden">
           <img 
             src={image} 
@@ -42,7 +42,7 @@ const CardPresentation = ({
   }
 
   return (
-    <div className={`${bgColor} p-8 ${className}`}>
+    <div className={`${bgColor} p-8 ${className} transition-transform hover:scale-105`}>
       {title && (
         <h2 className={`${titleTextColor} text-3xl font-serif mb-4`}>
           {title}

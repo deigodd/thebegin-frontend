@@ -9,7 +9,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ data }) => {
     const { title, image } = data;
 
     return (
-        <div className="relative overflow-hidden  shadow-md bg-[#f3f0ea] border border-[#d8d4ce] transition-transform hover:scale-105">
+        <div className="relative overflow-hidden shadow-md bg-[#f3f0ea] border border-[#d8d4ce] transition-transform hover:scale-105">
             <div className="aspect-square relative  ">
                 <img
                     src={image}

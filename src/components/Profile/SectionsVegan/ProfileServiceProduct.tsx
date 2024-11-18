@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ActivitiesPageLayout from '../Hooks/ColumnService';
+import ActivitiesPageLayout from '../Hooks/ServiceProduct/ColumnService';
 import PopupForm from '../Hooks/PopupForm'; // Asegúrate de tener este componente importado
 
 const ActivitiesPage: React.FC = () => {
@@ -20,7 +20,7 @@ const ActivitiesPage: React.FC = () => {
     { title: 'Frutillas', 
       image: 'https://cdn.pixabay.com/photo/2020/05/22/19/42/strawberry-5206853_1280.jpg' },
     { title: 'Taller de Poda', 
-      image: 'https://cdn.pixabay.com/photo/2016/04/18/11/45/shear-1336374_1280.jpg' },
+      image: 'https://images.pexels.com/photos/4503269/pexels-photo-4503269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
     { title: 'Mermeladas Caseras', 
       image: 'https://cdn.pixabay.com/photo/2017/09/12/20/22/jam-2743531_1280.jpg' },
   ];

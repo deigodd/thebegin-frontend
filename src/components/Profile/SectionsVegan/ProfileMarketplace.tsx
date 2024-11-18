@@ -19,12 +19,14 @@ const ProfileMarketplace = () => {
           </div>
           
           {/* Overlay content */}
-          <div className="relative h-full flex items-center justify-center p-6">
+          <div className="relative h-full flex items-center justify-center p-6 ">
 
             {/* Card verde */}
             <div className="bg-tbc-pilargreen-600 p-8 text-white text-center 
                           max-w-xl backdrop-blur-sm transform transition-all duration-300
-                          hover:shadow-xl group">
+                          hover:shadow-xl group
+                          transition-transform hover:scale-105
+                          ">
               <h2 className="text-4xl font-serif mb-2 transform transition-all duration-300 
                            group-hover:translate-y-[-4px]">MI TIENDA</h2>
               <h3 className="text-4xl font-script mb-6 transform transition-all duration-300 

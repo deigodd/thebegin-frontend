@@ -19,7 +19,7 @@ const ProfileNews = () => {
             {/* Columna izquierda - News */}
             <CardPresentation
               title='NEWS'
-              className="bg-tbc-primarybrown-300"
+              className="bg-tbc-primarybrown-400"
               titleTextColor="text-white"
               contentTextColor="text-[#836D63]"
             >
@@ -44,7 +44,7 @@ const ProfileNews = () => {
             </CardPresentation>
             
             {/* Columna derecha - Búsquedas */}
-            <div className="space-y-10 bg-white/40 p-5">
+            <div className="space-y-10 bg-white/40 p-5 transition-transform hover:scale-105">
               <h2 className="font-serif text-3xl mb-6 text-[#718755]">Búsquedas</h2>
               <div className="space-y-4">
                 {searches.map((search, index) => (
