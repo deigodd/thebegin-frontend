@@ -2,7 +2,7 @@
 //import UserOptions from '../components/'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/Footer';
-import ProfileServiceProduct from '../components/Profile/Sections/ProfileServiceProduct';
+import ProfileServiceProduct from '../components/Profile/SectionsVegan/ProfileServiceProduct';
 import ProfileWorkshops from '../components/Profile/Sections/ProfileWorkshops';
 import ProfileTrueque from '../components/Profile/Sections/ProfileTrueque';
 import ProfileMarketplace from '../components/Profile/SectionsVegan/ProfileMarketplace';
@@ -27,7 +27,7 @@ const Profile2 = () => {
         <ProfileHeader2 />
         <ProfilePresentation />
         <ProfileProjects />
-        <ProfileServiceProduct />
+        <ProfileServiceProduct/>
         <ProfileWorkshops />
         <ProfileMarketplace/>
         <ProfileMembership/>
