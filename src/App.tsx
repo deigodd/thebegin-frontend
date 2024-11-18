@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
 import HomePage from "./pages/HomePage";
 import PageTitle from "./components/App/PageTitle";
+import TheBegin from "./pages/TheBeginPage"
 //import Activity from "./pages/Activity";
 
 // Mantener el orden, ty
@@ -39,6 +40,16 @@ const App: React.FC = () => {
             <>
               <Marketplace />
               <PageTitle title="Trueque" />
+            </>
+          }
+        />
+        {/* Ruta del TheBegin */}
+        <Route
+          path="/the-begin"
+          element={
+            <>
+              <TheBegin />
+              <PageTitle title="The Begin" />
             </>
           }
         />
