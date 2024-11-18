@@ -146,7 +146,7 @@ const Login: React.FC = () => {
             <p className="mt-10 text-center text-sm/6 text-gray-500">
               Se parte de The Begin,{" "}
               <a
-                href="#"
+                href="/register"
                 className="font-semibold text-tbc-pilarorange-600 hover:text-tbc-pilarorange-400"
               >
                 Registrate
