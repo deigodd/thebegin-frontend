@@ -5,6 +5,8 @@ import Marketplace from "./pages/Marketplace";
 import HomePage from "./pages/HomePage";
 import PageTitle from "./components/App/PageTitle";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
 //import Activity from "./pages/Activity";
 
 // Mantener el orden, ty
@@ -50,6 +52,26 @@ const App: React.FC = () => {
             <>
               <Login />
               <PageTitle title="Iniciar Sesión" />
+            </>
+          }
+        />
+        {/* Ruta del Register */}
+        <Route
+          path="/Register"
+          element={
+            <>
+              <Register />
+              <PageTitle title="Registrate" />
+            </>
+          }
+        />
+        {/* RUTA CONTROLADORA -> Redirige al 404 */}
+        <Route
+          path="/*"
+          element={
+            <>
+              <NotFound />
+              <PageTitle title="404 - Página no encontrada" />
             </>
           }
         />
