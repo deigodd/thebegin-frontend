@@ -151,7 +151,7 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/hands.jpg"
+                imgSrc="/src/assets/Home/hands.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   ¿Qué es y para qué TB?
@@ -168,7 +168,7 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/hands.jpg"
+                imgSrc="/src/assets/Home/hands.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Como funciona TB
@@ -185,7 +185,7 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/hands.jpg"
+                imgSrc="/src/assets/Home/hands.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Beneficios para ti
