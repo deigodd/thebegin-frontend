@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
 import HomePage from "./pages/HomePage";
 import PageTitle from "./components/App/PageTitle";
+import TheBegin from "./pages/TheBeginPage"
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
@@ -45,6 +46,13 @@ const App: React.FC = () => {
             </>
           }
         />
+        {/* Ruta del TheBegin */}
+        <Route
+          path="/the-begin"
+          element={
+            <>
+              <TheBegin />
+              <PageTitle title="The Begin" />
         {/* Ruta del Login */}
         <Route
           path="/login"
