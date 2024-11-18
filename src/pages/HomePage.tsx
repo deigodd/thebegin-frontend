@@ -8,7 +8,10 @@ import { Card } from "flowbite-react";
 import videoHome from "../assets/que_es_tb_720p.mp4";
 import videoTheBegin from "../assets/thebegin.mp4";
 import comunidadVideo from "../assets/comunidadVideo.mp4";
-import iconSvg from "../assets/icons/svg/tb-icon-fill-gray.svg";
+import iconSvg from "../assets/icons/svg/tb-icon-outline-orange.svg";
+import CommunitySectionCard from "../components/HomePage/CommunitySectionCard";
+import poleraTB from "../assets/poleraTB.png";
+import ProductCard from "../components/HomePage/ProductCard";
 
 const HomePage: React.FC = () => {
   const [isNavbarFixed, setIsNavbarFixed] = useState(true);
@@ -45,11 +48,11 @@ const HomePage: React.FC = () => {
           className="w-full h-full object-cover z-0"
         ></video>
         <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
-          <h1 className="text-white text-4xl font-bold text-center">
+          <h1 className="text-white text-7xl font-serif text-center ">
             The Begin
           </h1>
-          <h2 className="text-white text-2xl font-semibold text-center mt-2">
-            el comienzo del cuidado
+          <h2 className="text-white text-2xl font-serif text-center mt-2">
+            El Comienzo del Cuidado
           </h2>
         </div>
       </div>
@@ -64,7 +67,7 @@ const HomePage: React.FC = () => {
         <div className="pb-16 sm:pb-20">
           <div className="mx-auto lg:max-w-7xl lg:px-8 px-4 sm:px-6">
             <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-              {/*Marketplace*/}
+              {/*Pilares*/}
               <HomePageCard
                 centerCard={false}
                 rowStart={1}
@@ -75,17 +78,6 @@ const HomePage: React.FC = () => {
                 cardTitle="PILARES"
                 buttonText="Descubre Nuestros Pilares"
                 cardSubtitle="Nuestros Pilares"
-              />
-              <HomePageCard
-                centerCard={false}
-                rowStart={2}
-                colStart={1}
-                imageIndex={1}
-                alt="Marketplace"
-                href="/marketplace"
-                cardTitle="MARKETPLACE"
-                buttonText="Visita el Marketplace"
-                cardSubtitle="Tu Tienda en 2 pasos"
               />
 
               <HomePageCard
@@ -100,7 +92,17 @@ const HomePage: React.FC = () => {
                 cardSubtitle="Un espacio de encuentro y apoyo colaborativo entre mujeres"
                 cardDescription="Un espacio donde podrás armar tu página web personal, para utilizarla por ejemplo, como presentación personal, muestrario de productos, servicios y actividades."
               />
-
+              <HomePageCard
+                centerCard={false}
+                rowStart={2}
+                colStart={1}
+                imageIndex={1}
+                alt="Marketplace"
+                href="/marketplace"
+                cardTitle="MARKETPLACE"
+                buttonText="Visita el Marketplace"
+                cardSubtitle="Tu Tienda en 2 pasos"
+              />
               {/*Trueque*/}
               <HomePageCard
                 centerCard={false}
@@ -209,71 +211,106 @@ const HomePage: React.FC = () => {
             loop
             className="w-full h-full object-cover z-0"
           ></video>
-          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 items-center justify-center z-20 px-4 md:px-8">
-            <div className="flex flex-col items-center justify-center">
+
+          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 items-center justify-center z-20 px-4 md:px-8">
+            <div className="flex flex-col items-center justify-center sm:mt-10">
               <img src={iconSvg} className="h-32 md:h-44 mb-4" alt="" />
-              <p className="text-white text-2xl md:text-5xl font-thin text-center">
+              <p className="text-white text-2xl md:text-5xl font-serif text-center">
                 Un espacio de encuentro
                 <br />
                 y apoyo colaborativo
                 <br />
                 entre mujeres
               </p>
-              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-black transition-colors duration-300 ease-in-out">
+              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
                 <span className="text-2xl tracking-tight text-[#d2bb90]">
                   REGISTRARME
                 </span>
               </button>
             </div>
 
-            <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 items-center justify-center z-20 px-4 md:px-8">
-              <div className="flex flex-col items-center justify-center">
-                <img src={iconSvg} className="h-32 md:h-44 mb-4" alt="" />
-                <p className="text-white text-2xl md:text-5xl font-thin text-center">
-                  Un espacio de encuentro
-                  <br />
-                  y apoyo colaborativo
-                  <br />
-                  entre mujeres
-                </p>
-                <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-black transition-colors duration-300 ease-in-out">
-                  <span className="text-2xl tracking-tight text-[#d2bb90]">
-                    REGISTRARME
-                  </span>
-                </button>
-              </div>
-
-              <div className="flex flex-col items-center justify-center gap-4 mt-4 lg:mt-0">
-                {[1, 2, 3].map((_, index) => (
-                  <div
-                    key={index}
-                    className="flex border border-gray-300 bg-white shadow-lg rounded-lg overflow-hidden h-40 w-3/4 max-w-md"
-                  >
-                    <div className="w-2/5 h-full">
-                      <img
-                        src={`https://via.placeholder.com/150`}
-                        alt={`Card ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    <div className="w-3/5 p-4 flex flex-col justify-center">
-                      <h3 className="text-lg font-bold text-gray-800">
-                        Título de la Card {index + 1}
-                      </h3>
-                      <p className="text-sm text-gray-600">
-                        Descripción breve de la card {index + 1}. Aquí puedes
-                        agregar el contenido que desees.
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="flex-col items-center justify-center gap-4 mt-4 lg:mt-0 hidden sm:flex">
+              <CommunitySectionCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen1"
+                title="Armá tu página web"
+                description="Usala como presentación personal, muestrario de productos,
+                  servicios y actividades."
+              />
+              <CommunitySectionCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen2"
+                title="Sumate al Trueque"
+                description="Publicá tus productos y/o servicios disponibles para
+                  intercambiar con nuestra comunidad."
+              />
+              <CommunitySectionCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen3"
+                title="Activá tu tienda online"
+                description="Vendé tus productos y/o servicios."
+              />
             </div>
           </div>
         </div>
 
         <PageSeparator title="Nuestros productos" />
+
+        <div className="bg-[#c8b79d] my-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex flex-col justify-end text-left w-1/2 ml-auto mb-16">
+              <h2 className="text-4xl font-serif text-white">POLERA</h2>
+              <hr className="w-full border-t border-gray-300 my-2" />
+              <p className="text-white text-2xl font-thin">100% algodón</p>
+              <hr className="w-full border-t border-gray-300 my-2" />
+              <p className="text-white text-2xl font-thin">
+                Talles: S - M - L - XL
+              </p>
+
+              <button className="bg-[#d19468]  px-6 py-2 mt-6 hover:bg-[#b57b57] transition-colors duration-300">
+                <span className="font-semibold text-xl text-white"> USD </span>
+                <span className="font-extrabold text-2xl text-white"> 120</span>
+              </button>
+            </div>
+
+            <div className="flex justify-center items-center">
+              <img src={poleraTB} alt="Polera" className="max-w-full h-auto" />
+            </div>
+
+            <div className="flex-col items-center justify-center gap-4 mt-4 lg:mt-0 hidden sm:flex">
+              <ProductCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen1"
+                title="TOTEBAG"
+                description="Con bolsillo interno"
+                extra="40 x 30 x 15 cm"
+                price={90}
+              />
+              <ProductCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen3"
+                title="TAZA"
+                description="De cerámica"
+                extra="Apta para microondas"
+                price={40}
+              />
+              <ProductCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen2"
+                title="POLERA"
+                description="100% algodón"
+                extra="Talles: S - M - L - XL"
+                price={120}
+              />
+
+              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
+                <span className="text-2xl tracking-tight text-[#d2bb90]">
+                  VER MÁS
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
 
         <Footer />
       </div>
