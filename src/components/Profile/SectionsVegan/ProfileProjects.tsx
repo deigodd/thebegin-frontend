@@ -61,7 +61,7 @@ const ProfileProject = () => {
       </div>
 
       {/* Línea Verde Inferior */}
-      <div className="absolute left-0 w-full h-full bg-[#AEBA9B]" />
+      <div className="absolute left-0 w-full bg-[#AEBA9B]" />
     </div>
     </div>
     

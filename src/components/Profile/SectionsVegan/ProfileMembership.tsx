@@ -4,7 +4,7 @@ const ProfileMembership = () => {
       <div className="relative min-h-screen">
       {/* Background with overlay */}
         <div className="absolute inset-0 
-      bg-[url('https://cdn.pixabay.com/photo/2016/08/17/10/04/fruits-1600023_1280.jpg')] 
+      bg-[url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg')] 
       bg-cover bg-center">
         <div className="absolute inset-0 bg-white/80"></div>
       </div>
