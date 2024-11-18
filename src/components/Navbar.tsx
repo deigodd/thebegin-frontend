@@ -32,9 +32,9 @@ const Navbar: React.FC = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={tbIcon} className="h-16" alt="The Begin Logo" />
-          <span className="self-center text-2xl whitespace-nowrap dark:text-white">
-            <span className="font-thin">The</span>
-            <span className="">Begin</span>
+          <span className="self-center text-2xl whitespace-nowrap">
+            <span className="font-thin text-white">The</span>
+            <span className="text-white">Begin</span>
           </span>
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
