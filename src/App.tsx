@@ -8,6 +8,8 @@ import TheBegin from "./pages/TheBeginPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import Tecito from "./pages/Tecito";
+
 //import Activity from "./pages/Activity";
 
 // Mantener el orden, ty
@@ -73,6 +75,16 @@ const App: React.FC = () => {
             <>
               <Register />
               <PageTitle title="Registrate" />
+            </>
+          }
+        />
+        {/* Ruta del Tecito */}
+        <Route
+          path="/tecito"
+          element={
+            <>
+              <Tecito />
+              <PageTitle title="Tecito" />
             </>
           }
         />
