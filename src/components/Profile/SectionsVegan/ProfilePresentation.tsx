@@ -1,5 +1,5 @@
 import React from 'react';
-import AudioCard from '../Hooks/AdioCard';
+import AudioCard from '../Hooks/AudioCard';
 import WriteCard from '../Hooks/WriteCard';
 
 const ProfilePresentation = () => {

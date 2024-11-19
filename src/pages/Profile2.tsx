@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 //import ProfileProjects from '../components/Profile/Sections/ProfileProjects';
 import ProfileServiceProduct from '../components/Profile/Sections/ProfileServiceProduct';
 import ProfileWorkshops from '../components/Profile/Sections/ProfileWorkshops';
-import ProfileTrueque from '../components/Profile/Sections/ProfileTrueque';
+import ProfileTrueque from '../components/Profile/Sections/ProfileTrade';
 import ProfileMarketplace from '../components/Profile/Sections/ProfileMarketplace';
 import ProfileMembership from '../components/Profile/Sections/ProfileMembership';
 import ProfileCalendar from '../components/Profile/Sections/ProfileCalendar';

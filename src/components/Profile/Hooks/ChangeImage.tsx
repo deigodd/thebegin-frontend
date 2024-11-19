@@ -28,7 +28,7 @@ const ChangeImage: React.FC<ChangeImageProps> = ({ defaultInnerImageUrl = 'defau
     };
 
     return (
-      <div className="relative w-full h-full overflow-hidden mb-4">
+      <div className="relative w-full h-full overflow-hidden">
         <img src={innerImageUrl} alt="Inner" className="object-cover w-full h-full" />
         
         <div className="absolute inset-0 flex items-center justify-center pt-4 px-10 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
