@@ -1,6 +1,6 @@
 // components/InfoCard.tsx
 import React from "react";
-import imagePath from "../../assets/Home/hands.jpg";
+import latamVideo from "../../assets/Home/latam.mp4";
 
 const DesafioLatam: React.FC = () => {
   const title: string = "Juntas seamos protagonistas del cambio.";
@@ -9,7 +9,13 @@ const DesafioLatam: React.FC = () => {
 
   return (
     <div className="flex items-center bg-white cursor-pointer overflow-hidden">
-      <img src={imagePath} alt={title} className="w-2/4" />
+      <video
+        src={latamVideo}
+        loop
+        autoPlay
+        muted
+        className="w-full h-full object-cover"
+      ></video>
       <div className="p-12">
         <h2 className="text-4xl font-serif font-bold text-tbc-primarybrown-500 mb-4">
           {title}
