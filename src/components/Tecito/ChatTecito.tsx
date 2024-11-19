@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { FeatherIcon, SendIcon, SmileIcon, SearchIcon, PlusIcon, ClockIcon } from 'lucide-react'
+import { SendIcon, SmileIcon, PlusIcon, ClockIcon } from 'lucide-react'
 
 type Chat = {
   id: string;
@@ -13,13 +13,13 @@ type Chat = {
   startTime: number;
 }
 
-export default function HippieChat() {
+const HippieChat: React.FC = () => {
   const [currentChat, setCurrentChat] = useState<string | null>(null)
   const [chats, setChats] = useState<Chat[]>([
-    { id: '1', name: 'Nature Lovers', lastMessage: 'Latest message...', startTime: Date.now() },
-    { id: '2', name: 'Peace & Harmony', lastMessage: 'Latest message...', startTime: Date.now() - 1000000 },
-    { id: '3', name: 'Flower Power', lastMessage: 'Latest message...', startTime: Date.now() - 2000000 },
-    { id: '4', name: 'Eco Warriors', lastMessage: 'Latest message...', startTime: Date.now() - 5000000 },
+    { id: '1', name: 'Nature Lovers', lastMessage: 'Wow que buena idea!', startTime: Date.now() },
+    { id: '2', name: 'Peace', lastMessage: 'NOOO JAJAJ', startTime: Date.now() - 1000000 },
+    { id: '3', name: 'Junta de divas', lastMessage: 'Super, nos vemos!', startTime: Date.now() - 2000000 },
+    { id: '4', name: 'Actualidad', lastMessage: 'Que tal?', startTime: Date.now() - 5000000 },
     { id: '5', name: 'Free Spirits', lastMessage: 'Latest message...', startTime: Date.now() - 8000000 },
   ])
   const [searchTerm, setSearchTerm] = useState('')
@@ -49,7 +49,7 @@ export default function HippieChat() {
       const newChat: Chat = {
         id: (chats.length + 1).toString(),
         name: newChatName.trim(),
-        lastMessage: 'New chat created',
+        lastMessage: 'Nuevo chat creado',
         startTime: Date.now()
       }
       setChats([newChat, ...chats])
@@ -69,11 +69,11 @@ export default function HippieChat() {
       {/* Left Panel - Groups */}
       <div className="w-80 border-r border-[#F0E4D7] bg-[#FCF3E3] flex flex-col">
         <div className="p-4 bg-[#F7D6E0] text-2xl font-bold text-center">
-          Hippie Vibes Chat
+          Mesas de Té
         </div>
         <div className="p-2 flex space-x-2">
           <Input 
-            placeholder="Search chats..." 
+            placeholder="Buscar una mesita..." 
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="flex-1 bg-white border-[#D7E6E0] focus:ring-[#F7D6E0] focus:border-[#F7D6E0]"
@@ -95,7 +95,7 @@ export default function HippieChat() {
                 className="bg-white border-[#D7E6E0] focus:ring-[#F7D6E0] focus:border-[#F7D6E0]"
               />
               <Button onClick={createNewChat} className="bg-[#F7D6E0] hover:bg-[#F5C6D6] text-[#5D4037]">
-                Create Chat
+                Crear Mesa
               </Button>
             </DialogContent>
           </Dialog>
@@ -141,17 +141,17 @@ export default function HippieChat() {
             <ScrollArea className="flex-1 p-4 space-y-4 bg-[url('/floral-bg.png')] bg-repeat">
               <div className="flex justify-start">
                 <div className="bg-white rounded-lg p-3 max-w-[70%] shadow-md">
-                  <p className="text-lg">Hey there, beautiful souls! 🌸</p>
+                  <p className="text-lg">Hey qué tal? como están! 🌸</p>
                 </div>
               </div>
               <div className="flex justify-end">
                 <div className="bg-[#E1F5FE] rounded-lg p-3 max-w-[70%] shadow-md">
-                  <p className="text-lg">Hello! Sending good vibes your way ☮️</p>
+                  <p className="text-lg">Holaaa! Todo bien!!</p>
                 </div>
               </div>
               <div className="flex justify-start">
                 <div className="bg-white rounded-lg p-3 max-w-[70%] shadow-md">
-                  <p className="text-lg">Let's plan our next nature retreat! 🏕️</p>
+                  <p className="text-lg">¿Y si planeamos un nuevo viaje?! 🏕️</p>
                 </div>
               </div>
             </ScrollArea>
@@ -162,7 +162,7 @@ export default function HippieChat() {
                 <SmileIcon />
               </Button>
               <Input 
-                placeholder="Send a groovy message..." 
+                placeholder="Qué cuentas..." 
                 className="flex-1 bg-white border-[#D7E6E0] focus:ring-[#F7D6E0] focus:border-[#F7D6E0] text-lg"
               />
               <Button size="icon" className="bg-[#F7D6E0] hover:bg-[#F5C6D6] text-[#5D4037]">
@@ -172,10 +172,11 @@ export default function HippieChat() {
           </>
         ) : (
           <div className="flex-1 flex items-center justify-center text-2xl text-[#8D6E63]">
-            Select a chat or create a new one to start grooving! ✌️
+            Selecciona una mesa de Té o empieza una...
           </div>
         )}
       </div>
     </div>
   )
 }
+export default  HippieChat;
