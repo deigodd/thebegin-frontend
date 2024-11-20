@@ -1,31 +1,5 @@
-//import React from "react";
-import ConsultForm from "../Hooks/ConsultForm";
-import WorkshopCard from "../Hooks/WorkshopCard";
-
-interface Workshop {
-  id: number;
-  title: string;
-}
-
-const ColumnWorkshops = () => {
-  const workshops: Workshop[] = [
-    { id: 1, title: 'Taller de compost y compostaje' },
-    { id: 2, title: 'Taller de conducción y poda en frutales' },
-    { id: 3, title: 'Taller de riego' },
-    { id: 4, title: 'Taller calendario de siembra' },
-  ];
-
-  return (
-    <div className="space-y-4">
-      <h2 className="text-[#2C4A3B] text-3xl font-serif mb-6">Talleres Verdes</h2>
-      <div className="space-y-3">
-        {workshops.map((workshop) => (
-          <WorkshopCard key={workshop.id} {...workshop} />
-        ))}
-      </div>
-    </div>
-  );
-};
+import ConsultForm from "../Hooks/Projects/ConsultForm";
+import ColumnWorkshops from "../Hooks/Projects/ColumnWorkshops";
 
 const ProfileProject = () => {
   return (
@@ -45,7 +19,7 @@ const ProfileProject = () => {
         </div>
 
         {/* Columna de Imagen */}
-        <div className="relative flex items-center justify-center mt-16">
+        <div className="relative flex items-center justify-center mt-28">
           <img
             src="https://i.pinimg.com/736x/9f/de/67/9fde671de96337f60fb79ab575e7acd3.jpg"
             alt="Vegetales frescos"
@@ -61,7 +35,7 @@ const ProfileProject = () => {
       </div>
 
       {/* Línea Verde Inferior */}
-      <div className="absolute left-0 w-2/3 bg-[#AEBA9B]" />
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-tbc-pilargreen-600" />
     </div>
     </div>
     
