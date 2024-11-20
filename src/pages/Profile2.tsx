@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/Footer';
 import ProfileServiceProduct from '../components/Profile/SectionsVegan/ProfileServiceProduct';
 import ProfileWorkshops from '../components/Profile/Sections/ProfileWorkshops';
-import ProfileTrueque from '../components/Profile/Sections/ProfileTrueque';
+import ProfileTrueque from '../components/Profile/SectionsVegan/ProfileTrueque';
 import ProfileMarketplace from '../components/Profile/SectionsVegan/ProfileMarketplace';
 import ProfileMembership from '../components/Profile/SectionsVegan/ProfileMembership';
 import ProfileCalendar from '../components/Profile/SectionsVegan/ProfileCalendar';
@@ -26,14 +26,13 @@ const Profile2 = () => {
         
         <ProfileHeader2 />
         <ProfilePresentation />
-        <ProfileProjects />
         <ProfileServiceProduct/>
-        <ProfileWorkshops />
-        <ProfileMarketplace/>
-        <ProfileMembership/>
+        <ProfileProjects />
         <ProfileCalendar/>
+        <ProfileMembership/>
         <ProfileNews/>
         <ProfileTrueque/>
+        <ProfileMarketplace/>
         <ProfileContact/>
 
       </div>
