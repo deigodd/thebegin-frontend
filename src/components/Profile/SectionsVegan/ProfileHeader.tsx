@@ -1,12 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import AudioProgress from '../Hooks/AudioProgress';
-import BackgroundImage from '../Hooks/BackgroundImage';
-
 
 const ProfileHeader: React.FC = () => {
 
-  const [imageUrl, setImageUrl] = useState<string>(
+  const [imageUrl] = useState<string>(
     'https://cdn.pixabay.com/photo/2019/06/11/13/33/salad-4267063_1280.jpg'
   );
 
