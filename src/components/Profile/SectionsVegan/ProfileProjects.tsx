@@ -30,7 +30,7 @@ const ColumnWorkshops = () => {
 const ProfileProject = () => {
   return (
     <div className="bg-[#FBF4EC]">
-<div className="relative min-h-screen pb-8 py-10">
+      <div className="relative min-h-screen pb-8 py-10">
       {/* Contenedor Principal */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Columna de Consultas */}
@@ -61,7 +61,7 @@ const ProfileProject = () => {
       </div>
 
       {/* Línea Verde Inferior */}
-      <div className="absolute left-0 w-full bg-[#AEBA9B]" />
+      <div className="absolute left-0 w-2/3 bg-[#AEBA9B]" />
     </div>
     </div>
     

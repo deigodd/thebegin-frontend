@@ -1,63 +1,63 @@
-//import CardService from "../Hooks/CardService";
+import React from 'react';
 
-const ProfileMembership = () => {
+// Aquí no necesitamos props, ya que no estamos recibiendo parámetros, pero si los necesitaras,
+// puedes definirlos en el componente.
 
+const ProfileMembership: React.FC = () => {
   return (
-      <div className="relative min-h-screen flex justify-center items-center">
-
-      {/* Background con overlay */}
-        <div className="absolute inset-0 
-      bg-[url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg')] 
-      bg-cover bg-center">
+    <div className="relative min-h-screen flex justify-center items-center">
+      {/* Background with overlay */}
+      <div className="absolute inset-0 bg-[url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-white/80"></div>
       </div>
-      
-      {/* Contenido Card Membership */}
-      <div className="relative container mx-auto px-4 py-12">
-        <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-          
-          {/* Membership Card */}
-          <div className="w-full md:w-96 bg-[#F6EFEA] shadow-xl overflow-hidden relative transition-transform hover:scale-105">
 
-            {/* Intento de curva en la imagen */}
-            <div className="relative">
-              <div className="aspect-[4/3]  overflow-hidden">
+      {/* Content Container */}
+      <div className="relative container mx-auto px-4 py-12">
+        <div className="flex flex-col md:flex-row gap-12 items-center justify-center max-w-6xl mx-auto">
+
+          {/* Membership Card */}
+          <div className="w-full md:w-[380px] bg-[#FBF7F4]  shadow-lg overflow-hidden relative transition-transform hover:scale-105"
+          style={{
+            borderTopLeftRadius: '100% 70%',
+            borderTopRightRadius: '100% 70%',
+          }}>
+          
+          
+            {/* Image Container with arch shape */}
+            <div className="relative px-6 pt-6">
+              <div className="relative aspect-[5/4] overflow-hidden rounded-t-[2rem]" 
+                   style={{
+                     borderTopLeftRadius: '50% 60%',
+                     borderTopRightRadius: '50% 60%',
+                   }}>
                 <img 
                   src="https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                  alt="Vegetables in basket"
+                  alt="Vegetales en cesta"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
-              {/* White overlay that creates the curved effect */}
-              <div className="absolute -bottom-6 left-0 right-0 h-16 bg-[#F6EFEA]"
-                   style={{
-                     borderTopLeftRadius: '50% 100%',
-                     borderTopRightRadius: '50% 100%'
-                   }}>
-              </div>
             </div>
-            
+
             {/* Card content */}
             <div className="p-6 text-center">
-              <h2 className="text-3xl mb-2">Membresía</h2>
-              <h3 className="text-4xl font-serif text-[#A77C60] mb-6">GOLD</h3>
+              <h2 className="text-5xl font-light mb-1 font-serif italic">Membresía</h2>
+              <h3 className="text-5xl font-serif text-[#B08968] mb-6">GOLD</h3>
 
-              {/* Contenedor boton */}
+              {/* Button container */}
               <div className="flex justify-center items-center">
-                <button className="bg-[#D0B7A5] text-black text-xl px-8 py-2 rounded-full hover:bg-tbc-primarybrown-500 transition-colors mb-4">
+                <button className="w-full bg-[#D5BBA9] text-black text-xl py-2.5 hover:bg-[#B08968] transition-colors">
                   Suscribirme
                 </button>
               </div>
             </div>
           </div>
-          
+
           {/* Benefits Section */}
-          <div className="w-full md:w-1/2">
-            <h2 className="text-2xl font-semibold mb-6 text-black">
-              Tenemos beneficios exclusivos para nuestra Comunidad Gold
+          <div className="w-full md:w-1/2 px-4">
+            <h2 className="text-2xl font-medium mb-8 text-gray-800">
+              Tenemos beneficios exclusivos para nuestra Comunidad Gold.
             </h2>
-            <ul className="space-y-4">
+            <ul className="space-y-5">
               {[
                 'Clases Personalizadas de cocina',
                 'Acceso a Encuentros VIP',
@@ -68,21 +68,18 @@ const ProfileMembership = () => {
                 'Descuentos en stand para la feria anual',
                 'Sorteos y mucho más'
               ].map((benefit, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <span className="w-2 h-2 bg-amber-600 rounded-full mt-2"></span>
-                  <span className="text-black-700 text-xl">{benefit}</span>
+                <li key={index} className="flex items-start space-x-4">
+                  <span className="w-2 h-2 bg-[#B08968] rounded-full mt-2.5"></span>
+                  <span className="text-gray-700 text-lg">{benefit}</span>
                 </li>
               ))}
             </ul>
           </div>
-          
+
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default ProfileMembership;
-
-
-

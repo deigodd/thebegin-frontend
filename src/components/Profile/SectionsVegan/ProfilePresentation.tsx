@@ -21,7 +21,7 @@ const ProfilePresentation = () => {
           { /* IMAGEN */}
           <div className="md:col-span-3">
             <CardPresentation
-              image="https://i.pinimg.com/736x/62/e3/ea/62e3eadbe806001e338f516c88ed9aa2.jpg"
+              image="https://cdn.pixabay.com/photo/2017/02/28/11/53/spices-2105541_1280.jpg"
               imageAlt="Semillas y plantas pequeñas"
               className="h-full"
             />
