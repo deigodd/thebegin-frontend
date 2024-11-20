@@ -1,50 +1,53 @@
-import React from 'react';
+//import React from 'react';
 import BackgroundTrueque from '../Hooks/Trueque/BackgroundTrueque';
 import TruequeCard from '../Hooks/Trueque/TruequeCard';
 import TruequeButton from '../Hooks/Trueque/ButtonTrueque';
 
-export default function ProfileTrueque() {
-  return (
-    <div className="max-w-4xl mx-auto p-6 relative">
-      <BackgroundTrueque>
 
-        
-        <TruequeCard />
-        
-        {/* Main Content Container */}
-        <div className="mt-8 relative">
-          
-            {/* Image Container */}
-          <div className="rounded-2xl overflow-hidden relative">
-            <img
-              src="/placeholder.svg?height=600&width=800"
-              alt="Persona recolectando vegetales en una cesta"
-              width={800}
-              height={600}
-              className="w-full object-cover"
-            />
-            
-            {/* Overlay Text */}
-            <div className="absolute top-1/4 right-8 max-w-sm">
-              <p className="text-white text-3xl font-handwriting leading-relaxed">
-                Tenemos mucho para compartir
-              </p>
-            </div>
+const ProfileTrueque = () => {
+  return (
+    <div className="min-h-screen bg-[#FBF4EC] py-12 relative">
+      <div className="container mx-auto px-4">
+
+        <div className="absolute inset-0 max-y-2/3 -bottom-8 w-2/3 left-1/2 transform -translate-x-1/2">
+            <BackgroundTrueque />
           </div>
 
-          {/* Bottom Text Box */}
-          <div className="bg-tbc-pilargreen-600 rounded-full p-6 mt-4 text-center relative">
-            <p className="text-white text-lg mb-4">
+        <div className="max-w-3xl mx-auto relative">
+          {/* Background Card */}
+          
+
+          {/* Trueque Title Card */}
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 transform z-20">
+            <TruequeCard />
+          </div>
+
+          {/* Main Content */}
+          <div className="relative pt-24 pb-32">
+            <img
+              src="https://cdn.pixabay.com/photo/2022/06/26/14/32/redcurrants-7285616_960_720.jpg"
+              alt="Organic gardening and produce"
+              className="w-full h-[600px] object-cover shadow-lg"
+            />
+
+            {/* Green Info Box */}
+        <div className="absolute top-[calc(730px-80px)] left-16 right-16 z-10">
+          <div className="bg-tbc-pilargreen-600 text-white p-8 rounded-3xl shadow-lg">
+            <p className="text-xl md:text-xl text-center font-light">
               Te comparto todas las cosas lindas que tengo para intercambiar.
             </p>
           </div>
-          
-          {/* CTA Button positioned below the green card */}
-          <div className="flex justify-center mt-4">
-            <TruequeButton />
+        </div>
+
+            {/* Call to Action Button */}
+            <div className="absolute bottom-[calc(120px-80px)] left-1/2 -translate-x-1/2 z-20">
+              <TruequeButton />
+            </div>
           </div>
         </div>
-      </BackgroundTrueque>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default ProfileTrueque;

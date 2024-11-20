@@ -1,17 +1,14 @@
-import { Button } from "flowbite-react"
 
-interface ButtonTruequeProps {
-  onClick?: () => void
-}
+import React from "react";
 
-export default function ButtonTrueque({ onClick }: ButtonTruequeProps) {
+const ButtonTrueque = () => {
   return (
-    <Button 
-      className="bg-[#D4C4B5] text-[#594A3C] hover:bg-[#C0B0A1] px-8 py-2 rounded-full"
-      onClick={onClick}
+    <button 
+      className="bg-[#D1B18A] px-8 py-4 rounded-full hover:bg-[#BFA395] transition-colors"
     >
-      <span className="font-medium">VER MÁS</span>
-      <span className="font-handwriting ml-2 text-lg">Aquí</span>
-    </Button>
+      <span className="text-xl px-2 text-black">VER MÁS</span>
+      <span className="font-serif text-2xl text-white">Aquí</span>
+    </button>
   )
 }
+export default ButtonTrueque;

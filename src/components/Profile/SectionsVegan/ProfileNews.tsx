@@ -1,16 +1,31 @@
-//import React from 'react';
+// ProfileNews.tsx
+import { useState } from 'react';
 import Background from '../Hooks/BackgroundImage';
 import CardPresentation from '../Hooks/CardPresentation';
 import Checkbox from '../Hooks/CheckBox';
+import PopupForm from '../Hooks/PopupForm'; // Importamos el PopupForm
 
 const searches = [
   "Proveedoras de macetas",
   "Jardinera ornamental",
   "Proveedora de tierra para cactus",
-  "Asistente para mantenimiento de hinvernadero"
+  "Asistente para mantenimiento de invernadero"
 ];
 
 const ProfileNews = () => {
+  // Estado para controlar la apertura y cierre del Popup
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  // Función para abrir el popup
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  // Función para cerrar el popup
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <Background>
       <div className="min-h-screen flex items-center justify-center">
@@ -19,7 +34,7 @@ const ProfileNews = () => {
             {/* Columna izquierda - News */}
             <CardPresentation
               title='NEWS'
-              className="bg-[#CEB5A3]"
+              className="bg-[#CEB5A2]"
               titleTextColor="text-white"
               contentTextColor="text-[#836D63]"
             >
@@ -56,13 +71,16 @@ const ProfileNews = () => {
                       <div className="flex-shrink-0 w-8 px-7">
                         <Checkbox />
                       </div>
-                      <span className=" ">{search}</span>
+                      <span>{search}</span>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="pt-4">
-                <button className="w-full font-serif text-xl bg-[#877869] text-white p-4 hover:bg-[#665B52] transition-colors">
+                <button 
+                  className="w-full font-serif text-xl bg-[#877869] text-white p-4 hover:bg-[#665B52] transition-colors"
+                  onClick={openPopup} // Abre el popup cuando se haga clic
+                >
                   CONSULTAR
                 </button>
               </div>
@@ -70,6 +88,9 @@ const ProfileNews = () => {
           </div>
         </div>
       </div>
+
+      {/* Componente PopupForm */}
+      <PopupForm isOpen={isPopupOpen} onClose={closePopup} />
     </Background>
   );
 };
