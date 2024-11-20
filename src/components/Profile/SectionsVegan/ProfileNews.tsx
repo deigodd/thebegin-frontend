@@ -19,7 +19,7 @@ const ProfileNews = () => {
             {/* Columna izquierda - News */}
             <CardPresentation
               title='NEWS'
-              className="bg-tbc-primarybrown-400"
+              className="bg-[#CEB5A3]"
               titleTextColor="text-white"
               contentTextColor="text-[#836D63]"
             >
