@@ -73,8 +73,8 @@ const ActivitiesColumn = () => {
                 </div>
               ))}
             </div>
-            <ChevronRight className="w-8 h-8 text-[#738755] cursor-pointer" />
-          </div>
+          <ChevronRight className="w-8 h-8 text-[#738755] cursor-pointer" />
+        </div>
     
           <AnimatePresence mode="wait">
             <motion.div
