@@ -43,26 +43,26 @@ const Pilares: React.FC = () => {
         <Navbar />
       </div>
 
-      <div className="relative bg-white border border-gray-200 mt-10 mb-10 h-[450px] pt-4">
-        <img 
-          src={imageTempNuestrosPilares}
-          alt="Imagen Temporal"
-          className="absolute top-0 left-0 w-1/2 h-full object-cover"
-        />
-        <div className="absolute top-0 right-0 w-1/2 h-full flex flex-col items-start justify-center pl-16 pr-12">
-          <h1 className="text-tbc-primarybrown-400 text-5xl font-serif font-semibold mb-6">
-            Nuestros Pilares
-          </h1>
-          <p className="text-black text-lg leading-relaxed">
-            Nuestra plataforma como es un match colaborativo que destaca por su asertividad principal basada en coincidencias. Nos referimos específicamente al match centrado en elementos como profesión u ocupación, modelos de negocio, intereses particulares y necesidades de información y preferencias de interacción específicas.
-          </p>
+      <div className="relative bg-white border border-gray-200 mt-10 mb-10 h-auto pt-4 flex flex-wrap">
+          <img 
+            src={imageTempNuestrosPilares}
+            alt="Imagen Temporal"
+            className="w-full md:w-1/2 h-64 md:h-full object-cover"
+          />
+          <div className="w-full md:w-1/2 flex flex-col items-start justify-center pl-6 md:pl-16 pr-6 md:pr-12 py-6">
+            <h1 className="text-tbc-primarybrown-400 text-3xl md:text-5xl font-serif font-semibold mb-4 md:mb-6">
+              Nuestros Pilares
+            </h1>
+            <p className="text-black text-sm md:text-lg leading-relaxed">
+              Nuestra plataforma como es un match colaborativo que destaca por su asertividad principal basada en coincidencias. Nos referimos específicamente al match centrado en elementos como profesión u ocupación, modelos de negocio, intereses particulares y necesidades de información y preferencias de interacción específicas.
+            </p>
+          </div>
         </div>
-      </div>
 
       <PageSeparator title="Conócelos" />
 
 
-      <div className="flex flex-col mx-auto justify-center w-full 2xl:translate-x-0 md:max-w-7xl lg:mt-4 pt-2">
+      <div className="flex flex-col mx-auto justify-evenly w-full 2xl:translate-x-0 md:max-w-7xl lg:mt-4 pt-2 space-y-4">
         <div className="pb-16 sm:pb-20">
           <div className="mx-auto lg:max-w-7xl lg:px-8 px-4 sm:px-6">
             <div
@@ -73,30 +73,35 @@ const Pilares: React.FC = () => {
                 description="El amor se pinta, se teje, se esculpe y se canta"
                 imageSrc={imageTemp}
                 icon={iconCard}
+                info=""
               />
               <PilaresCard
                 title="Consumo con sentido"
                 description="Soy en gran medida el resultado de mis decisiones"
                 imageSrc={imageTemp}
                 icon={iconCard}
+                info=""
               />
               <PilaresCard
                 title="Bienestar"
                 description="Mi cuerpo, mi tempo, mi santuario"
                 imageSrc={imageTemp}
                 icon={iconCard}
+                info=""
               />
               <PilaresCard
                 title="Salud Mental"
                 description="Pensando, sintiendo, actuando"
                 imageSrc={imageTemp}
                 icon={iconCard}
+                info=""
               />
               <PilaresCard
                 title="Medio Ambiente"
                 description="Cuidando mi entorno me cuido a mí misma"
                 imageSrc={imageTemp}
                 icon={iconCard}
+                info=""
               />
             </div>
           </div>

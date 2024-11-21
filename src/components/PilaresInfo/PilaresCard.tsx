@@ -5,6 +5,7 @@ interface PilaresCardProps {
   description: string;
   imageSrc: string;
   icon: string;
+  info:string;
 }
 
 const defaultDescription =
@@ -15,6 +16,7 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
   description,
   imageSrc,
   icon,
+  info,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -23,7 +25,7 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
   };
 
   return (
-    <div className="relative flex flex-col h-full w-full items-center">
+    <div className="relative flex flex-col items-center w-full">
       {/* Tarjeta principal */}
       <div
         className="bg-white border border-gray-200 rounded-lg shadow w-full lg:w-auto mx-auto flex flex-col h-full cursor-pointer"
@@ -48,18 +50,23 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
       </div>
 
       {/* Contenido expandible */}
-      {isExpanded && (
-        <div className="absolute top-full w-full bg-white border border-gray-200 rounded-lg shadow p-4 mt-4">
-          <p className="text-gray-700 text-center">
-            {defaultDescription}
+      <div
+        className={`transition-all duration-300 overflow-hidden w-full ${
+          isExpanded ? "max-h-96 p-4 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-white/90 p-5 rounded-lg shadow-md">
+          <p className="text-gray-700">
+            {info || defaultDescription}
           </p>
         </div>
-      )}
+      </div>
     </div>
   );
 };
 
 export default PilaresCard;
+
 
 
 

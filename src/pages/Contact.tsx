@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
-import backgroundImage from "../assets/background-marketplace.svg";
+import backgroundImage from "../assets/background-home.svg";
 import Form from "../components/Contact/ContactForm";
 
 const Contact: React.FC = () => {
