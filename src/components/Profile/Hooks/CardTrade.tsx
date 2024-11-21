@@ -9,13 +9,19 @@ type CardTradeProps = {
 
 const CardTrade = ({ image, title, altText, className }: CardTradeProps) => {
   return (
-    <div className={`flex flex-col items-center justify-center bg-blue-800 p-4 rounded-lg text-center h-[160px] w-[160px] ${className}`}>
+    <div
+      className={`flex flex-col items-center justify-center p-4 text-center 
+        h-[250px] w-[250px] flex-none 
+        lg:h-[205px] lg:w-[205px] 2xl:h-[280px] 2xl:w-[280px] relative ${className}`}
+    >
       <img
         src={image}
         alt={altText}
-        className="h-full w-full mb-2 object-contain" // Ajustado el tamaño de la imagen
+        className="absolute top-0 left-0 h-full w-full object-cover"  // Aquí aseguramos que la imagen ocupe toda la tarjeta
       />
-      <p className="text-white text-sm">{title}</p> {/* Cambié el tamaño del texto */}
+      <div className="relative z-10">
+        <p className="text-white text-sm">{title}</p>
+      </div>
     </div>
   );
 };

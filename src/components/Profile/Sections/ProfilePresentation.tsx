@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AudioCard from '../Hooks/AudioCard';
 import WriteCard from '../Hooks/WriteCard';
 
-interface UserProfile {
+interface userProfile {
   name: string;
   pname: string;
   role: string;
@@ -10,7 +10,7 @@ interface UserProfile {
 }
 
 const ProfilePresentation = () => {
-  const [userProfile, setUserProfile] = useState<UserProfile>({
+  const [userProfile, setUserProfile] = useState<userProfile>({
     name: 'Sofía Monteverde',
     pname: '@sofiamonteverde',
     image: 'https://lh3.googleusercontent.com/pelsDJaccSJIJBNMCsrXAJpC3A0AMdY53PXs6uYjfP_YwDj64thnVVHxNiuvTDp07xYFzPvFs95VVv_4N4upBTmx45NM8-IhTuBKBrAPfndn19XtXNA-79TpyIs7PoPYYEHv23Uy',

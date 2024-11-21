@@ -9,7 +9,16 @@ const ProfileCalendar = () => {
       <div className="max-w-[90rem] mx-auto bg-tbc-primarybrown-200  p-10 flex">
         <ImageColumn />
         <CalendarColumn />
-        <ActivitiesColumn />
+        <ActivitiesColumn
+            selectedDayBg="#738755"
+            selectedDayText="white"
+            arrowColor='#738755'
+            dayBg="#D0D7C2"
+            dayText="black"
+            activityBg="#957F74"
+            activityHoverBg="#AD947D"
+            activityText="white"
+          />
       </div>
     </div>
   );

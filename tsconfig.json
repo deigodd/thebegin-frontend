@@ -1,4 +1,10 @@
 {
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "commonjs",  // Asegúrate de usar un módulo compatible
+    "strict": true          // Esto es opcional, pero recomendado para mayor seguridad de tipos
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

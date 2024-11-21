@@ -18,7 +18,7 @@ const CardPresentation = ({
   title,
   subtitle,
   content,
-  bgColor = 'bg-white',
+  bgColor = '',
   titleTextColor = 'text-gray-800',  // Valor por defecto
   contentTextColor = 'text-gray-800', // Valor por defecto
   image,
@@ -42,14 +42,14 @@ const CardPresentation = ({
   }
 
   return (
-    <div className={`${bgColor} p-8 ${className} transition-transform hover:scale-105`}>
+    <div className={`${bgColor} p-14 ${className} transition-transform hover:scale-105 relative`}>
       {title && (
-        <h2 className={`${titleTextColor} text-3xl font-serif mb-4`}>
+        <h2 className={`${titleTextColor} text-6xl font-serif mb-6`}>
           {title}
         </h2>
       )}
       {subtitle && (
-        <span className="text-3xl font-script">
+        <span className="">
           {subtitle}
         </span>
       )}

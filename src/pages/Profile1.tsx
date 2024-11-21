@@ -47,7 +47,6 @@ const Profile = () => {
         <ProfilePresentation />
         <ProfileProjects />
         <ProfileServiceProduct />
-        <ProfileWorkshops />
         <ProfileTrueque/>
         <ProfileMarketplace/>
         <ProfileMembership/>
