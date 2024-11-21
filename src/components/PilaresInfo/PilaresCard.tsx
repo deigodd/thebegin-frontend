@@ -28,7 +28,7 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
     <div className="relative flex flex-col items-center w-full">
       {/* Tarjeta principal */}
       <div
-        className="bg-white border border-gray-200 rounded-lg shadow w-full lg:w-auto mx-auto flex flex-col h-full cursor-pointer"
+        className="bg-white border border-gray-200 rounded-lg shadow w-full lg:w-auto mx-auto flex flex-col h-full cursor-pointer transition-all transform hover:scale-105 hover:shadow-lg"
         onClick={toggleExpand}
       >
         <img
@@ -51,7 +51,7 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
 
       {/* Contenido expandible */}
       <div
-        className={`transition-all duration-300 overflow-hidden w-full ${
+        className={`transition-all overflow-hidden w-full ${
           isExpanded ? "max-h-96 p-4 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
