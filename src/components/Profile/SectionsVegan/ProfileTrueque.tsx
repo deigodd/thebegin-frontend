@@ -1,10 +1,13 @@
-//import React from 'react';
+import TruequeData from '../../../data/Profile2/TruequeData.json'
 import BackgroundTrueque from '../Hooks/Trueque/BackgroundTrueque';
 import TruequeCard from '../Hooks/Trueque/TruequeCard';
 import TruequeButton from '../Hooks/Trueque/ButtonTrueque';
 
 
 const ProfileTrueque = () => {
+    const { mainImage, infoBox } = TruequeData;
+
+
   return (
     <div className="min-h-screen bg-[#FBF4EC] py-12 relative">
       <div className="container mx-auto px-4">
@@ -24,17 +27,17 @@ const ProfileTrueque = () => {
 
           {/* Main Content */}
           <div className="relative pt-24 pb-32">
-            <img
-              src="https://cdn.pixabay.com/photo/2022/06/26/14/32/redcurrants-7285616_960_720.jpg"
-              alt="Organic gardening and produce"
-              className="w-full h-[600px] object-cover shadow-lg"
+          <img
+              src={mainImage.src}
+              alt={mainImage.alt}
+              className={`w-${mainImage.width} h-[${mainImage.height}] object-cover shadow-lg`}
             />
 
             {/* Green Info Box */}
         <div className="absolute top-[calc(730px-80px)] left-16 right-16 z-10">
           <div className="bg-tbc-pilargreen-600 text-white p-8 rounded-3xl shadow-lg">
             <p className="text-xl md:text-xl text-center font-light">
-              Te comparto todas las cosas lindas que tengo para intercambiar.
+              {infoBox.text}
             </p>
           </div>
         </div>

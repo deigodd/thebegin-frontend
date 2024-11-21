@@ -1,4 +1,4 @@
-import { ServiceCardData } from "../../../data/ProjectsData";
+import { ServiceCardData } from "../../../types/ProjectsData";
 
 interface ServiceCardProps {
     data: ServiceCardData;
