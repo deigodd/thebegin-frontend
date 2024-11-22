@@ -6,7 +6,7 @@ import ActivitiesColumn from '../Hooks/Calendary/ActivitiesColumn';
 const ProfileCalendar = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-tbc-primarybrown-200 p-12">
-      <div className="max-w-[90rem] mx-auto bg-tbc-primarybrown-200  p-10 flex">
+      <div className="max-w-[90rem] mx-auto bg-tbc-primarybrown-200  p-10 flex flex-wrap">
         <ImageColumn />
         <CalendarColumn />
         <ActivitiesColumn

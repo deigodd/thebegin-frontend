@@ -1,13 +1,12 @@
 import React from 'react';
 
-// Aquí no necesitamos props, ya que no estamos recibiendo parámetros, pero si los necesitaras,
-// puedes definirlos en el componente.
-
 const ProfileMembership: React.FC = () => {
   return (
     <div className="relative min-h-screen flex justify-center items-center">
       {/* Background with overlay */}
-      <div className="absolute inset-0 bg-[url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg')] bg-cover bg-center">
+      <div className="absolute inset-0 
+      bg-[url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg')] 
+      bg-cover bg-center">
         <div className="absolute inset-0 bg-white/80"></div>
       </div>
 
@@ -75,7 +74,6 @@ const ProfileMembership: React.FC = () => {
               ))}
             </ul>
           </div>
-
         </div>
       </div>
     </div>

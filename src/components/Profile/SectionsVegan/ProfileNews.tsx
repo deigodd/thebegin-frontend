@@ -34,7 +34,7 @@ const ProfileNews = () => {
             {/* Columna izquierda - News */}
             <CardPresentation
               title='NEWS'
-              className="bg-[#CEB5A2]"
+              className="bg-[#CEB5A7]"
               titleTextColor="text-white"
               contentTextColor="text-[#836D63]"
             >
