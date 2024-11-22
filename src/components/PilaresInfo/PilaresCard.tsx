@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 interface PilaresCardProps {
   title: string;
@@ -50,17 +51,16 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
       </div>
 
       {/* Contenido expandible */}
-      <div
-        className={`transition-all overflow-hidden w-full ${
-          isExpanded ? "max-h-96 p-4 opacity-100" : "max-h-0 opacity-0"
-        }`}
+      <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={isExpanded ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="overflow-hidden w-full"
       >
-        <div className="bg-white/90 p-5 rounded-lg shadow-md">
-          <p className="text-gray-700">
-            {info || defaultDescription}
-          </p>
+        <div className="bg-tbc-secondarygray-100/90 p-5 rounded-lg shadow-md">
+          <p className="text-gray-700">{info || defaultDescription}</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

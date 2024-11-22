@@ -59,54 +59,51 @@ const Pilares: React.FC = () => {
           </div>
         </div>
 
-      <PageSeparator title="Conócelos" />
+        <PageSeparator title="Conócelos" />
 
 
-      <div className="flex flex-col mx-auto justify-evenly w-full 2xl:translate-x-0 md:max-w-7xl lg:mt-4 pt-2 space-y-4">
-        <div className="pb-16 sm:pb-20">
-          <div className="mx-auto lg:max-w-7xl lg:px-8 px-4 sm:px-6">
-            <div
-              className="mt-4 grid gap-4 sm:mt-8 lg:grid-cols-5 lg:grid-rows-1 justify-center items-center"
-            >
-              <PilaresCard
-                title="Arte con sentido"
-                description="El amor se pinta, se teje, se esculpe y se canta"
-                imageSrc={imageTemp}
-                icon={iconCard}
-                info=""
-              />
-              <PilaresCard
-                title="Consumo con sentido"
-                description="Soy en gran medida el resultado de mis decisiones"
-                imageSrc={imageTemp}
-                icon={iconCard}
-                info=""
-              />
-              <PilaresCard
-                title="Bienestar"
-                description="Mi cuerpo, mi tempo, mi santuario"
-                imageSrc={imageTemp}
-                icon={iconCard}
-                info=""
-              />
-              <PilaresCard
-                title="Salud Mental"
-                description="Pensando, sintiendo, actuando"
-                imageSrc={imageTemp}
-                icon={iconCard}
-                info=""
-              />
-              <PilaresCard
-                title="Medio Ambiente"
-                description="Cuidando mi entorno me cuido a mí misma"
-                imageSrc={imageTemp}
-                icon={iconCard}
-                info=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <div
+  className="flex justify-center items-center mx-auto w-full h-[690px] 2xl:translate-x-0 md:max-w-7xl lg:mt-4 pt-1 space-y-2 overflow-hidden"
+>
+  <div className="grid gap-4 sm:mt-8 lg:grid-cols-5 lg:grid-rows-1 justify-center items-center">
+  
+    <PilaresCard
+      title="Arte con sentido"
+      description="El amor se pinta, se teje, se esculpe y se canta"
+      imageSrc={imageTemp}
+      icon={iconCard}
+      info=""
+    />
+    <PilaresCard
+      title="Consumo con sentido"
+      description="Soy en gran medida el resultado de mis decisiones"
+      imageSrc={imageTemp}
+      icon={iconCard}
+      info=""
+    />
+    <PilaresCard
+      title="Bienestar"
+      description="Mi cuerpo, mi tempo, mi santuario"
+      imageSrc={imageTemp}
+      icon={iconCard}
+      info=""
+    />
+    <PilaresCard
+      title="Salud Mental"
+      description="Pensando, sintiendo, actuando"
+      imageSrc={imageTemp}
+      icon={iconCard}
+      info=""
+    />
+    <PilaresCard
+      title="Medio Ambiente"
+      description="Cuidando mi entorno me cuido a mí misma"
+      imageSrc={imageTemp}
+      icon={iconCard}
+      info=""
+    />
+  </div>
+</div>
           <PageSeparator title="Comunidad" />
           <div className="relative mt-10 mb-10" style={{ height: "700px" }}>
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
