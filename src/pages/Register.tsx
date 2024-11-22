@@ -13,26 +13,19 @@ const Register: React.FC = () => {
     email: "",
     country: "",
     city: "",
-    password: "",
     profession: "",
     hobbies: [] as string[],
+    abilities: [] as string[],
+    interests: [] as string[],
+    findings: [] as string[],
+    shares: [] as string[],
+    user: "",
+    password: "",
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [countries, setCountries] = useState<
     { value: string; label: string }[]
   >([]);
-  const [professions, setProfessions] = useState<string[]>([
-    "Ingeniera",
-    "Doctora",
-    "Abogada",
-    "Profesora",
-    "Arquitecta",
-    "Enfermera",
-    "Contadora",
-    "Desarrolladora",
-    "Diseñadora",
-    "Científica",
-  ]);
   const [hobbies, setHobbies] = useState<string[]>([
     "Leer",
     "Viajar",
@@ -44,6 +37,58 @@ const Register: React.FC = () => {
     "Jardinería",
     "Escritura",
     "Cine",
+  ]);
+  const [abilities, setAbilities] = useState<string[]>([
+    "Liderazgo",
+    "Comunicación efectiva",
+    "Resolución de conflictos",
+    "Empatía",
+    "Gestión del tiempo",
+    "Trabajo en equipo",
+    "Creatividad",
+    "Adaptabilidad",
+    "Pensamiento crítico",
+    "Negociación",
+    "Planificación estratégica",
+    "Mentoría",
+    "Toma de decisiones",
+    "Innovación",
+    "Desarrollo profesional",
+  ]);
+  const [interests, setInterests] = useState<string[]>([
+    "Leer",
+    "Viajar",
+    "Cocinar",
+    "Deportes",
+    "Música",
+    "Pintura",
+    "Fotografía",
+    "Jardinería",
+    "Escritura",
+    "Cine",
+    "Tecnología",
+    "Voluntariado",
+    "Yoga",
+    "Meditación",
+    "Danza",
+  ]);
+  const [findings, setFindings] = useState<string[]>([
+    "Amistad",
+    "Oportunidades de negocio",
+    "Mentoría",
+    "Colaboración en proyectos",
+    "Red de apoyo",
+    "Inspiración",
+    "Conocimiento",
+    "Eventos",
+    "Voluntariado",
+    "Actividades recreativas",
+  ]);
+  const [shares, setShares] = useState<string[]>([
+    "Productos",
+    "Salidas",
+    "Trueque",
+    "Amistad",
   ]);
 
   useEffect(() => {
@@ -70,15 +115,12 @@ const Register: React.FC = () => {
       });
   }, []);
 
-  const handleNext = () => {
-    if (validateStep()) {
-      if (step === 3) {
-        // Si estás en el último paso, envía el formulario
-        console.log("Enviando formulario:", formData);
-        // Aquí puedes realizar la lógica de envío, como una llamada a una API
-      } else {
-        setStep(step + 1);
-      }
+  const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    if (step === 3) {
+      handleSubmit(e as unknown as React.FormEvent<HTMLFormElement>);
+    } else {
+      setStep(step + 1);
     }
   };
 
@@ -125,9 +167,25 @@ const Register: React.FC = () => {
         formIsValid = false;
         newErrors.profession = "La profesión es requerida.";
       }
-      if (!formData.hobbies) {
+      if (formData.hobbies.length === 0) {
         formIsValid = false;
-        newErrors.hobbies = "La profesión es requerida.";
+        newErrors.hobbies = "Los hobbies son requeridos.";
+      }
+      if (formData.abilities.length === 0) {
+        formIsValid = false;
+        newErrors.abilities = "Las habilidades son requeridas.";
+      }
+      if (formData.interests.length === 0) {
+        formIsValid = false;
+        newErrors.interests = "Los intereses son requeridos.";
+      }
+      if (formData.findings.length === 0) {
+        formIsValid = false;
+        newErrors.findings = "Indica qué te gustaría encontrar.";
+      }
+      if (formData.shares.length === 0) {
+        formIsValid = false;
+        newErrors.shares = "Indica qué te gustaría compartir.";
       }
     }
 
@@ -140,18 +198,42 @@ const Register: React.FC = () => {
         formIsValid = false;
         newErrors.password = "La contraseña debe tener al menos 6 caracteres.";
       }
+      if (!formData.user) {
+        formIsValid = false;
+        newErrors.password = "Un nombre de usuario es requerido.";
+      }
     }
 
     setErrors(newErrors);
     return formIsValid;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateStep()) {
       // Lógica de envío del formulario
       console.log("Formulario enviado con éxito:", formData);
       console.log("Redirigiendo al inicio de sesión...");
+
+      try {
+        const response = await fetch("http://localhost:3000/saveData", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          console.log("Datos guardados con éxito");
+          // Redirigir al inicio de sesión o mostrar un mensaje de éxito
+          alert("Datos guardados con éxito");
+        } else {
+          console.error("Error al guardar los datos");
+        }
+      } catch (error) {
+        console.error("Error al enviar la solicitud:", error);
+      }
     }
   };
 
@@ -404,34 +486,14 @@ const Register: React.FC = () => {
                       >
                         Profesión
                       </label>
-                      <Select
+                      <input
                         id="profession"
                         name="profession"
-                        value={
-                          professions.find(
-                            (profession) => profession === formData.profession
-                          )
-                            ? {
-                                value: formData.profession,
-                                label: formData.profession,
-                              }
-                            : null
-                        }
-                        onChange={(selectedOption) => {
-                          setFormData({
-                            ...formData,
-                            profession: selectedOption
-                              ? selectedOption.value
-                              : "",
-                          });
-                        }}
-                        options={professions.map((profession) => ({
-                          value: profession,
-                          label: profession,
-                        }))}
-                        classNamePrefix="react-select"
-                        className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
-                          errors.profession
+                        type="text"
+                        value={formData.profession}
+                        onChange={handleChange}
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.email
                             ? "border-red-500 ring-red-500 focus:ring-red-500"
                             : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
                         }`}
@@ -483,36 +545,225 @@ const Register: React.FC = () => {
                         </p>
                       )}
                     </div>
+
+                    <div>
+                      <label
+                        htmlFor="abilities"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        Habilidades
+                      </label>
+                      <Select
+                        id="abilities"
+                        name="abilities"
+                        value={formData.abilities.map((abilities) => ({
+                          value: abilities,
+                          label: abilities,
+                        }))}
+                        onChange={(selectedOptions) => {
+                          setFormData({
+                            ...formData,
+                            abilities: selectedOptions
+                              ? selectedOptions.map((option) => option.value)
+                              : [],
+                          });
+                        }}
+                        options={abilities.map((abilities) => ({
+                          value: abilities,
+                          label: abilities,
+                        }))}
+                        isMulti
+                        classNamePrefix="react-select"
+                        className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.abilities
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.abilities && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.abilities}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="interests"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        Intereses Personales
+                      </label>
+                      <Select
+                        id="interests"
+                        name="interests"
+                        value={formData.interests.map((interests) => ({
+                          value: interests,
+                          label: interests,
+                        }))}
+                        onChange={(selectedOptions) => {
+                          setFormData({
+                            ...formData,
+                            interests: selectedOptions
+                              ? selectedOptions.map((option) => option.value)
+                              : [],
+                          });
+                        }}
+                        options={interests.map((interests) => ({
+                          value: interests,
+                          label: interests,
+                        }))}
+                        isMulti
+                        classNamePrefix="react-select"
+                        className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.interests
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.interests && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.interests}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="findings"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        ¿Qué te gustaría encontrar?
+                      </label>
+                      <Select
+                        id="findings"
+                        name="findings"
+                        isMulti
+                        options={findings.map((finding) => ({
+                          value: finding,
+                          label: finding,
+                        }))}
+                        value={formData.findings.map((finding) => ({
+                          value: finding,
+                          label: finding,
+                        }))}
+                        onChange={(selectedOptions) => {
+                          setFormData({
+                            ...formData,
+                            findings: selectedOptions
+                              ? selectedOptions.map((option) => option.value)
+                              : [],
+                          });
+                        }}
+                        classNamePrefix="react-select"
+                        className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.findings
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.findings && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.findings}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="shares"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        ¿Qué deseas compartir?
+                      </label>
+                      <Select
+                        id="shares"
+                        name="shares"
+                        isMulti
+                        options={shares.map((share) => ({
+                          value: share,
+                          label: share,
+                        }))}
+                        value={formData.shares.map((share) => ({
+                          value: share,
+                          label: share,
+                        }))}
+                        onChange={(selectedOptions) => {
+                          setFormData({
+                            ...formData,
+                            shares: selectedOptions
+                              ? selectedOptions.map((option) => option.value)
+                              : [],
+                          });
+                        }}
+                        classNamePrefix="react-select"
+                        className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.shares
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.shares && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.shares}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
               )}
 
               {step === 3 && (
                 <div>
-                  <div>
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium text-gray-900"
-                    >
-                      Contraseña
-                    </label>
-                    <input
-                      id="password"
-                      name="password"
-                      type="password"
-                      value={formData.password}
-                      onChange={handleChange}
-                      className={`block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
-                        errors.password
-                          ? "border-red-500 ring-red-500 focus:ring-red-500"
-                          : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
-                      }`}
-                    />
-                    {errors.password && (
-                      <p className="mt-1 text-sm text-red-600">
-                        {errors.password}
-                      </p>
-                    )}
+                  <div className="space-y-4">
+                    <div>
+                      <label
+                        htmlFor="user"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        Nombre de usuario
+                      </label>
+                      <input
+                        id="user"
+                        name="user"
+                        type="text"
+                        value={formData.user}
+                        onChange={handleChange}
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.user
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.user && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.user}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="password"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        Contraseña
+                      </label>
+                      <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        className={`block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.password
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.password && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.password}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
               )}
@@ -528,8 +779,8 @@ const Register: React.FC = () => {
                   </button>
                 )}
                 <button
-                  type="button"
-                  onClick={handleNext}
+                  type={step === 3 ? "submit" : "button"}
+                  onClick={step === 3 ? undefined : handleNext}
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-tbc-pilarorange-600 hover:bg-tbc-pilarorange-700 rounded-md"
                 >
                   {step === 3 ? "Enviar" : "Siguiente"}
