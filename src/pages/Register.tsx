@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/background-home.svg";
 import logo from "../assets/icons/svg/tb-icon-fill-orange.svg";
-import { Select } from "flowbite-react";
+import Select from "react-select";
 
 const Register: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -14,10 +14,37 @@ const Register: React.FC = () => {
     country: "",
     city: "",
     password: "",
-    confirmPassword: "",
+    profession: "",
+    hobbies: [] as string[],
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [countries, setCountries] = useState<string[]>([]);
+  const [countries, setCountries] = useState<
+    { value: string; label: string }[]
+  >([]);
+  const [professions, setProfessions] = useState<string[]>([
+    "Ingeniera",
+    "Doctora",
+    "Abogada",
+    "Profesora",
+    "Arquitecta",
+    "Enfermera",
+    "Contadora",
+    "Desarrolladora",
+    "Diseñadora",
+    "Científica",
+  ]);
+  const [hobbies, setHobbies] = useState<string[]>([
+    "Leer",
+    "Viajar",
+    "Cocinar",
+    "Deportes",
+    "Música",
+    "Pintura",
+    "Fotografía",
+    "Jardinería",
+    "Escritura",
+    "Cine",
+  ]);
 
   useEffect(() => {
     fetch(
@@ -31,7 +58,10 @@ const Register: React.FC = () => {
       })
       .then((data) => {
         const countryOptions = data.countries.map(
-          (country: { value: string; label: string }) => country.label
+          (country: { value: string; label: string }) => ({
+            value: country.value,
+            label: country.label,
+          })
         );
         setCountries(countryOptions);
       })
@@ -91,20 +121,24 @@ const Register: React.FC = () => {
 
     if (step === 2) {
       // Validación para el paso de la contraseña
+      if (!formData.profession) {
+        formIsValid = false;
+        newErrors.profession = "La profesión es requerida.";
+      }
+      if (!formData.hobbies) {
+        formIsValid = false;
+        newErrors.hobbies = "La profesión es requerida.";
+      }
+    }
+
+    if (step === 3) {
+      // Validación para la confirmación de la contraseña
       if (!formData.password) {
         formIsValid = false;
         newErrors.password = "La contraseña es requerida.";
       } else if (formData.password.length < 6) {
         formIsValid = false;
         newErrors.password = "La contraseña debe tener al menos 6 caracteres.";
-      }
-    }
-
-    if (step === 3) {
-      // Validación para la confirmación de la contraseña
-      if (formData.password !== formData.confirmPassword) {
-        formIsValid = false;
-        newErrors.confirmPassword = "Las contraseñas no coinciden.";
       }
     }
 
@@ -122,11 +156,6 @@ const Register: React.FC = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
@@ -312,21 +341,23 @@ const Register: React.FC = () => {
                       <Select
                         id="country"
                         name="country"
-                        value={formData.country}
-                        onChange={handleSelectChange}
+                        value={countries.find(
+                          (country) => country.value === formData.country
+                        )}
+                        onChange={(selectedOption) => {
+                          setFormData({
+                            ...formData,
+                            country: selectedOption ? selectedOption.value : "",
+                          });
+                        }}
+                        options={countries}
+                        classNamePrefix="react-select"
                         className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
                           errors.country
                             ? "border-red-500 ring-red-500 focus:ring-red-500"
                             : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
                         }`}
-                      >
-                        <option value="">Selecciona tu país</option>
-                        {countries.map((country, index) => (
-                          <option key={index} value={country}>
-                            {country}
-                          </option>
-                        ))}
-                      </Select>
+                      />
                       {errors.country && (
                         <p className="mt-1 text-sm text-red-600">
                           {errors.country}
@@ -365,6 +396,99 @@ const Register: React.FC = () => {
 
               {step === 2 && (
                 <div>
+                  <div className="space-y-4">
+                    <div>
+                      <label
+                        htmlFor="profession"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        Profesión
+                      </label>
+                      <Select
+                        id="profession"
+                        name="profession"
+                        value={
+                          professions.find(
+                            (profession) => profession === formData.profession
+                          )
+                            ? {
+                                value: formData.profession,
+                                label: formData.profession,
+                              }
+                            : null
+                        }
+                        onChange={(selectedOption) => {
+                          setFormData({
+                            ...formData,
+                            profession: selectedOption
+                              ? selectedOption.value
+                              : "",
+                          });
+                        }}
+                        options={professions.map((profession) => ({
+                          value: profession,
+                          label: profession,
+                        }))}
+                        classNamePrefix="react-select"
+                        className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.profession
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.profession && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.profession}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="hobbies"
+                        className="block text-sm font-medium text-gray-900"
+                      >
+                        Hobbies
+                      </label>
+                      <Select
+                        id="hobbies"
+                        name="hobbies"
+                        value={formData.hobbies.map((hobby) => ({
+                          value: hobby,
+                          label: hobby,
+                        }))}
+                        onChange={(selectedOptions) => {
+                          setFormData({
+                            ...formData,
+                            hobbies: selectedOptions
+                              ? selectedOptions.map((option) => option.value)
+                              : [],
+                          });
+                        }}
+                        options={hobbies.map((hobby) => ({
+                          value: hobby,
+                          label: hobby,
+                        }))}
+                        isMulti
+                        classNamePrefix="react-select"
+                        className={`block w-full rounded-md text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
+                          errors.hobbies
+                            ? "border-red-500 ring-red-500 focus:ring-red-500"
+                            : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
+                        }`}
+                      />
+                      {errors.hobbies && (
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.hobbies}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {step === 3 && (
+                <div>
                   <div>
                     <label
                       htmlFor="password"
@@ -387,36 +511,6 @@ const Register: React.FC = () => {
                     {errors.password && (
                       <p className="mt-1 text-sm text-red-600">
                         {errors.password}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              )}
-
-              {step === 3 && (
-                <div>
-                  <div>
-                    <label
-                      htmlFor="confirmPassword"
-                      className="block text-sm font-medium text-gray-900"
-                    >
-                      Confirmar contraseña
-                    </label>
-                    <input
-                      id="confirmPassword"
-                      name="confirmPassword"
-                      type="password"
-                      value={formData.confirmPassword}
-                      onChange={handleChange}
-                      className={`block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm ${
-                        errors.confirmPassword
-                          ? "border-red-500 ring-red-500 focus:ring-red-500"
-                          : "border-0 ring-gray-300 focus:ring-tbc-pilarorange-600"
-                      }`}
-                    />
-                    {errors.confirmPassword && (
-                      <p className="mt-1 text-sm text-red-600">
-                        {errors.confirmPassword}
                       </p>
                     )}
                   </div>
