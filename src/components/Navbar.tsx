@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import tbIcon from "../assets/icons/svg/tb-icon-outline-brown.svg";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,11 +31,11 @@ const Navbar: React.FC = () => {
       {/*padre*/}
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://www.thebegin.org/wp-content/uploads/2023/12/Recurso-25@15x-1024x273.png"
-            className="h-12"
-            alt="The Begin Logo"
-          />
+          <img src={tbIcon} className="h-16" alt="The Begin Logo" />
+          <span className="self-center text-2xl whitespace-nowrap">
+            <span className="font-thin text-white">The</span>
+            <span className="text-white">Begin</span>
+          </span>
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           {isLoggedIn ? (
@@ -140,9 +141,9 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                href="/marketplace"
+                href="/tecito"
                 className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
-                style={isActive("/marketplace") ? activeStyle : {}}
+                style={isActive("/tecito") ? activeStyle : {}}
               >
                 TECITO
               </a>

@@ -23,7 +23,6 @@ const Activity: React.FC = () => {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 py-5">
           {/* Search Bar */}
-          <SearchBar2 onSearch={handleSearch} />
 
           {/* Activity Header */}
           <ActivityHeader matchCount={850} />

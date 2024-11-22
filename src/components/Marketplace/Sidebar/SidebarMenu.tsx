@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
 import CategoryItem from './CategoryItem';
 import iconPath from '../../../assets/icons/svg/tb-icon-outline-brown.svg';
 
 interface SidebarMenuProps {
   onClose?: () => void;
+  onCategorySelect: (category: string) => void;
 }
 
-const SidebarMenu: React.FC<SidebarMenuProps> = ({ onClose }) => {
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+const SidebarMenu: React.FC<SidebarMenuProps> = ({ onClose, onCategorySelect }) => {
 
   const categories = [
     "The Begin",
@@ -20,10 +19,6 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ onClose }) => {
     "Membresía",
   ];
 
-  const toggleCategory = (category: string) => {
-    setExpandedCategory(expandedCategory === category ? null : category);
-  };
-
   return (
     <div>
       <h2 className="bg-tbc-primarybrown-600 p-2 text-white text-lg rounded-sm font-bold">
@@ -31,18 +26,17 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ onClose }) => {
       </h2>
       <ul className="space-y-1">
         {categories.map((category) => (
-          <React.Fragment key={category}>
+          <div key={category}>
             <CategoryItem
               category={category}
               iconPath={iconPath}
-              isExpanded={expandedCategory === category}
-              onClick={() => toggleCategory(category)}
+              onSelectCategory={onCategorySelect}
             />
             {/* Línea divisoria después de "Medio Ambiente" o "Membresía" */}
             {(category === "Medio Ambiente" || category === "Membresía") && (
               <hr className="border-4 border-tbc-primaryred-600 my-2" />
             )}
-          </React.Fragment>
+          </div>
         ))}
       </ul>
       {/* Botón de cierre, visible solo en pop-up */}
