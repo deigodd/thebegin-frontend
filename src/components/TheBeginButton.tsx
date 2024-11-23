@@ -8,10 +8,10 @@ interface ButtonProps {
 const TheBeginButton: React.FC<ButtonProps> = ({ label }) => {
     return (
         <button 
-        className={`w-48 h-8 bg-tbc-primaryred-600 text-white text-bold rounded-sm hover:bg-tbc-primarybrown-600 transition-colors duration-300 hover:scale-105 overflow-hidden`}
+        className={`flex overflow-hidden w-48 h-8 bg-tbc-primaryred-600 text-white text-bold rounded-sm hover:bg-tbc-primarybrown-600 transition-colors duration-300 hover:scale-105`}
         >
-            <img src={logo} className="absolute w-12 h-12 -translate-x-5 -translate-y-2"/>  
-            {label}
+            <img src={logo} className="w-12 h-12 -translate-x-5 -translate-y-2"/>  
+            <span className="ml-8 my-auto">{label}</span>
         </button>
     );
 };
