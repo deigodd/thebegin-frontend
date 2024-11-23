@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
+import Trueque from "./pages/Trueque";
 import HomePage from "./pages/HomePage";
 import Pilares from "./pages/Pilares";
 import PageTitle from "./components/App/PageTitle";
@@ -45,7 +46,7 @@ const App: React.FC = () => {
           path="/trueque"
           element={
             <>
-              <Marketplace />
+              <Trueque />
               <PageTitle title="Trueque" />
             </>
           }
