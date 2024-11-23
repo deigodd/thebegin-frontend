@@ -3,12 +3,12 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/Footer';
 import PageSeparator from '../components/PageSeparator';
 import backgroundImage from '../assets/background-marketplace.svg'
-import comunidadVideo from "../assets/comunidadVideo.mp4";
+import comunidadVideo from "../assets/Home/comunidadVideo.mp4";
 import iconSvg from "../assets/icons/svg/tb-icon-fill-gray.svg";
 import PilaresCard from "../components/PilaresInfo/PilaresCard";
-import imageTemp from "../assets/pd21-34-07-kwan-a-1.jpg";
+import imageTemp from "../assets/Home/pd21-34-07-kwan-a-1.jpg";
 import iconCard from "../assets/icons/tb-icon-fill-lightBrown.png";
-import imageTempNuestrosPilares from "../assets/hands.jpg";
+import imageTempNuestrosPilares from "../assets/Home/hands.jpg";
 
 const Pilares: React.FC = () => {
 
