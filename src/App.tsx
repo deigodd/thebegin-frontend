@@ -67,6 +67,9 @@ const App: React.FC = () => {
             <>
               <Contact />
               <PageTitle title="Contact" />
+            </>
+          }
+        />
         {/* Ruta del TheBegin */}
         <Route
           path="/the-begin"
