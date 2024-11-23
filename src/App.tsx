@@ -3,7 +3,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
 import HomePage from "./pages/HomePage";
+import Pilares from "./pages/Pilares";
 import PageTitle from "./components/App/PageTitle";
+import  Contact  from "./pages/Contact";
 import TheBegin from "./pages/TheBeginPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -48,6 +50,23 @@ const App: React.FC = () => {
             </>
           }
         />
+        {/* Ruta Pilares-info */}
+        <Route
+          path="/pilares"
+          element={
+            <>
+              <Pilares />
+              <PageTitle title="Pilares" />
+            </>
+          }
+        />
+        {/* Ruta contacto*/}
+        <Route
+          path="/contacto"
+          element={
+            <>
+              <Contact />
+              <PageTitle title="Contact" />
         {/* Ruta del TheBegin */}
         <Route
           path="/the-begin"
