@@ -9,6 +9,7 @@ import PilaresCard from "../components/PilaresInfo/PilaresCard";
 import imageTemp from "../assets/Home/pd21-34-07-kwan-a-1.jpg";
 import iconCard from "../assets/icons/tb-icon-fill-lightBrown.png";
 import imageTempNuestrosPilares from "../assets/Home/hands.jpg";
+import CommunitySectionCard from "../components/HomePage/CommunitySectionCard";
 
 const Pilares: React.FC = () => {
 
@@ -61,12 +62,11 @@ const Pilares: React.FC = () => {
 
         <PageSeparator title="Conócelos" />
 
-
-      <div
-  className="flex justify-center items-center mx-auto w-full h-[690px] 2xl:translate-x-0 md:max-w-7xl lg:mt-4 pt-1 space-y-2 overflow-hidden"
+        <div
+  className="flex justify-center items-center mx-auto w-full max-w-7xl min-w-[320px] min-h-[760px] h-auto lg:mt-4 pt-1 pb-4 space-y-2"
 >
-  <div className="grid gap-4 sm:mt-8 lg:grid-cols-5 lg:grid-rows-1 justify-center items-center">
-  
+  {/* Contenedor de las tarjetas */}
+  <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-center items-center px-4">
     <PilaresCard
       title="Arte con sentido"
       description="El amor se pinta, se teje, se esculpe y se canta"
@@ -104,6 +104,8 @@ const Pilares: React.FC = () => {
     />
   </div>
 </div>
+
+
           <PageSeparator title="Comunidad" />
           <div className="relative mt-10 mb-10" style={{ height: "700px" }}>
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
@@ -114,66 +116,45 @@ const Pilares: React.FC = () => {
             loop
             className="w-full h-full object-cover z-0"
           ></video>
-          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 items-center justify-center z-20 px-4 md:px-8">
-            <div className="flex flex-col items-center justify-center">
+
+          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 items-center justify-center z-20 px-4 md:px-8">
+            <div className="flex flex-col items-center justify-center sm:mt-10">
               <img src={iconSvg} className="h-32 md:h-44 mb-4" alt="" />
-              <p className="text-white text-2xl md:text-5xl font-thin text-center">
+              <p className="text-white text-2xl md:text-5xl font-serif text-center">
                 Un espacio de encuentro
                 <br />
                 y apoyo colaborativo
                 <br />
                 entre mujeres
               </p>
-              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-black transition-colors duration-300 ease-in-out">
+              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
                 <span className="text-2xl tracking-tight text-[#d2bb90]">
                   REGISTRARME
                 </span>
               </button>
             </div>
 
-            <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-1 items-center justify-center z-20 px-4 md:px-8">
-              <div className="flex flex-col items-center justify-center">
-                <img src={iconSvg} className="h-32 md:h-44 mb-4" alt="" />
-                <p className="text-white text-2xl md:text-5xl font-thin text-center">
-                  Un espacio de encuentro
-                  <br />
-                  y apoyo colaborativo
-                  <br />
-                  entre mujeres
-                </p>
-                <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-black transition-colors duration-300 ease-in-out">
-                  <span className="text-2xl tracking-tight text-[#d2bb90]">
-                    REGISTRARME
-                  </span>
-                </button>
-              </div>
-
-              <div className="flex flex-col items-center justify-center gap-4 mt-4 lg:mt-0">
-                {[1, 2, 3].map((_, index) => (
-                  <div
-                    key={index}
-                    className="flex border border-gray-300 bg-white shadow-lg rounded-lg overflow-hidden h-40 w-3/4 max-w-md"
-                  >
-                    <div className="w-2/5 h-full">
-                      <img
-                        src={`https://via.placeholder.com/150`}
-                        alt={`Card ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    <div className="w-3/5 p-4 flex flex-col justify-center">
-                      <h3 className="text-lg font-bold text-gray-800">
-                        Título de la Card {index + 1}
-                      </h3>
-                      <p className="text-sm text-gray-600">
-                        Descripción breve de la card {index + 1}. Aquí puedes
-                        agregar el contenido que desees.
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="flex-col items-center justify-center gap-4 mt-4 lg:mt-0 hidden sm:flex">
+              <CommunitySectionCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen1"
+                title="Armá tu página web"
+                description="Usala como presentación personal, muestrario de productos,
+                  servicios y actividades."
+              />
+              <CommunitySectionCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen2"
+                title="Sumate al Trueque"
+                description="Publicá tus productos y/o servicios disponibles para
+                  intercambiar con nuestra comunidad."
+              />
+              <CommunitySectionCard
+                imageSrc="https://via.placeholder.com/150"
+                imageAlt="Imagen3"
+                title="Activá tu tienda online"
+                description="Vendé tus productos y/o servicios."
+              />
             </div>
           </div>
         </div>
