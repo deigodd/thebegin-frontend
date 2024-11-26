@@ -13,6 +13,8 @@ import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Tecito from "./pages/Tecito";
 
+import Profile from "./pages/Profile1";
+import Profile2 from "./pages/Profile2";
 //import Activity from "./pages/Activity";
 
 // Mantener el orden, ty
@@ -118,6 +120,26 @@ const App: React.FC = () => {
             <>
               <NotFound />
               <PageTitle title="404 - Página no encontrada" />
+            </>
+          }
+        />
+        {/* Ruta del Profile */}
+        <Route
+          path="/profile"
+          element={
+            <>
+              <Profile/>
+              <PageTitle title="Profile" />
+            </>
+          }
+        />
+        {/* Ruta del Profile2 */}
+        <Route
+          path="/profile2"
+          element={
+            <>
+              <Profile2/>
+              <PageTitle title="ProfileVegan" />
             </>
           }
         />
