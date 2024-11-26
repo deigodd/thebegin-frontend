@@ -157,10 +157,8 @@ const HomePage: React.FC = () => {
                   ¿Qué es y para qué TB?
                 </h5>
                 <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  aliquam doloremque est corrupti qui voluptate, porro excepturi
-                  blanditiis quo dolor autem sunt, hic consequatur minus!
-                  Cupiditate, eligendi. Eum, aspernatur odit.
+                Una plataforma y RED SOCIAL PARA MUJERES, MASIVA Y MULTIUSO, PARA GENERAR CONEXIONES QUE APOYEN AL CRECIMIENTO INDIVIDUAL Y COLECTIVO. 
+                CON EL PROPÓSITO DE MULTIPLICAR LA ENERGÍA CREADORA DE LAS MUJERES y el fin QUE CADA MUJER LOGRE SU PROPIA META
                 </p>
               </Card>
             </div>
@@ -174,10 +172,8 @@ const HomePage: React.FC = () => {
                   Como funciona TB
                 </h5>
                 <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  possimus hic et soluta quasi beatae suscipit ducimus impedit
-                  enim, quos quod repellat, fugiat quis ratione corporis ex.
-                  Doloribus, fugiat iusto!
+                Nuestra plataforma  es un match colaborativo, basado en coincidencias. 
+                Te registras en la plataforma, y según tus interés, profesión u ocupación, modelos de negocio, intereses particulares, necesidades de información, preferencias de interacción específicas.
                 </p>
               </Card>
             </div>
@@ -191,10 +187,10 @@ const HomePage: React.FC = () => {
                   Beneficios para ti
                 </h5>
                 <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  ipsam atque dicta sint nesciunt eius, excepturi exercitationem
-                  impedit? Sint neque dolor eos? Quibusdam minima, quis magnam
-                  laboriosam sit totam labore?
+                The Begin, es la comunidad online de mujeres más completa  El núcleo es la APP THE BEGIN que cuenta con múltiples segmentos:  TRUEKE, bolsa de trabajo, Marketplace, cuidado personal, salud mental entre otros, desde lo práctico, hasta lo onírico.
+                Con el propósito de fortalecer la comunidad inclusiva, sin discriminación, The Begin implementa 
+                tecnologías de vinculación dentro un universo propio. Es un facilitador para la construcción y el alcance de metas entre y para mujeres.
+
                 </p>
               </Card>
             </div>

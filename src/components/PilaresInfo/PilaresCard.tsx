@@ -6,7 +6,7 @@ interface PilaresCardProps {
   description: string;
   imageSrc: string;
   icon: string;
-  info:string;
+  info: string;
 }
 
 const defaultDescription =
@@ -26,10 +26,10 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
   };
 
   return (
-    <div className="relative flex flex-col items-center w-full">
+    <div className="relative flex flex-col items-center w-full sm:w-auto pt-4 pb-4"> {/* Padding top y bottom */}
       {/* Tarjeta principal */}
       <div
-        className="bg-white border border-gray-200 rounded-lg shadow w-full lg:w-auto mx-auto flex flex-col h-full cursor-pointer transition-all transform hover:scale-105 hover:shadow-lg"
+        className="bg-white border border-gray-200 rounded-lg shadow w-full max-w-sm mx-auto flex flex-col h-full cursor-pointer transition-all transform hover:scale-105 hover:shadow-lg sm:mx-2"
         onClick={toggleExpand}
       >
         <img
@@ -53,7 +53,11 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
       {/* Contenido expandible */}
       <motion.div
         initial={{ height: 0, opacity: 0 }}
-        animate={isExpanded ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+        animate={
+          isExpanded
+            ? { height: "auto", opacity: 1 }
+            : { height: 0, opacity: 0 }
+        }
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="overflow-hidden w-full"
       >
@@ -66,6 +70,8 @@ const PilaresCard: React.FC<PilaresCardProps> = ({
 };
 
 export default PilaresCard;
+
+
 
 
 
