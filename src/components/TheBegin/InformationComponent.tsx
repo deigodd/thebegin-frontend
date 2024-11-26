@@ -22,11 +22,11 @@ const InformationComponent: React.FC = () => {
     };
 
     return (
-        <div className="flex gap-4 w-full">
-            <div className="w-2/3 h-fill">
+        <div className="sm:flex gap-4 w-full">
+            <div className="sm:w-2/3 h-fill">
                 <ContentDisplay title={selectedContent.title} content={selectedContent.content} />
             </div>
-            <div className="grid gap-y-2 py-8 w-1/3">
+            <div className="grid sm:gap-y-2 sm:py-8 sm:w-1/3">
                 {contentData.map((item, index) => (
                     <InfoCard
                         key={index}
