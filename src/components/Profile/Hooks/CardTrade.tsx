@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 type CardTradeProps = {
   image: string;    // Ruta de la imagen
