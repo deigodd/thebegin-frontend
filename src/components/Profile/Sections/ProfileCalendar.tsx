@@ -1,4 +1,4 @@
-import ImageColumn from '../Hooks/Calendary/ImageColumn';
+
 import CalendarColumn from '../Hooks/Calendary/CalendarColumnTemplate2';
 import ActivitiesColumn from '../Hooks/Calendary/ActivitiesColumn';
 import bg from "../../../assets/backgroundProfile/calendarBgP1.jpg";
@@ -19,7 +19,7 @@ const ProfileCalendar = () => {
             <ActivitiesColumn
               selectedDayBg="#282c2c"
               selectedDayText="white"
-              arrowColor="white"
+
               dayBg="#5d6062"
               dayText="white"
               activityBg="#282c2c"

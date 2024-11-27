@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPhoneAlt, FaEnvelope, FaInstagram, FaMousePointer, FaPersonBooth, FaUser } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaUser } from 'react-icons/fa';
 import ChangeImage from '../Hooks/ChangeImage';
 import bg from "../../../assets/backgroundProfile/bgContactP1.jpg";
 
@@ -10,10 +10,10 @@ interface userProfile {
 }
 
 const ProfileContact: React.FC = () => {
-  const [bgColor, setBgColor] = useState('#000000');
+  const [bgColor] = useState('#000000');
   const [bgImage] = useState<string | null>(bg);
   
-  const [userProfile, setUserProfile] = useState<userProfile>({
+  const [userProfile] = useState<userProfile>({
     cellphone: '+123-456-7890',
     pname: '@sofiamonteverde',
     email: 'hola@gmail.com',

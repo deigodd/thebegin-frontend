@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom'; // Importa Link para redirección
 import cinta from '../../../assets/adhesive2.png';
 import img1 from '../../../assets/img1_TradeP1.jpg';

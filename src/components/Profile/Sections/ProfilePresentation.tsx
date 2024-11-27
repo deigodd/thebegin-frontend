@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import AudioCard from '../Hooks/AudioCard';
 import WriteCard from '../Hooks/WriteCard';
 
@@ -28,18 +28,7 @@ const ProfilePresentation = () => {
     }));
   }, []);
 
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const result = reader.result as string;
-        setUserProfile((prevProfile) => ({ ...prevProfile, image: result }));
-        localStorage.setItem('profileImage', result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+
 
   return (
     <section className="relative flex items-center justify-center min-h-screen bg-[#343c3c] text-white overflow-hidden">

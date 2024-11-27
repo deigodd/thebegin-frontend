@@ -1,8 +1,8 @@
-import React from "react";
 
-type Props = {};
 
-const ProfileServiceProduct = (props: Props) => {
+
+
+const ProfileServiceProduct = ( ) => {
   return (
     <section className="relative flex items-center justify-center min-h-screen bg-[#343c3c] text-white">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
