@@ -37,7 +37,7 @@ const MatchesPage: React.FC<MatchProps> = ({ searchQuery }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <h1 className="text-2xl font-bold my-6">Nuevos Matches</h1>
+      <h1 className="text-tbc-pilarbrown-600 text-2xl font-serif font-bold my-6">Nuevos Matches</h1>
 
       <MatchGrid
         users={users}

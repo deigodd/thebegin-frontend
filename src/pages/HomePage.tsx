@@ -90,7 +90,7 @@ const HomePage: React.FC = () => {
                 cardTitle="COMUNIDAD"
                 buttonText="Descubre la Comunidad"
                 cardSubtitle="Un espacio de encuentro y apoyo colaborativo entre mujeres"
-                cardDescription="Un espacio donde podrás armar tu página web personal, para utilizarla por ejemplo, como presentación personal, muestrario de productos, servicios y actividades."
+                cardDescription="The Begin, es la comunidad online de mujeres más completa  El núcleo es la APP THE BEGIN que cuenta con múltiples segmentos:  TRUEKE, bolsa de trabajo, Marketplace, cuidado personal, salud mental entre otros, desde lo práctico, hasta lo onírico."
               />
               <HomePageCard
                 centerCard={false}
@@ -102,6 +102,10 @@ const HomePage: React.FC = () => {
                 cardTitle="MARKETPLACE"
                 buttonText="Visita el Marketplace"
                 cardSubtitle="Tu Tienda en 2 pasos"
+                cardDescription="Un espacio para comprar, vender e intercambiar productos y servicios, apoyando a tu comunidad.
+                Este espacio divide  los 5 Pilares The Begin. Al seleccionar uno de ellos verás las subcategorías correspondientes.
+                por ejemplo: Arte con Sentido: Pintura, Escultura, Dibujo, Grabado, Fotografía,
+                etc"
               />
               {/*Trueque*/}
               <HomePageCard
@@ -114,6 +118,8 @@ const HomePage: React.FC = () => {
                 cardTitle="TRUEQUE"
                 buttonText="Visita lo trueques"
                 cardSubtitle="Llegó el Trueque"
+                cardDescription="Volvemos al origen, intercambiemos cosas, en un mundo donde no se necesita el dinero si no que el intercambio es la estrella. Quiere hacer trueque de producto o servicio 
+                Hace la oferta y el sistema buscará a tu interesado y entre muchos podrás hacerlo factible. Cruzar tus productos/servicios y haz tu TRUEQUE. "
               />
 
               {/*Begin Fest*/}
@@ -127,6 +133,8 @@ const HomePage: React.FC = () => {
                 cardTitle="BEGIN FEST"
                 buttonText="Conoce nuestro festival"
                 cardSubtitle="¿De qué se trata?"
+                cardDescription="2 días Festival, que canaliza la experiencia The Begin y  va rotando en distintos lugares de América Latina.
+                Un encuentro masivo donde se ven en acción todos los segmentos de la Plataforma. Estos serán espacios diseñados para que las mujeres nos encontremos físicamente, nos conozcamos, nos abracemos y nos inspiremos, intercambiemos  nuestras habilidades, expongamos nuestros productos artísticos y culturales."
               />
             </div>
           </div>
@@ -157,10 +165,8 @@ const HomePage: React.FC = () => {
                   ¿Qué es y para qué TB?
                 </h5>
                 <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  aliquam doloremque est corrupti qui voluptate, porro excepturi
-                  blanditiis quo dolor autem sunt, hic consequatur minus!
-                  Cupiditate, eligendi. Eum, aspernatur odit.
+                Una plataforma y RED SOCIAL PARA MUJERES, MASIVA Y MULTIUSO, PARA GENERAR CONEXIONES QUE APOYEN AL CRECIMIENTO INDIVIDUAL Y COLECTIVO. 
+                CON EL PROPÓSITO DE MULTIPLICAR LA ENERGÍA CREADORA DE LAS MUJERES y el fin QUE CADA MUJER LOGRE SU PROPIA META
                 </p>
               </Card>
             </div>
@@ -174,10 +180,8 @@ const HomePage: React.FC = () => {
                   Como funciona TB
                 </h5>
                 <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  possimus hic et soluta quasi beatae suscipit ducimus impedit
-                  enim, quos quod repellat, fugiat quis ratione corporis ex.
-                  Doloribus, fugiat iusto!
+                Nuestra plataforma  es un match colaborativo, basado en coincidencias. 
+                Te registras en la plataforma, y según tus interés, profesión u ocupación, modelos de negocio, intereses particulares, necesidades de información, preferencias de interacción específicas.
                 </p>
               </Card>
             </div>
@@ -191,10 +195,10 @@ const HomePage: React.FC = () => {
                   Beneficios para ti
                 </h5>
                 <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  ipsam atque dicta sint nesciunt eius, excepturi exercitationem
-                  impedit? Sint neque dolor eos? Quibusdam minima, quis magnam
-                  laboriosam sit totam labore?
+                The Begin, es la comunidad online de mujeres más completa  El núcleo es la APP THE BEGIN que cuenta con múltiples segmentos:  TRUEKE, bolsa de trabajo, Marketplace, cuidado personal, salud mental entre otros, desde lo práctico, hasta lo onírico.
+                Con el propósito de fortalecer la comunidad inclusiva, sin discriminación, The Begin implementa 
+                tecnologías de vinculación dentro un universo propio. Es un facilitador para la construcción y el alcance de metas entre y para mujeres.
+
                 </p>
               </Card>
             </div>

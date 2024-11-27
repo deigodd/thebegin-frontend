@@ -2,11 +2,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
+import Trueque from "./pages/Trueque";
 import HomePage from "./pages/HomePage";
+import Pilares from "./pages/Pilares";
 import PageTitle from "./components/App/PageTitle";
+import  Contact  from "./pages/Contact";
+import TheBegin from "./pages/TheBeginPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
+import Tecito from "./pages/Tecito";
+import MatchPage from './pages/MatchPage'
+import Profile from "./pages/Profile1";
+import Profile2 from "./pages/Profile2";
 //import Activity from "./pages/Activity";
 
 // Mantener el orden, ty
@@ -40,8 +48,38 @@ const App: React.FC = () => {
           path="/trueque"
           element={
             <>
-              <Marketplace />
+              <Trueque />
               <PageTitle title="Trueque" />
+            </>
+          }
+        />
+        {/* Ruta Pilares-info */}
+        <Route
+          path="/pilares"
+          element={
+            <>
+              <Pilares />
+              <PageTitle title="Pilares" />
+            </>
+          }
+        />
+        {/* Ruta contacto*/}
+        <Route
+          path="/contacto"
+          element={
+            <>
+              <Contact />
+              <PageTitle title="Contact" />
+            </>
+          }
+        />
+        {/* Ruta del TheBegin */}
+        <Route
+          path="/the-begin"
+          element={
+            <>
+              <TheBegin />
+              <PageTitle title="The Begin" />
             </>
           }
         />
@@ -65,6 +103,16 @@ const App: React.FC = () => {
             </>
           }
         />
+        {/* Ruta del Tecito */}
+        <Route
+          path="/tecito"
+          element={
+            <>
+              <Tecito />
+              <PageTitle title="Tecito" />
+            </>
+          }
+        />
         {/* RUTA CONTROLADORA -> Redirige al 404 */}
         <Route
           path="/*"
@@ -72,6 +120,36 @@ const App: React.FC = () => {
             <>
               <NotFound />
               <PageTitle title="404 - Página no encontrada" />
+            </>
+          }
+        />
+        {/* Ruta del Profile */}
+        <Route
+          path="/profile/1"
+          element={
+            <>
+              <Profile/>
+              <PageTitle title="Profile" />
+            </>
+          }
+        />
+        {/* Ruta del Profile2 */}
+        <Route
+          path="/profile/2"
+          element={
+            <>
+              <Profile2/>
+              <PageTitle title="ProfileVegan" />
+            </>
+          }
+        />
+        {/* Ruta del Profile2 */}
+        <Route
+          path="/match"
+          element={
+            <>
+              <MatchPage/>
+              <PageTitle title="Match" />
             </>
           }
         />
