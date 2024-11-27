@@ -17,7 +17,7 @@ const ProfileCalendar = () => {
           activityBg="#957F74"
           activityHoverBg="#AD947D"
           activityText="white"
-        />
+        />
       </div>
     </div>
   );
