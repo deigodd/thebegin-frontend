@@ -16,7 +16,7 @@ const ProfilePresentation = () => {
               bgColor="bg-tbc-pilargreen-400"
               titleTextColor="text-white"  // Color del título
               contentTextColor="text-black"  // Color del contenido
-              className="h-full"
+              className="h-full "
             />
           </div>
           { /* IMAGEN */}
