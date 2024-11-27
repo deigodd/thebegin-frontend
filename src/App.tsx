@@ -12,7 +12,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Tecito from "./pages/Tecito";
-
+import MatchPage from './pages/MatchPage'
 import Profile from "./pages/Profile1";
 import Profile2 from "./pages/Profile2";
 //import Activity from "./pages/Activity";
@@ -125,7 +125,7 @@ const App: React.FC = () => {
         />
         {/* Ruta del Profile */}
         <Route
-          path="/profile"
+          path="/profile/1"
           element={
             <>
               <Profile/>
@@ -135,11 +135,21 @@ const App: React.FC = () => {
         />
         {/* Ruta del Profile2 */}
         <Route
-          path="/profile2"
+          path="/profile/2"
           element={
             <>
               <Profile2/>
               <PageTitle title="ProfileVegan" />
+            </>
+          }
+        />
+        {/* Ruta del Profile2 */}
+        <Route
+          path="/activity"
+          element={
+            <>
+              <MatchPage/>
+              <PageTitle title="Match" />
             </>
           }
         />

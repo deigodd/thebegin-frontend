@@ -14,7 +14,7 @@ const Banner = ({ text = "¡wow!" }: BannerProps) => {
       {/* Right section with image */}
       <div className="relative overflow-hidden">
         <img
-          src="/api/placeholder/600/400"
+          src="https://images.pexels.com/photos/1204135/pexels-photo-1204135.jpeg?cs=srgb&dl=pexels-vladbagacian-1204135.jpg&fm=jpg"
           alt="Friends embracing"
           className="w-full h-full object-cover"
         />
