@@ -1,5 +1,4 @@
 import imgP1 from '../assets/fotografa.png'
-import imgP2 from '../assets/fotografa_pie.jpg'
 export interface User {
     id: string;
     name: string;
@@ -29,7 +28,7 @@ export interface User {
       name: 'Amalia Ribero',
       age: 30,
       bio: 'Amante de las plantas, la huerta y el jardín. En mi tienda producimos nuesttros propios alimentos y semillas.',
-      profileImage: imgP2,
+      profileImage: 'https://cdn.pixabay.com/photo/2018/08/04/20/48/woman-3584435_1280.jpg',
       interests: ['Plantas', 'Bienestar', 'Huertas', 'Flores'],
       location: 'Santiago',
       nationality: 'Chilena',
@@ -80,15 +79,15 @@ export interface User {
       countryCode: "MX"
     },
     {
-      id: '8',
-      name: 'Renata',
+      id: '9',
+      name: 'Andrea',
       age: 24,
       bio: 'Trabajo en comunicación y marketing digital. Mi pasión es crear contenido auténtico y conectar con personas de diferentes partes del mundo.',
       profileImage: 'https://i.pravatar.cc/150?u=diego',
       interests: ['Marketing Digital', 'Redes Sociales', 'Fotografía'],
       location: 'Ciudad de México',
-      nationality: 'Mexicana',
-      countryCode: "MX"
+      nationality: 'Argentina',
+      countryCode: "AR"
     }
   ];
   
