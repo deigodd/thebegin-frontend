@@ -38,7 +38,6 @@ const Profile = () => {
 
   return (
     <>
-      <UserOptions />
       <Navbar />
 
       <div className="bg-white">

@@ -69,17 +69,17 @@ const ProfileProjects: React.FC = () => {
         <div className="grid grid-cols-3 rounded-lg gap-2 lg:mr-10 h-screen">
           
           {/* Segunda columna */}
-          <div className="bg-red-700 rounded-b-3xl min-h-[150px] col-span-2 ml-5 overflow-hidden">
+          <div className="rounded-b-3xl min-h-[150px] col-span-2 ml-5 overflow-hidden">
             <img alt='img' src={img1}/>
           </div>
 
           {/* Tercera columna */}
-          <div className="bg-purple-700 rounded-b-3xl min-h-[150px] overflow-hidden mr-10">
+          <div className="rounded-b-3xl min-h-[150px] overflow-hidden mr-10">
           <img alt='img' src={img4}/>
           </div>
 
           {/* Columna de imagen de perfil */}
-          <div className="bg-red-700 rounded-3xl min-h-[200px] overflow-hidden ml-5">
+          <div className="rounded-3xl min-h-[200px] overflow-hidden ml-5">
             {/* Profile image */}
             <img src={userProfile.image} alt="Profile" className="object-cover w-full h-full rounded-3xl" />
           </div>
@@ -93,10 +93,10 @@ const ProfileProjects: React.FC = () => {
           </div>
 
           {/* Más columnas con imágenes */}
-          <div className="bg-red-700 rounded-3xl min-h-[250px] overflow-hidden mb-5 ml-5">
+          <div className="rounded-3xl min-h-[250px] overflow-hidden mb-5 ml-5">
             <img alt='img' src={img5}/>
           </div>
-          <div className="bg-red-700 rounded-t-3xl min-h-[250px] col-span-2 overflow-hidden mr-10">
+          <div className=" rounded-t-3xl min-h-[250px] col-span-2 overflow-hidden mr-10">
             <img alt='img' src={img3}/>
           </div>
 

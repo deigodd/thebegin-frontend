@@ -145,7 +145,7 @@ const App: React.FC = () => {
         />
         {/* Ruta del Profile2 */}
         <Route
-          path="/activity"
+          path="/match"
           element={
             <>
               <MatchPage/>
