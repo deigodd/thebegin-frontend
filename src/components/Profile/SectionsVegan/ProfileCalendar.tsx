@@ -6,19 +6,18 @@ import ActivitiesColumn from '../Hooks/Calendary/ActivitiesColumn';
 const ProfileCalendar = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-tbc-primarybrown-200 p-12">
-      <div className="max-w-[90rem] mx-auto bg-tbc-primarybrown-200  p-10 flex">
+      <div className="max-w-[90rem] mx-auto bg-tbc-primarybrown-200  p-10 flex flex-wrap">
         <ImageColumn />
         <CalendarColumn />
         <ActivitiesColumn
-            selectedDayBg="#738755"
-            selectedDayText="white"
-            arrowColor='#738755'
-            dayBg="#D0D7C2"
-            dayText="black"
-            activityBg="#957F74"
-            activityHoverBg="#AD947D"
-            activityText="white"
-          />
+          selectedDayBg="#738755"
+          selectedDayText="white"
+          dayBg="#D0D7C2"
+          dayText="black"
+          activityBg="#957F74"
+          activityHoverBg="#AD947D"
+          activityText="white"
+        />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
-//import React from 'react';
 import CardPresentation from '../Hooks/CardPresentation';
+//import presentationData from '../../../data/Profile2/presentationData.json'
+
 
 const ProfilePresentation = () => {
   return (
@@ -15,13 +16,13 @@ const ProfilePresentation = () => {
               bgColor="bg-tbc-pilargreen-400"
               titleTextColor="text-white"  // Color del título
               contentTextColor="text-black"  // Color del contenido
-              className="h-full"
+              className="h-full "
             />
           </div>
           { /* IMAGEN */}
           <div className="md:col-span-3">
             <CardPresentation
-              image="https://i.pinimg.com/736x/62/e3/ea/62e3eadbe806001e338f516c88ed9aa2.jpg"
+              image="https://cdn.pixabay.com/photo/2017/02/28/11/53/spices-2105541_1280.jpg"
               imageAlt="Semillas y plantas pequeñas"
               className="h-full"
             />
@@ -32,7 +33,7 @@ const ProfilePresentation = () => {
         <div className="grid md:grid-cols-3 gap-6">
           <div className="md:col-span-1">
             <CardPresentation
-              image="https://i.pinimg.com/736x/25/cc/b5/25ccb56715f3464ae7a9238c4b8a38e0.jpg"
+              image="https://cdn.pixabay.com/photo/2021/09/20/06/55/spaghetti-6639970_1280.jpg"
               imageAlt="Preparación de vegetales"
               className="h-full"
             />
@@ -74,7 +75,7 @@ const ProfilePresentation = () => {
           </div>
           <div className="md:col-span-3">
             <CardPresentation
-              image="https://i.pinimg.com/736x/9b/71/ae/9b71ae7ef28892d79040f227a4b497cf.jpg"
+              image="https://cdn.pixabay.com/photo/2019/05/07/09/01/spices-4185324_1280.jpg"
               imageAlt="Especias en cucharas de madera"
               className="h-full"
             />

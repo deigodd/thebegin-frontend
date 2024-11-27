@@ -1,0 +1,13 @@
+{
+    "mainImage": {
+      "src": "https://cdn.pixabay.com/photo/2022/06/26/14/32/redcurrants-7285616_960_720.jpg",
+      "alt": "Organic gardening and produce",
+      "width": "full",
+      "height": "600px"
+    },
+    "infoBox": {
+      "text": "Te comparto todas las cosas lindas que tengo para intercambiar.",
+      "backgroundColor": "bg-tbc-pilargreen-600"
+    }
+  }
+  
