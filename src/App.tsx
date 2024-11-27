@@ -1,5 +1,5 @@
 // src/App.tsx
-import React from "react";
+import {useEffect, useState} from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
 import Trueque from "./pages/Trueque";
@@ -12,12 +12,22 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Tecito from "./pages/Tecito";
-
-//import Activity from "./pages/Activity";
+import MatchPage from './pages/MatchPage'
+import Profile from "./pages/Profile1";
+import Profile2 from "./pages/Profile2";
 
 // Mantener el orden, ty
 
 const App: React.FC = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    // Aqui verificamos si hay token, despúes hay que implementar para validar si el token esta vigente -> TO-DO
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   return (
     <Router>
       <Routes>
@@ -26,7 +36,7 @@ const App: React.FC = () => {
           path="/"
           element={
             <>
-              <HomePage />
+              {isLoggedIn? (<MatchPage/>):(<HomePage />)}
               <PageTitle title="The Begin" />
             </>
           }
@@ -118,6 +128,36 @@ const App: React.FC = () => {
             <>
               <NotFound />
               <PageTitle title="404 - Página no encontrada" />
+            </>
+          }
+        />
+        {/* Ruta del Profile */}
+        <Route
+          path="/profile/1"
+          element={
+            <>
+              <Profile/>
+              <PageTitle title="Profile" />
+            </>
+          }
+        />
+        {/* Ruta del Profile2 */}
+        <Route
+          path="/profile/2"
+          element={
+            <>
+              <Profile2/>
+              <PageTitle title="ProfileVegan" />
+            </>
+          }
+        />
+        {/* Ruta del Profile2 */}
+        <Route
+          path="/match"
+          element={
+            <>
+              <MatchPage/>
+              <PageTitle title="Match" />
             </>
           }
         />
