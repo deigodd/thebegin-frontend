@@ -1,16 +1,56 @@
-import React from 'react'
+import TruequeData from '../../../data/Profile2/TruequeData.json'
+import BackgroundTrueque from '../Hooks/Trueque/BackgroundTrueque';
+import TruequeCard from '../Hooks/Trueque/TruequeCard';
+import TruequeButton from '../Hooks/Trueque/ButtonTrueque';
 
-type Props = {}
 
-const ProfileTrueque = (props: Props) => {
+const ProfileTrueque = () => {
+    const { mainImage, infoBox } = TruequeData;
+
+
   return (
-    <section className="flex items-center justify-center min-h-screen bg-gray-500 p-10">
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">Trueque</h2>
-            <p>Sección para mostrar productos que estarán en el trueque, con enlace a información completa.</p>
-          </div>
-    </section>
-  )
-}
+    <div className="min-h-screen bg-[#FBF4EC] py-12 relative">
+      <div className="container mx-auto px-4">
 
-export default ProfileTrueque
+        <div className="absolute inset-0 max-y-2/3 -bottom-8 w-2/3 left-1/2 transform -translate-x-1/2">
+            <BackgroundTrueque />
+          </div>
+
+        <div className="max-w-3xl mx-auto relative">
+          {/* Background Card */}
+          
+
+          {/* Trueque Title Card */}
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 transform z-20">
+            <TruequeCard />
+          </div>
+
+          {/* Main Content */}
+          <div className="relative pt-24 pb-32">
+          <img
+              src={mainImage.src}
+              alt={mainImage.alt}
+              className={`w-${mainImage.width} h-[${mainImage.height}] object-cover shadow-lg`}
+            />
+
+            {/* Green Info Box */}
+        <div className="absolute top-[calc(730px-80px)] left-16 right-16 z-10">
+          <div className="bg-tbc-pilargreen-600 text-white p-8 rounded-3xl shadow-lg">
+            <p className="text-xl md:text-xl text-center font-light">
+              {infoBox.text}
+            </p>
+          </div>
+        </div>
+
+            {/* Call to Action Button */}
+            <div className="absolute bottom-[calc(120px-80px)] left-1/2 -translate-x-1/2 z-20">
+              <TruequeButton />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileTrueque;

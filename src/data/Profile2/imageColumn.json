@@ -1,0 +1,18 @@
+[
+    {
+      "src": "https://images.pexels.com/photos/12301873/pexels-photo-12301873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "alt": "Decorative pots",
+      "height": "h-56"
+    },
+    {
+      "src": "https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "alt": "Food preparation",
+      "height": "h-48"
+    },
+    {
+      "src": "https://images.pexels.com/photos/5429051/pexels-photo-5429051.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "alt": "Gardening",
+      "height": "h-64"
+    }
+  ]
+  
