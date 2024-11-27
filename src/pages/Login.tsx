@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import backgroundImage from "../assets/background-home.svg";
 import logo from "../assets/icons/svg/tb-icon-fill-orange.svg";
+import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
+  const token = () => {localStorage.setItem("token","TB") ; navigate('/');}
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string }>(
@@ -64,7 +67,7 @@ const Login: React.FC = () => {
           </div>
 
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white border rounded-lg p-10">
-            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+            <form onSubmit={token} className="space-y-6" noValidate>
               <div>
                 <label
                   htmlFor="email"

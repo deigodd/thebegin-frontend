@@ -1,5 +1,5 @@
 // src/App.tsx
-import React from "react";
+import {useEffect, useState} from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
 import Trueque from "./pages/Trueque";
@@ -15,11 +15,19 @@ import Tecito from "./pages/Tecito";
 import MatchPage from './pages/MatchPage'
 import Profile from "./pages/Profile1";
 import Profile2 from "./pages/Profile2";
-//import Activity from "./pages/Activity";
 
 // Mantener el orden, ty
 
 const App: React.FC = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    // Aqui verificamos si hay token, despúes hay que implementar para validar si el token esta vigente -> TO-DO
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   return (
     <Router>
       <Routes>
@@ -28,7 +36,7 @@ const App: React.FC = () => {
           path="/"
           element={
             <>
-              <HomePage />
+              {isLoggedIn? (<MatchPage/>):(<HomePage />)}
               <PageTitle title="The Begin" />
             </>
           }
