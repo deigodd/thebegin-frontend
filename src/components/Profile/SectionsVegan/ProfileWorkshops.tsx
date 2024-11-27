@@ -1,8 +1,6 @@
-import React from 'react'
 
-type Props = {}
 
-const ProfileWorkshops = (props: Props) => {
+const ProfileWorkshops = () => {
   return (
     <section className="flex items-center justify-center min-h-screen bg-gray-400 p-10">
           <div className="text-center">
