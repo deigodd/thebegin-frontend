@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
     "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
     "framer-motion": "^11.11.11",
     "lucide-react": "^0.454.0",
+    "mongoose": "^8.8.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.1",
@@ -38,4 +42,5 @@
     "vite": "^5.4.10",
     "vite-plugin-svgr": "^4.3.0"
   }
+  
 }
