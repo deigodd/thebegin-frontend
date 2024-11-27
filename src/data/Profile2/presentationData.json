@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "seeds": {
+      "layout": "md:grid-cols-5",
+      "cards": [
+        {
+          "type": "text",
+          "span": "md:col-span-2",
+          "title": "SEMILLAS",
+          "content": "Mis semillas son producidas con técnicas de cultivo que protegen el medio ambiente. No están tratadas con venenos, pueden ser manipuladas con tranquilidad, incluso por niños",
+          "bgColor": "bg-tbc-pilargreen-400",
+          "titleTextColor": "text-white",
+          "contentTextColor": "text-black"
+        },
+        {
+          "type": "image",
+          "span": "md:col-span-3",
+          "image": "https://cdn.pixabay.com/photo/2017/02/28/11/53/spices-2105541_1280.jpg",
+          "imageAlt": "Semillas y plantas pequeñas",
+          "bgColor": ""
+        }
+      ]
+    },
+    "vegetables": {
+      "layout": "md:grid-cols-3",
+      "cards": [
+        {
+          "type": "image",
+          "span": "md:col-span-1",
+          "image": "https://i.pinimg.com/736x/25/cc/b5/25ccb56715f3464ae7a9238c4b8a38e0.jpg",
+          "imageAlt": "Preparación de vegetales",
+          "bgColor": ""
+        },
+        {
+          "type": "text",
+          "span": "md:col-span-1",
+          "title": "HORTALIZAS Y VERDURAS",
+          "content": "Produzco alimentos frescos y saludables, con la tranquilidad de saber que están cultivados pensando en el bienestar de todos.",
+          "bgColor": "bg-tbc-pilarbrown-200",
+          "titleTextColor": "text-white",
+          "contentTextColor": "text-black"
+        },
+        {
+          "type": "organic",
+          "span": "md:col-span-1",
+          "bgColor": "bg-gray-100",
+          "title": {
+            "text": "ORGÁNICO",
+            "color": "text-[#96B37E]"
+          },
+          "subtitle": {
+            "text": "Natural",
+            "color": "text-[#D4A373]"
+          }
+        }
+      ]
+    },
+    "spices": {
+      "layout": "md:grid-cols-5",
+      "cards": [
+        {
+          "type": "text",
+          "span": "md:col-span-2",
+          "title": "AROMÁTICAS Y ESPECIAS",
+          "content": "Cuento con una amplia variedad de aromáticas y especias.",
+          "bgColor": "bg-[#DBDFB7]",
+          "titleTextColor": "text-[#A77F63]",
+          "contentTextColor": "text-black"
+        },
+        {
+          "type": "image",
+          "span": "md:col-span-3",
+          "image": "https://i.pinimg.com/736x/9b/71/ae/9b71ae7ef28892d79040f227a4b497cf.jpg",
+          "imageAlt": "Especias en cucharas de madera",
+          "bgColor": ""
+        }
+      ]
+    }
+  }
+}

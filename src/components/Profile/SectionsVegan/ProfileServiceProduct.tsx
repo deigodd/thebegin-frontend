@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import ActivitiesPageLayout from '../Hooks/ServiceProduct/ColumnService';
+import PopupForm from '../Hooks/PopupForm'; // Asegúrate de tener este componente importado
+import ServiceProduct from '../../../data/Profile2/ServiceProduct.json'
 
-type Props = {}
+const ActivitiesPage: React.FC = () => {
+  const [isPopupOpen, setPopupOpen] = useState(false);
 
-const ProfileServiceProduct = (props: Props) => {
+  const openPopup = () => setPopupOpen(true);
+  const closePopup = () => setPopupOpen(false);
+
   return (
-    <section className="flex items-center justify-center min-h-screen bg-gray-300 p-10">
-          <div className="text-center">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">Destacar Servicios</h2>
-            <p>Espacio para destacar productos, servicios o cualquier contenido que desee mostrar.</p>
-          </div>
-    </section>
-  )
-}
+    <div>
+      <ActivitiesPageLayout activities={ServiceProduct} onMoreInfo={openPopup} />
+      <PopupForm isOpen={isPopupOpen} onClose={closePopup} />
+    </div>
+  );
+};
 
-export default ProfileServiceProduct
+export default ActivitiesPage;

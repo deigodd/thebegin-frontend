@@ -14,7 +14,6 @@ interface ActivitiesByDay {
 interface ColorProps {
   selectedDayBg: string;
   selectedDayText: string;
-  arrowColor: string;
   dayBg: string;
   dayText: string;
   activityBg: string;
@@ -25,7 +24,6 @@ interface ColorProps {
 const ActivitiesColumn = ({
   selectedDayBg = '#738755',
   selectedDayText = 'white',
-  arrowColor = 'white',
   dayBg = '#D0D7C2',
   dayText = 'gray-700',
   activityBg = '#957F74',
@@ -68,16 +66,15 @@ const ActivitiesColumn = ({
   };
 
   return (
-    <div className="w-full max-w-lg sm:max-w-md mx-auto h-[calc(100vh-6rem)] sm:h-[500px] overflow-y-auto">
-      {/* Selector de días */}
-      <div className="flex items-center justify-between mb-6 px-4 sm:px-0 overflow-x-auto">
-        <ChevronLeft className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: arrowColor }} />
-        <div className="flex gap-2 overflow-x-auto">
+    <div className="w-[28rem]">
+      <div className="flex items-center justify-between mb-8">
+        <ChevronLeft className="w-8 h-8" style={{ color: selectedDayBg }} />
+        <div className="flex gap-2">
           {[10, 11, 12, 13, 14].map((day) => (
             <motion.div
               key={day}
               onClick={() => handleDayChange(day)}
-              className="min-w-[60px] px-4 py-2 rounded cursor-pointer transition-all duration-300 text-center"
+              className="px-5 py-3 rounded cursor-pointer transition-all duration-300"
               initial={{ scale: 1 }}
               animate={{
                 scale: day === selectedDay ? 1.05 : 1,
@@ -87,15 +84,14 @@ const ActivitiesColumn = ({
                 color: day === selectedDay ? selectedDayText : dayText,
               }}
             >
-              <div className="text-sm sm:text-base">{day}</div>
-              <div className="text-xs sm:text-sm">ABRIL</div>
+              <div className="text-base">{day}</div>
+              <div className="text-sm">ABRIL</div>
             </motion.div>
           ))}
         </div>
-        <ChevronRight className="w-8 h-8 sm:w-10 sm:h-10" style={{ color: arrowColor }} />
+        <ChevronRight className="w-8 h-8" style={{ color: selectedDayBg }} />
       </div>
 
-      {/* Lista de actividades */}
       <AnimatePresence mode="wait">
         <motion.div
           key={selectedDay}
@@ -103,12 +99,12 @@ const ActivitiesColumn = ({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="space-y-4 px-4"
+          className="space-y-3"
         >
           {activitiesByDay[selectedDay].map((activity, index) => (
             <motion.div
               key={index}
-              className="p-4 sm:p-5 rounded-lg shadow-md cursor-pointer"
+              className="p-5 cursor-pointer"
               style={{
                 backgroundColor: activityBg,
                 color: activityText,
@@ -117,8 +113,8 @@ const ActivitiesColumn = ({
                 backgroundColor: activityHoverBg,
               }}
             >
-              <div className="text-sm sm:text-base">{activity.time}</div>
-              <div className="text-base sm:text-lg font-medium">{activity.name}</div>
+              <div className="text-base">{activity.time}</div>
+              <div className="text-lg">{activity.name}</div>
             </motion.div>
           ))}
         </motion.div>
