@@ -18,7 +18,7 @@ interface MatchGridProps {
 
   export const MatchGrid = ({ users, onSelectUser, onIgnore, onMatch }: MatchGridProps) => {
     return (
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+      <div className="grid grid-cols-2 bg-tbc-primaryyellow-100 rounded-2xl md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
         {users.map((user) => (
           <MatchCard
             key={user.id}
