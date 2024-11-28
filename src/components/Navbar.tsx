@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     // Aqui verificamos si hay token, despúes hay que implementar para validar si el token esta vigente -> TO-DO
-    const token = localStorage.getItem("jwt");
+    const token = localStorage.getItem("token");
     if (token) {
       setIsLoggedIn(true);
     }
