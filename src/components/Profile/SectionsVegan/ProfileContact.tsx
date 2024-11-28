@@ -1,6 +1,6 @@
 import BackgroundImage from '../../../assets/De la puerta a la mesa.png'
 import { MOCK_USERS, User } from '@/types/User';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ProfileContact = () => {
 
