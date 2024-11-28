@@ -1,9 +1,10 @@
-// ProfileNews.tsx
 import { useState } from 'react';
 import Background from '../Hooks/BackgroundImage';
 import CardPresentation from '../Hooks/CardPresentation';
 import Checkbox from '../Hooks/CheckBox';
 import PopupForm from '../Hooks/PopupForm'; // Importamos el PopupForm
+
+//Imagen bakcground funciona con Background
 
 const searches = [
   "Proveedoras de macetas",

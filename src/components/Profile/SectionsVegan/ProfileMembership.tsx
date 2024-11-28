@@ -1,6 +1,12 @@
 import React from 'react';
+import { imageGeneral, ImageCategory } from '@/types/imageGeneral';
 
 const ProfileMembership: React.FC = () => {
+
+  const getImage = (category: ImageCategory) => {
+    return imageGeneral[category].imageUrl;
+  };
+
   return (
     <div className="relative min-h-screen flex justify-center items-center">
       {/* Background with overlay */}
@@ -15,7 +21,7 @@ const ProfileMembership: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center justify-center max-w-6xl mx-auto">
 
           {/* Membership Card */}
-          <div className="w-full md:w-[380px] bg-[#FBF7F4]  shadow-lg overflow-hidden relative transition-transform hover:scale-105"
+          <div className="w-full md:w-[380px] bg-[#FBF7F4]  shadow-lg overflow-hidden relative "
           style={{
             borderTopLeftRadius: '100% 70%',
             borderTopRightRadius: '100% 70%',
@@ -30,7 +36,7 @@ const ProfileMembership: React.FC = () => {
                      borderTopRightRadius: '50% 60%',
                    }}>
                 <img 
-                  src="https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                  src={getImage("membership")}
                   alt="Vegetales en cesta"
                   className="w-full h-full object-cover"
                 />

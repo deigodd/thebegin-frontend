@@ -5,7 +5,7 @@ const RightsAndConnections: React.FC = () => {
     return (
 
         <div className="px-4 py-6 bg-[#7D4B31]  md:flex md:items-center md:justify-between">
-        <span className="text-sm text-white/80 dark:text-gray-300 sm:text-center">© 2024 <a href="#" className="hover:text-[#FFFFFF]">The Begin™</a>. All Rights Reserved.
+        <span className="text-sm text-white/80 dark:text-gray-300 sm:text-center">© 2024 <a href="/" className="hover:text-[#FFFFFF]">The Begin™</a>. All Rights Reserved.
         </span>
         <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
           <a href="#" className="text-white/80 hover:text-[#FFFFFF] dark:hover:text-white transition-colors duration-300">

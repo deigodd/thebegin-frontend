@@ -1,7 +1,17 @@
 import ConsultForm from "../Hooks/Projects/ConsultForm";
 import ColumnWorkshops from "../Hooks/Projects/ColumnWorkshops";
+import { imageGeneral, ImageCategory } from "@/types/imageGeneral";
 
 const ProfileProject = () => {
+
+  const getImage = (category: ImageCategory) => {
+    return imageGeneral[category].imageUrl;
+  };
+
+  const getAltText = (category: ImageCategory) => {
+    return imageGeneral[category].altText;
+  };
+
   return (
     <div className="bg-[#FBF4EC]">
       <div className="relative min-h-screen pb-8 py-10">
@@ -21,9 +31,9 @@ const ProfileProject = () => {
         {/* Columna de Imagen */}
         <div className="relative flex items-center justify-center mt-28">
           <img
-            src="https://i.pinimg.com/736x/9f/de/67/9fde671de96337f60fb79ab575e7acd3.jpg"
-            alt="Vegetales frescos"
-            className="w-full h-[700px] object-cover "
+            src={getImage("projects")}
+            alt={getAltText("projects")}
+            className="w-full h-[700px] object-cover"
           />
         </div>
 

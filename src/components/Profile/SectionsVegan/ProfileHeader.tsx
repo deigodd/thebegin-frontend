@@ -1,18 +1,30 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState }  from 'react';
+import { MOCK_USERS, User } from '@/types/User';
 import AudioProgress from '../Hooks/AudioProgress';
+import { imageGeneral, ImageCategory } from "@/types/imageGeneral";
 
 const ProfileHeader: React.FC = () => {
+  const [user, setUser] = useState<User | undefined>(undefined);
 
-  const [imageUrl] = useState<string>(
-    'https://cdn.pixabay.com/photo/2019/06/11/13/33/salad-4267063_1280.jpg'
-  );
+  useEffect(() => {
+    // Busca el usuario con id '2'
+    const fetchedUser = MOCK_USERS.find(user => user.id === '2');
+    setUser(fetchedUser);
+  }, []);
+
+  if (!user) return <div>Loading...</div>; // Si no se ha cargado el usuario, muestra un loading
+
+  const getImage = (category: ImageCategory) => {
+    return imageGeneral[category].imageUrl;
+  };
 
   return (
 
     <div
       className="relative flex flex-col"
-      style={{ backgroundImage: `url(${imageUrl})` }} // Agregar la imagen de fondo aquí
+      style={{ 
+        backgroundImage: `url(${getImage('headerBackground')})`
+      }} // Agregar la imagen de fondo aquí
     >
 
         {/* Green background div positioned absolutely */}
@@ -37,7 +49,7 @@ const ProfileHeader: React.FC = () => {
                 <div className="flex-1 px-6">
                   <h1 className="text-7xl font-light mb-2 text-[#FFDDC8]">
                     SOY
-                    <span className="text-7xl block font-script text-white px-6">Amelia</span>
+                    <span className="text-7xl block font-script text-white px-6">{user.name.split(" ")[0]}</span>
                   </h1>
                   <p className="border-b-4 p-1 border-[#FFDDC8]"></p>
                   
@@ -68,7 +80,7 @@ const ProfileHeader: React.FC = () => {
                 <div className="w-full lg:w-1/3 transition-transform hover:scale-105">
                   <div className="relative mx-auto w-72 h-[500px] bg-black rounded-[3rem] border-[14px] border-black overflow-hidden">
                     <img
-                      src="https://cdn.pixabay.com/photo/2018/08/04/20/48/woman-3584435_1280.jpg"
+                      src= {user.profileImage}
                       alt="Garden produce"
                       className="w-full h-full object-cover rounded-[2rem]"
                     />

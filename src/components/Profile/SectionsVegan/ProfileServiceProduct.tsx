@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ActivitiesPageLayout from '../Hooks/ServiceProduct/ColumnService';
-import PopupForm from '../Hooks/PopupForm'; // Asegúrate de tener este componente importado
+import PopupForm from '../Hooks/PopupForm';
 import ServiceProduct from '../../../data/Profile2/ServiceProduct.json'
+
+//Las fotos y textos se sacan de ServiceProduct.json
 
 const ActivitiesPage: React.FC = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
