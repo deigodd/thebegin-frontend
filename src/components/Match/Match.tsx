@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { MatchGrid } from "./MatchGrid";
 import { ProfileDialog } from "./MatchGrid";

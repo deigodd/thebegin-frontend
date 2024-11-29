@@ -1,14 +1,10 @@
-interface BannerProps {
-  text?: string;
-}
-
-const Banner = ({ text = "¡wow!" }: BannerProps) => {
+const Banner = () => {
   return (
     <div className="relative w-full h-96 grid grid-cols-2">
       {/* Left section with Match text */}
-      <div className="bg-tbc-primaryyellow-500 flex flex-col items-center justify-center">
-        <h1 className="text-white text-6xl font-serif mb-2">Match</h1>
-        <p className="text-white text-3xl font-serif italic">{text}</p>
+      <div className="bg-[#D2A977] flex flex-col items-center justify-center">
+        <h1 className="text-white text-7xl font-serif mb-2">Match</h1>
+        <p className="text-[#E8D3BA] text-4xl font-serif italic ">¡Wow!</p>
       </div>
       
       {/* Right section with image */}

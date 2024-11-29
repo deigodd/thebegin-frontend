@@ -9,7 +9,7 @@ interface MatchCardProps {
 
   export const MatchCard = ({ user, onSelect }: MatchCardProps) => {
     return (
-      <div className="rounded-xl overflow-hidden bg-white shadow-lg">
+      <div className="rounded-xl overflow-hidden bg-white ">
         {/* Imagen de perfil */}
         <div 
           className="w-full aspect-[4/5] bg-cover bg-center cursor-pointer"
