@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const token = () => {localStorage.setItem("token","TB") ; navigate('/', { replace: true });}
+  const token = () => {localStorage.setItem("token","TB") ; navigate('/#', { replace: true });}
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors] = useState<{ email?: string; password?: string }>(
