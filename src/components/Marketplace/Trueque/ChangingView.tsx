@@ -17,7 +17,7 @@ const ChangingView: React.FC<ChangingViewProps> = ({selectedPilar, selectedCateg
                 {selectedPilar === "Salud Mental" && <TruequeProducts selectPil={4} selectCat={selectedCategory}/>}
                 {selectedPilar === "Medio Ambiente" && <TruequeProducts selectPil={5} selectCat={selectedCategory}/>}
                 {!["The Begin", "Arte con Sentido", "Consumo con Sentido", "Bienestar", "Salud Mental", "Medio Ambiente"].includes(selectedPilar) && (
-                    <TruequeProducts selectPil={0} selectCat={selectedCategory}/>
+                    <TruequeProducts selectPil={null} selectCat={selectedCategory}/>
                 )}
               </div>         
   );

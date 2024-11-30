@@ -3,7 +3,7 @@ import SmallCards from '../../ProductCards/Trueque/SmallTruequeCard';
 import Product from '../../../types/Product';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const MarketProducts: React.FC<{ selectPil: number | null, selectCat?: string | null }> = ({ selectPil, selectCat }) => {
+const TruequeProducts: React.FC<{ selectPil: number | null, selectCat?: string | null }> = ({ selectPil, selectCat }) => {
     const [products, setProducts] = useState<Product[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [productsPerPage] = useState<number>(30);
@@ -89,4 +89,4 @@ const MarketProducts: React.FC<{ selectPil: number | null, selectCat?: string | 
     );
 };
 
-export default MarketProducts;
+export default TruequeProducts;
