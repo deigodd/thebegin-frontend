@@ -4,20 +4,15 @@ interface BannerProps {
 
 const Banner = ({ text = "¡wow!" }: BannerProps) => {
   return (
-    <div className="relative w-full h-96 grid grid-cols-2">
-      {/* Left section with Match text */}
-      <div className="bg-tbc-primaryyellow-500 flex flex-col items-center justify-center">
+    <div className="relative w-full h-32 md:h-96 overflow-hidden">
+      <img
+        src="https://images.pexels.com/photos/1204135/pexels-photo-1204135.jpeg?cs=srgb&dl=pexels-vladbagacian-1204135.jpg&fm=jpg"
+        alt="Friends embracing"
+        className="w-full object-cover -translate-y-20 lg:-translate-y-32"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-tbc-primaryyellow-500 to-transparent w-1/2 flex flex-col items-center justify-center">
         <h1 className="text-white text-6xl font-serif mb-2">Match</h1>
         <p className="text-white text-3xl font-serif italic">{text}</p>
-      </div>
-      
-      {/* Right section with image */}
-      <div className="relative overflow-hidden">
-        <img
-          src="https://images.pexels.com/photos/1204135/pexels-photo-1204135.jpeg?cs=srgb&dl=pexels-vladbagacian-1204135.jpg&fm=jpg"
-          alt="Friends embracing"
-          className="w-full h-full object-cover object-top"
-        />
       </div>
     </div>
   );

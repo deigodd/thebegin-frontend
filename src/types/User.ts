@@ -83,7 +83,7 @@ export interface User {
       name: 'Andrea',
       age: 24,
       bio: 'Trabajo en comunicación y marketing digital. Mi pasión es crear contenido auténtico y conectar con personas de diferentes partes del mundo.',
-      profileImage: 'https://i.pravatar.cc/150?u=diego',
+      profileImage: 'https://i.pravatar.cc/150?u=gabi',
       interests: ['Marketing Digital', 'Redes Sociales', 'Fotografía'],
       location: 'Ciudad de México',
       nationality: 'Argentina',
