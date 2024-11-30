@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer/Footer";
 import HomePageCard from "../components/HomePage/HomePageCard";
@@ -12,6 +13,9 @@ import iconSvg from "../assets/icons/svg/tb-icon-outline-orange.svg";
 import CommunitySectionCard from "../components/HomePage/CommunitySectionCard";
 import poleraTB from "../assets/Home/poleraTB.png";
 import ProductCard from "../components/HomePage/ProductCard";
+import polera from "../assets/TB-Products/polera.png";
+import taza from "../assets/TB-Products/taza.png";
+import totebag from "../assets/TB-Products/tote.png";
 
 const HomePage: React.FC = () => {
   const [isNavbarFixed, setIsNavbarFixed] = useState(true);
@@ -159,14 +163,14 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/Home/hands.jpg"
+                imgSrc="https://cdn0.psicologia-online.com/es/posts/2/7/5/que_hacer_en_la_primera_cita_para_conquistar_5572_600.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   ¿Qué es y para qué TB?
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                Una plataforma y RED SOCIAL PARA MUJERES, MASIVA Y MULTIUSO, PARA GENERAR CONEXIONES QUE APOYEN AL CRECIMIENTO INDIVIDUAL Y COLECTIVO. 
-                CON EL PROPÓSITO DE MULTIPLICAR LA ENERGÍA CREADORA DE LAS MUJERES y el fin QUE CADA MUJER LOGRE SU PROPIA META
+                <p className="font-normal text-justify text-gray-700 dark:text-gray-400 flex-grow">
+                Una plataforma y red social diseñada exclusivamente para mujeres, masiva y multifuncional, que impulsa conexiones valiosas para fomentar el crecimiento individual y colectivo.
+                Con el propósito de potenciar la energía creadora de cada mujer, esta plataforma busca ser el espacio donde cada una pueda alcanzar sus metas personales y profesionales.
                 </p>
               </Card>
             </div>
@@ -174,14 +178,14 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/Home/hands.jpg"
+                imgSrc="https://img.unocero.com/2020/10/mujeres-cursos-programacion-1200x600.jpg"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Como funciona TB
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                Nuestra plataforma  es un match colaborativo, basado en coincidencias. 
-                Te registras en la plataforma, y según tus interés, profesión u ocupación, modelos de negocio, intereses particulares, necesidades de información, preferencias de interacción específicas.
+                <p className="font-normal text-justify text-gray-700 dark:text-gray-400 flex-grow">
+                Nuestra plataforma es un espacio colaborativo basado en afinidades y coincidencias.
+                Regístrate y conecta según tus intereses, profesión, ocupación, modelo de negocio, necesidades específicas de información o preferencias de interacción. Cada conexión está diseñada para maximizar el valor y la relevancia en tu experiencia.
                 </p>
               </Card>
             </div>
@@ -189,15 +193,15 @@ const HomePage: React.FC = () => {
               <Card
                 className="max-w-sm flex flex-col h-full"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/src/assets/Home/hands.jpg"
+                imgSrc="https://mejorconsalud.as.com/wp-content/uploads/2016/02/mujer-feliz-1.jpg?auto=webp&quality=60&width=1920&crop=16:9,smart,safe"
               >
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Beneficios para ti
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400 flex-grow">
-                The Begin, es la comunidad online de mujeres más completa  El núcleo es la APP THE BEGIN que cuenta con múltiples segmentos:  TRUEKE, bolsa de trabajo, Marketplace, cuidado personal, salud mental entre otros, desde lo práctico, hasta lo onírico.
-                Con el propósito de fortalecer la comunidad inclusiva, sin discriminación, The Begin implementa 
-                tecnologías de vinculación dentro un universo propio. Es un facilitador para la construcción y el alcance de metas entre y para mujeres.
+                <p className="font-normal text-justify text-gray-700 dark:text-gray-400 flex-grow">
+                The Begin es la comunidad en línea más completa para mujeres.
+                Su núcleo, la app The Begin, integra múltiples segmentos: trueque, bolsa de trabajo, marketplace, cuidado personal, salud mental y más. Desde soluciones prácticas hasta aspiraciones soñadoras, esta plataforma inclusiva promueve la colaboración sin discriminación.
+                Con tecnologías avanzadas de vinculación, The Begin facilita la construcción de una red de apoyo y el logro de metas colectivas e individuales, fortaleciendo la comunidad de mujeres en un entorno único y transformador.
 
                 </p>
               </Card>
@@ -226,30 +230,30 @@ const HomePage: React.FC = () => {
                 <br />
                 entre mujeres
               </p>
-              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
+              <Link to="/register" className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
                 <span className="text-2xl tracking-tight text-[#d2bb90]">
                   REGISTRARME
                 </span>
-              </button>
+              </Link>
             </div>
 
             <div className="flex-col items-center justify-center gap-4 mt-4 lg:mt-0 hidden sm:flex">
               <CommunitySectionCard
-                imageSrc="https://via.placeholder.com/150"
+                imageSrc="https://brainfoodmkt.com/wp-content/uploads/2021/07/tipos-de-paginas-web.png"
                 imageAlt="Imagen1"
                 title="Armá tu página web"
                 description="Usala como presentación personal, muestrario de productos,
                   servicios y actividades."
               />
               <CommunitySectionCard
-                imageSrc="https://via.placeholder.com/150"
+                imageSrc="https://uvn-brightspot.s3.amazonaws.com/assets/vixes/s/shutterstock_460130851.jpg"
                 imageAlt="Imagen2"
                 title="Sumate al Trueque"
                 description="Publicá tus productos y/o servicios disponibles para
                   intercambiar con nuestra comunidad."
               />
               <CommunitySectionCard
-                imageSrc="https://via.placeholder.com/150"
+                imageSrc="https://blog.zenitx.com/wp-content/uploads/2020/03/tienda-online.jpg"
                 imageAlt="Imagen3"
                 title="Activá tu tienda online"
                 description="Vendé tus productos y/o servicios."
@@ -283,7 +287,7 @@ const HomePage: React.FC = () => {
 
             <div className="flex-col items-center justify-center gap-4 mt-4 lg:mt-0 hidden sm:flex">
               <ProductCard
-                imageSrc="https://via.placeholder.com/150"
+                imageSrc={totebag}
                 imageAlt="Imagen1"
                 title="TOTEBAG"
                 description="Con bolsillo interno"
@@ -291,7 +295,7 @@ const HomePage: React.FC = () => {
                 price={90}
               />
               <ProductCard
-                imageSrc="https://via.placeholder.com/150"
+                imageSrc={taza}
                 imageAlt="Imagen3"
                 title="TAZA"
                 description="De cerámica"
@@ -299,7 +303,7 @@ const HomePage: React.FC = () => {
                 price={40}
               />
               <ProductCard
-                imageSrc="https://via.placeholder.com/150"
+                imageSrc={polera}
                 imageAlt="Imagen2"
                 title="POLERA"
                 description="100% algodón"
@@ -307,11 +311,11 @@ const HomePage: React.FC = () => {
                 price={120}
               />
 
-              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
+              <Link to="/marketplace" className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
                 <span className="text-2xl tracking-tight text-[#d2bb90]">
                   VER MÁS
                 </span>
-              </button>
+              </Link >
             </div>
           </div>
         </div>
