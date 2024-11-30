@@ -103,6 +103,17 @@ const Navbar: React.FC = () => {
                 THE BEGIN
               </a>
             </li>
+            {isLoggedIn && (
+              <li>
+              <a
+                href="/comunidad"
+                className={`block py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#7c513a] transition-colors duration-300 ease-in-out`}
+                style={isActive("/comunidad") ? activeStyle : {}}
+              >
+                COMUNIDAD
+              </a>
+            </li>
+            )}
             <li>
               <a
                 href="/pilares"
