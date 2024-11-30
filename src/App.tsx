@@ -15,6 +15,7 @@ import Tecito from "./pages/Tecito";
 import MatchPage from './pages/MatchPage'
 import Profile from "./pages/Profile1";
 import Profile2 from "./pages/Profile2";
+import BeginFest from "./pages/BeginFest";
 
 // Mantener el orden, ty
 
@@ -158,6 +159,16 @@ const App: React.FC = () => {
             <>
               {isLoggedIn && <MatchPage/>}
               <PageTitle title="Comunidad" />
+            </>
+          }
+        />
+        {/* Ruta de BeginFest */}
+        <Route
+          path="/begin-fest"
+          element={
+            <>
+              <BeginFest/>
+              <PageTitle title="Begin Fest" />
             </>
           }
         />

@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
 
   return (
     <div
-      className="flex flex-col min-h-screen"
+      className="flex mt-20 flex-col min-h-screen"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
