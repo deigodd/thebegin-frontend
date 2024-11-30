@@ -26,7 +26,7 @@ const Register: React.FC = () => {
   const [countries, setCountries] = useState<
     { value: string; label: string }[]
   >([]);
-  const [hobbies, setHobbies] = useState<string[]>([
+  const [hobbies] = useState<string[]>([
     "Leer",
     "Viajar",
     "Cocinar",
@@ -38,7 +38,7 @@ const Register: React.FC = () => {
     "Escritura",
     "Cine",
   ]);
-  const [abilities, setAbilities] = useState<string[]>([
+  const [abilities] = useState<string[]>([
     "Liderazgo",
     "Comunicación efectiva",
     "Resolución de conflictos",
@@ -55,7 +55,7 @@ const Register: React.FC = () => {
     "Innovación",
     "Desarrollo profesional",
   ]);
-  const [interests, setInterests] = useState<string[]>([
+  const [interests] = useState<string[]>([
     "Leer",
     "Viajar",
     "Cocinar",
@@ -72,7 +72,7 @@ const Register: React.FC = () => {
     "Meditación",
     "Danza",
   ]);
-  const [findings, setFindings] = useState<string[]>([
+  const [findings] = useState<string[]>([
     "Amistad",
     "Oportunidades de negocio",
     "Mentoría",
@@ -84,7 +84,7 @@ const Register: React.FC = () => {
     "Voluntariado",
     "Actividades recreativas",
   ]);
-  const [shares, setShares] = useState<string[]>([
+  const [shares] = useState<string[]>([
     "Productos",
     "Salidas",
     "Trueque",

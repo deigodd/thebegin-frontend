@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaPlay, FaPause, FaBackward, FaForward } from 'react-icons/fa';
+import {  FaPause, FaBackward, FaForward } from 'react-icons/fa';
 
 interface AudioCardProps {
   defaultInnerImageUrl?: string;

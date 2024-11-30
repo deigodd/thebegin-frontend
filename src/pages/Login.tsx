@@ -5,46 +5,15 @@ import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const token = () => {localStorage.setItem("token","TB") ; navigate('/');}
+  const token = () => {localStorage.setItem("token","TB") ; navigate('/#', { replace: true });}
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>(
+  const [errors] = useState<{ email?: string; password?: string }>(
     {}
   );
 
-  const validateForm = () => {
-    let formIsValid = true;
-    let newErrors: { email?: string; password?: string } = {};
 
-    // Validación de email
-    if (!email) {
-      formIsValid = false;
-      newErrors.email = "El correo electrónico es requerido.";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      formIsValid = false;
-      newErrors.email = "El correo electrónico no es válido.";
-    }
 
-    // Validación de contraseña
-    if (!password) {
-      formIsValid = false;
-      newErrors.password = "La contraseña es requerida.";
-    } else if (password.length < 6) {
-      formIsValid = false;
-      newErrors.password = "La contraseña debe tener al menos 6 caracteres.";
-    }
-
-    setErrors(newErrors);
-    return formIsValid;
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Lógica de envío del formulario
-      console.log("Formulario enviado con éxito:", { email, password });
-    }
-  };
 
   return (
     <>

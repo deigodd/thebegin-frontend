@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import WriteCard from '../Hooks/WriteCard';
+
 import { PiStarFourFill } from "react-icons/pi";
 import itemData from '../../../data/itemData.json';
-import ChangeImage from '../Hooks/ChangeImage';
+
 import img1 from '../../../assets/img1_ProjecP1.jpg'
-import img2 from '../../../assets/img2_ProjecP1.jpg'
+
 import img3 from '../../../assets/img3_ProjecP1.jpg'
 import img4 from '../../../assets/img4_ProjecP1.jpg'
 import img5 from '../../../assets/img5_ProjecP1.jpg'
@@ -35,18 +35,7 @@ const ProfileProjects: React.FC = () => {
     }));
   }, []);
 
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const result = reader.result as string;
-        setUserProfile((prevProfile) => ({ ...prevProfile, image: result }));
-        localStorage.setItem('profileImage', result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+
 
   return (
     <section className="relative flex items-center min-h-screen bg-[#242c34]">
