@@ -7,7 +7,7 @@ import backgroundImage from '../assets/background-marketplace.svg'
 import ChangingView from '../components/Marketplace/Trueque/ChangingView';
 
 const Trueque: React.FC = () => {
-  const [selectedPilar, setSelectedPilar] = useState<string>("The Begin");
+  const [selectedPilar, setSelectedPilar] = useState<string>("Trueque");
   const [selectedCategory, setSelectedCategory] = useState<string | null>("");
 
   return (
