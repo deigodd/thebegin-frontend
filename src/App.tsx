@@ -36,7 +36,7 @@ const App: React.FC = () => {
           path="/"
           element={
             <>
-              {isLoggedIn? (<MatchPage/>):(<HomePage />)}
+              <HomePage />
               <PageTitle title="The Begin" />
             </>
           }
@@ -147,17 +147,17 @@ const App: React.FC = () => {
           element={
             <>
               <Profile2/>
-              <PageTitle title="ProfileVegan" />
+              <PageTitle title="Profile 2" />
             </>
           }
         />
-        {/* Ruta del Profile2 */}
+        {/* Ruta de comunidad */}
         <Route
-          path="/match"
+          path="/comunidad"
           element={
             <>
-              <MatchPage/>
-              <PageTitle title="Match" />
+              {isLoggedIn && <MatchPage/>}
+              <PageTitle title="Comunidad" />
             </>
           }
         />
