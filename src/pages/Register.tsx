@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/background-home.svg";
 import logo from "../assets/icons/svg/tb-icon-fill-orange.svg";
 import Select from "react-select";
@@ -91,6 +92,8 @@ const Register: React.FC = () => {
     "Amistad",
   ]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetch(
       "https://valid.layercode.workers.dev/list/countries?format=select&flags=true&value=code"
@@ -118,7 +121,7 @@ const Register: React.FC = () => {
   const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (step === 3) {
-      handleSubmit(e as unknown as React.FormEvent<HTMLFormElement>);
+      navigate("/login");
     } else {
       setStep(step + 1);
     }
@@ -780,7 +783,7 @@ const Register: React.FC = () => {
                 )}
                 <button
                   type={step === 3 ? "submit" : "button"}
-                  onClick={step === 3 ? undefined : handleNext}
+                  onClick={handleNext}
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-tbc-pilarorange-600 hover:bg-tbc-pilarorange-700 rounded-md"
                 >
                   {step === 3 ? "Enviar" : "Siguiente"}
