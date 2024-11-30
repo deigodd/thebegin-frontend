@@ -1,13 +1,13 @@
 // components/InfoCard.tsx
 import React from "react";
-import imagePath from "../../assets/Home/hands.jpg";
 
 interface InfoCardProps {
   title: string;
+  imagePath: string;
   onClick: () => void;
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({ title, onClick }) => {
+const InfoCard: React.FC<InfoCardProps> = ({ title, imagePath, onClick }) => {
   return (
     <div
       onClick={onClick}
