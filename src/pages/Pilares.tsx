@@ -3,13 +3,10 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/Footer';
 import PageSeparator from '../components/PageSeparator';
 import backgroundImage from '../assets/background-marketplace.svg'
-import comunidadVideo from "../assets/Home/comunidadVideo.mp4";
-import iconSvg from "../assets/icons/svg/tb-icon-fill-gray.svg";
 import PilaresCard from "../components/PilaresInfo/PilaresCard";
 import imageTemp from "../assets/Home/pd21-34-07-kwan-a-1.jpg";
 import iconCard from "../assets/icons/tb-icon-fill-lightBrown.png";
 import imageTempNuestrosPilares from "../assets/Home/hands.jpg";
-import CommunitySectionCard from "../components/HomePage/CommunitySectionCard";
 
 const Pilares: React.FC = () => {
 
@@ -72,94 +69,85 @@ const Pilares: React.FC = () => {
       description="El amor se pinta, se teje, se esculpe y se canta"
       imageSrc={imageTemp}
       icon={iconCard}
-      info=""
+      info="
+          Pintura, 
+          Escultura, 
+          Dibujo, 
+          Grabado, 
+          Fotografía, 
+          Arte textil, 
+          Cerámica, 
+          Poesía, 
+          Teatro, 
+          Música, 
+          Clases, 
+          Talleres y cursos, 
+          Asesorías."
     />
     <PilaresCard
       title="Consumo con sentido"
       description="Soy en gran medida el resultado de mis decisiones"
       imageSrc={imageTemp}
       icon={iconCard}
-      info=""
+      info="Compras comunitarias, 
+Venta a granel, 
+Venta productos huertos en red, 
+Aprovisionamiento temprano, 
+Datos – avisos económicos, 
+Ventas de garaje, 
+Talleres y cursos, 
+Asesorías."
     />
     <PilaresCard
       title="Bienestar"
       description="Mi cuerpo, mi tempo, mi santuario"
       imageSrc={imageTemp}
       icon={iconCard}
-      info=""
+      info="Corridas femeninas, 
+Pilates, 
+Cicletadas, 
+Entrenamientos, 
+Alimentos orgánicos, 
+Suplementos, 
+Alimentos funcionales, 
+Maquillaje, 
+Estilismo, 
+Talleres y cursos, 
+Asesorías."
     />
     <PilaresCard
       title="Salud Mental"
       description="Pensando, sintiendo, actuando"
       imageSrc={imageTemp}
       icon={iconCard}
-      info=""
+      info="Meditación, 
+Terapias, 
+Aceites, 
+Yoga, 
+Música, 
+Esparcimiento, 
+Baños de bosque, 
+Talleres y cursos, 
+Asesorías."
     />
     <PilaresCard
       title="Medio Ambiente"
       description="Cuidando mi entorno me cuido a mí misma"
       imageSrc={imageTemp}
       icon={iconCard}
-      info=""
+      info="Autocultivo hortalizas, 
+Flores, 
+Trueque de alimentos de temporada, 
+Reutilización, 
+Compostaje, 
+Trueque de semillas, 
+Jardinería ecológica, 
+Trueque de ropa, 
+Talleres y cursos, 
+Asesorías."
     />
   </div>
-</div>
-
-
-          <PageSeparator title="Comunidad" />
-          <div className="relative mt-10 mb-10" style={{ height: "700px" }}>
-          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-          <video
-            src={comunidadVideo}
-            autoPlay
-            muted
-            loop
-            className="w-full h-full object-cover z-0"
-          ></video>
-
-          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 items-center justify-center z-20 px-4 md:px-8">
-            <div className="flex flex-col items-center justify-center sm:mt-10">
-              <img src={iconSvg} className="h-32 md:h-44 mb-4" alt="" />
-              <p className="text-white text-2xl md:text-5xl font-serif text-center">
-                Un espacio de encuentro
-                <br />
-                y apoyo colaborativo
-                <br />
-                entre mujeres
-              </p>
-              <button className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
-                <span className="text-2xl tracking-tight text-[#d2bb90]">
-                  REGISTRARME
-                </span>
-              </button>
-            </div>
-
-            <div className="flex-col items-center justify-center gap-4 mt-4 lg:mt-0 hidden sm:flex">
-              <CommunitySectionCard
-                imageSrc="https://via.placeholder.com/150"
-                imageAlt="Imagen1"
-                title="Armá tu página web"
-                description="Usala como presentación personal, muestrario de productos,
-                  servicios y actividades."
-              />
-              <CommunitySectionCard
-                imageSrc="https://via.placeholder.com/150"
-                imageAlt="Imagen2"
-                title="Sumate al Trueque"
-                description="Publicá tus productos y/o servicios disponibles para
-                  intercambiar con nuestra comunidad."
-              />
-              <CommunitySectionCard
-                imageSrc="https://via.placeholder.com/150"
-                imageAlt="Imagen3"
-                title="Activá tu tienda online"
-                description="Vendé tus productos y/o servicios."
-              />
-            </div>
-          </div>
-        </div>
-          
-      
+</div>      
       <Footer />
     </div>
   );
