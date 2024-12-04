@@ -4,7 +4,7 @@ const CalendarColumn = () => {
     const weekDays = ['LUN', 'MAR', 'MIE', 'JUE', 'VIE', 'SAB', 'DOM'];
     
     return (
-      <div className="mx-12 w-96">
+      <div className="w-full sm:w-96 mx-auto">
         <h2 className="text-4xl text-black">Calendario de</h2>
         <h2 className="text-4xl font-serif text-[#738755]">ACTIVIDADES</h2>
         <hr className="border-t-2 border-[#738755] my-4" />

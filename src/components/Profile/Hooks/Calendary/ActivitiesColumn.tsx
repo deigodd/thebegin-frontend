@@ -66,7 +66,7 @@ const ActivitiesColumn = ({
   };
 
   return (
-    <div className="w-[28rem]">
+    <div className="w-full max-w-[28rem] mx-auto sm:w-full justify-center">
       <div className="flex items-center justify-between mb-8">
         <ChevronLeft className="w-8 h-8" style={{ color: selectedDayBg }} />
         <div className="flex gap-2">

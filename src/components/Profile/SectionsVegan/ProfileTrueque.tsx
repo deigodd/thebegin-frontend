@@ -3,10 +3,8 @@ import BackgroundTrueque from '../Hooks/Trueque/BackgroundTrueque';
 import TruequeCard from '../Hooks/Trueque/TruequeCard';
 import TruequeButton from '../Hooks/Trueque/ButtonTrueque';
 
-
 const ProfileTrueque = () => {
     const { mainImage, infoBox } = TruequeData;
-
 
   return (
     <div className="min-h-screen bg-[#FBF4EC] py-12 relative">
@@ -34,13 +32,14 @@ const ProfileTrueque = () => {
             />
 
             {/* Green Info Box */}
-        <div className="absolute top-[calc(730px-80px)] left-16 right-16 z-10">
-          <div className="bg-tbc-pilargreen-600 text-white p-8 rounded-3xl shadow-lg">
-            <p className="text-xl md:text-xl text-center font-light">
-              {infoBox.text}
-            </p>
+        {/* Green Info Box */}
+          <div className="absolute top-[calc(730px-120px)] sm:top-[calc(730px-90px)] left-16 right-16 z-10">
+            <div className="bg-tbc-pilargreen-600 text-white p-8 rounded-3xl shadow-lg">
+              <p className="text-xl md:text-xl text-center font-light">
+                {infoBox.text}
+              </p>
+            </div>
           </div>
-        </div>
 
             {/* Call to Action Button */}
             <div className="absolute bottom-[calc(120px-80px)] left-1/2 -translate-x-1/2 z-20">

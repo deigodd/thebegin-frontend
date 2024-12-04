@@ -2,7 +2,7 @@ const ConsultForm = () => {
 
     //Retorna la card de consultas
     return (
-      <div className="bg-[#EDE5D9] rounded-xl p-6">
+      <div className="bg-[#EDE5D9] rounded-xl p-6 max-w-lg mx-auto">
         <h2 className="text-[#B5947B] text-3xl font-serif mb-2 text-center">Consultas</h2>
         <form className="space-y-4 mt-6">
           <input

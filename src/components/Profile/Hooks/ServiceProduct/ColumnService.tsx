@@ -10,10 +10,12 @@ interface ActivitiesPageLayoutProps {
 const ActivitiesPageLayout: React.FC<ActivitiesPageLayoutProps> = ({ activities, onMoreInfo }) => {
   return (
     <div className="relative min-h-screen pb-8 py-10">
+      { /* Division de colores del fondo */ }
       <div className="bg-tbc-primarybrown-100 absolute inset-0 z-0"></div>
       <div className="bg-tbc-pilargreen-600 absolute inset-0 z-0 top-1/2"></div>
+      
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 justify-items-center">
           {activities.slice(0, 4).map((activity, index) => (
             <CardService
               key={index}
@@ -22,7 +24,7 @@ const ActivitiesPageLayout: React.FC<ActivitiesPageLayoutProps> = ({ activities,
             />
           ))}
         </div>
-        <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center">
           {activities.slice(4).map((activity, index) => (
             <CardService
               key={index}
