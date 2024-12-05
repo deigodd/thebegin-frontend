@@ -8,7 +8,7 @@ interface SearchBarProps {
         <div className="flex-1 relative">
           <input
             type="text"
-            placeholder="Buscador..."
+            placeholder="Buscador perfiles..."
             className="w-full py-2 px-4 rounded-lg bg-gray-100 border border-gray-200"
             onChange={(e) => onSearch(e.target.value)}
           />

@@ -2,13 +2,23 @@ import React, { useEffect, useState } from "react";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/Footer';
 import PageSeparator from '../components/PageSeparator';
-import backgroundImage from '../assets/background-marketplace.svg'
 import PilaresCard from "../components/PilaresInfo/PilaresCard";
 import imageTemp from "../assets/Home/pd21-34-07-kwan-a-1.jpg";
 import iconCard from "../assets/icons/tb-icon-fill-lightBrown.png";
 import imageTempNuestrosPilares from "../assets/Home/hands.jpg";
+import Match from "../components/Match/Match";
+import Banner from "../components/Match/Banner";
+import  {SearchBar2} from "../components/SearchBar/Bar2";
+import { ActivityHeader } from "../components/Match/ActivityHeader";
+import backgroundImage from "../assets/background-home.svg";
 
 const Pilares: React.FC = () => {
+
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (value: string) => {
+    setSearchQuery(value);
+  };
 
   const [isNavbarFixed, setIsNavbarFixed] = useState(true);
 
@@ -147,7 +157,29 @@ Talleres y cursos,
 Asesorías."
     />
   </div>
-</div>      
+</div>  
+
+      <div className="flex-1">
+        {/* Banner Section */}
+        <Banner />
+
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 py-5">
+          {/* Search Bar */}
+          <SearchBar2 onSearch={handleSearch}/>
+
+          {/* Activity Header */}
+          <ActivityHeader matchCount={7} />
+
+          {/* Matches Grid */}
+          <div className="flex flex-col md:flex-row flex-1">
+            <div className="w-full">
+              <Match searchQuery={searchQuery} />
+            </div>
+          </div>
+        </div>
+      </div>
+    
       <Footer />
     </div>
   );
