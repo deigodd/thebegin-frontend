@@ -2,13 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import { PiStarFourFill } from "react-icons/pi";
 import itemData from '../../../data/itemData.json';
-
-import img1 from '../../../assets/img1_ProjecP1.jpg'
-
-import img3 from '../../../assets/img3_ProjecP1.jpg'
-import img4 from '../../../assets/img4_ProjecP1.jpg'
-import img5 from '../../../assets/img5_ProjecP1.jpg'
-
 interface UserProfile {
   name: string;
   pname: string;
@@ -59,12 +52,12 @@ const ProfileProjects: React.FC = () => {
           
           {/* Segunda columna */}
           <div className="rounded-b-3xl min-h-[150px] col-span-2 ml-5 overflow-hidden">
-            <img alt='img' src={img1}/>
+            <img alt='img' src="https://images.pexels.com/photos/9524375/pexels-photo-9524375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
           </div>
 
           {/* Tercera columna */}
           <div className="rounded-b-3xl min-h-[150px] overflow-hidden mr-10">
-          <img alt='img' src={img4}/>
+          <img alt='img' src="https://images.unsplash.com/photo-1687804823451-7b1c5995eac4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
           </div>
 
           {/* Columna de imagen de perfil */}
@@ -83,10 +76,10 @@ const ProfileProjects: React.FC = () => {
 
           {/* Más columnas con imágenes */}
           <div className="rounded-3xl min-h-[250px] overflow-hidden mb-5 ml-5">
-            <img alt='img' src={img5}/>
+            <img alt='img' src="https://images.unsplash.com/photo-1678885408128-9b76727628a2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
           </div>
           <div className=" rounded-t-3xl min-h-[250px] col-span-2 overflow-hidden mr-10">
-            <img alt='img' src={img3}/>
+            <img alt='img' src="https://i.pinimg.com/736x/f4/dd/f4/f4ddf4bc0787c4d6614d7d85c2cd7cc2.jpg"/>
           </div>
 
         </div>

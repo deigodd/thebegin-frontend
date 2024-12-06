@@ -1,16 +1,6 @@
 
 import { Link } from 'react-router-dom'; // Importa Link para redirección
 import cinta from '../../../assets/adhesive2.png';
-import img1 from '../../../assets/img1_TradeP1.jpg';
-import img2 from '../../../assets/img2_TradeP1.jpg';
-import img3 from '../../../assets/img3_TradeP1.jpg';
-import img4 from '../../../assets/img4_TradeP1.jpg';
-import img5 from '../../../assets/img5_TradeP1.jpg';
-import img6 from '../../../assets/img6_TradeP1.jpg';
-import img7 from '../../../assets/img7_TradeP1.jpg';
-import img8 from '../../../assets/img8_TradeP1.jpg';
-import img9 from '../../../assets/img9_TradeP1.jpg';
-import img10 from '../../../assets/img10_TradeP1.jpg';
 import CardTrade from '../Hooks/CardTrade';
 import Background from '../Hooks/BackgroundImage';
 import bg from '../../../assets/backgroundProfile/bgContactP1.jpg';
@@ -23,20 +13,19 @@ interface Card {
 }
 
 const cardData: Card[] = [
-  { id: 1, title: "", image: img1 },
-  { id: 2, title: "", image: img2 },
-  { id: 3, title: "", image: img3 },
-  { id: 4, title: "", image: img4 },
-  { id: 5, title: "", image: img5 },
-  { id: 6, title: "", image: img6 },
-  { id: 7, title: "", image: img7 },
-  { id: 8, title: "", image: img8 }, // La última "tarjeta" será un botón
-  { id: 9, title: "", image: img9 }, // La última "tarjeta" será un botón
-  { id: 10, title: "", image: img10 }, // La última "tarjeta" será un botón
+  { id: 1, title: "", image: "https://images.unsplash.com/photo-1553984658-d17e19aa281a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 2, title: "", image: "https://img1.wallspic.com/previews/6/6/1/5/7/175166/175166-coche-lomografia-capucha-lente_de_la_camara-iluminacion_automotriz-x750.jpg" },
+  { id: 3, title: "", image: "https://images.unsplash.com/photo-1508285296015-c0b524447532?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 4, title: "", image: "https://images.unsplash.com/photo-1589695900288-dde3e1b4c9b9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 5, title: "", image: "https://images.unsplash.com/photo-1488241561087-799714b46586?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 6, title: "", image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 7, title: "", image: "https://images.unsplash.com/photo-1653078695581-741f61bbfdf5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { id: 8, title: "", image: "https://images.unsplash.com/photo-1510574457807-3d9bf494ff6b?q=80&w=1401&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }, 
+  { id: 9, title: "", image: "https://images.unsplash.com/photo-1725033797039-9d7db36e96f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmVyZGUlMjBlc21lcmFsZGF8ZW58MHx8MHx8fDA%3D" }, 
+  { id: 10, title: "", image: "https://images.unsplash.com/photo-1620248410823-9060cd5a5dcb?q=80&w=1388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }, 
   { id: 11, title: "VER MÁS", image: "" }, // La última "tarjeta" será un botón
 ];
 
-// Componente para las tarjetas con scroll horizontal
 // Componente para las tarjetas con scroll horizontal
 const CardSection = ({ cardData, bottomPosition, customClass }: { cardData: Card[], bottomPosition: string, customClass?: string }) => (
   <div

@@ -28,7 +28,7 @@ const ProfilePresentation = () => {
     }));
   }, []);
 
-
+  
 
   return (
     <section className="relative flex items-center justify-center min-h-screen bg-[#343c3c] text-white overflow-hidden">

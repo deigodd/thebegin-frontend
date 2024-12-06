@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import { FaCog } from 'react-icons/fa';
 import BackgroundSettings from '../Hooks/BackgroundSectionSettings';
-import img1 from '../../../assets/img1_MKplaceP1.jpg';
-import img2 from '../../../assets/img2_MKplaceP1.jpg';
-import img3 from '../../../assets/img3_MKplaceP1.jpg';
-import img4 from '../../../assets/img4_MKplaceP1.jpg';
-import img5 from '../../../assets/img5_MKplaceP1.jpg';
-import img6 from '../../../assets/img6_MKplaceP1.jpg';
-import img7 from '../../../assets/img7_MKplaceP1.jpg';
 
 const ProfileMarketplace: React.FC = () => {
   const [bgColor, setBgColor] = useState('#302c2c'); // Color de fondo inicial
@@ -53,8 +46,8 @@ const ProfileMarketplace: React.FC = () => {
       
       {/* Contenido principal con el diseño de las imágenes */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-2 relative px-10 md:px-28">
-        <div className="flex justify-center items-center bg-red-800 h-full w-full min-h-[550px] min-w-[160px] row-span-2 rounded-tl-[80px] overflow-hidden hover:scale-105 transition">
-          <img src={img1} alt="img" className="object-cover w-full h-full" />
+        <div className="flex justify-center items-center h-full w-full min-h-[550px] min-w-[160px] row-span-2 rounded-tl-[80px] overflow-hidden hover:scale-105 transition">
+          <img src="https://www.blogdelfotografo.com/wp-content/uploads/2024/02/pose-fotos-mujer-cabello-contrapicado.webp" alt="img" className="object-cover w-full h-full" />
         </div>
         <div className="flex flex-col justify-center items-center bg-[#606464] h-full w-full min:h-[550px] min-w-[160px] row-span-2 overflow-hidden hover:scale-105 transition">
           <p className='text-center text-white text-4xl sm:text-6x1 lg:text-7xl'>Visitá</p>
@@ -62,23 +55,23 @@ const ProfileMarketplace: React.FC = () => {
           <p className='relative text-center text-white text-4xl sm:text-6x1 lg:text-7xl'>Tienda</p>
           <button className="text-white text-base sm:text-lg border hover:bg-white hover:text-black hover:scale-105 transition rounded-3xl mt-10 w-36 sm:w-44 sm:h-10">Ver Tienda</button>
         </div>
-        <div className="flex justify-center items-center bg-red-800 h-full w-full min-h-[312px] min-w-[160px] row-span-2 overflow-hidden hover:scale-105 transition">
-          <img src={img2} alt="img" className="object-cover w-full h-full" />
+        <div className="flex justify-center items-center h-full w-full min-h-[312px] min-w-[160px] row-span-2 overflow-hidden hover:scale-105 transition">
+          <img src="https://images.pexels.com/photos/12011949/pexels-photo-12011949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" className="object-cover w-full h-full" />
         </div>
-        <div className="flex justify-center items-center bg-red-800 h-full w-full md:h-[312px] min-w-[160px] rounded-tl-[80px] rounded-br-[80px] overflow-hidden hover:scale-105 transition">
-          <img src={img3} alt="img" className="object-cover w-full h-full" />
+        <div className="flex justify-center items-center h-full w-full md:h-[312px] min-w-[160px] rounded-tl-[80px] rounded-br-[80px] overflow-hidden hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1651607138360-4956f0a73de0?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img" className="object-cover w-full h-full" />
         </div>
-        <div className="flex justify-center items-center bg-red-800 h-full w-full min-h-[550px] min-w-[160px] row-span-2 overflow-hidden hover:scale-105 transition">
-          <img src={img6} alt="img" className="object-cover w-full h-full" />
+        <div className="flex justify-center items-center h-full w-full min-h-[550px] min-w-[160px] row-span-2 overflow-hidden hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1598121496608-3d0b9627155e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img" className="object-cover w-full h-full" />
         </div>
-        <div className="flex justify-center items-center bg-red-800 h-full w-full md:h-[312px] min-w-[160px] rounded-tl-[80px] rounded-br-[80px] overflow-hidden hover:scale-105 transition">
-          <img src={img4} alt="img" className="object-cover w-full h-full" />
+        <div className="flex justify-center items-center h-full w-full md:h-[312px] min-w-[160px] rounded-tl-[80px] rounded-br-[80px] overflow-hidden hover:scale-105 transition">
+          <img src="https://static.wixstatic.com/media/1ae557_c6ccce7294d44a54a8c4c012b8e5c5cc~mv2.jpg/v1/fill/w_500,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1ae557_c6ccce7294d44a54a8c4c012b8e5c5cc~mv2.jpg" alt="img" className="object-cover w-full h-full" />
         </div>
-        <div className="flex justify-center items-center bg-red-800 h-full w-full md:h-[312px] min-w-[160px] rounded-full overflow-hidden hover:scale-105 transition">
-          <img src={img5} alt="img" className="object-cover w-full h-full" />
+        <div className="flex justify-center items-center h-full w-full md:h-[312px] min-w-[160px] rounded-full overflow-hidden hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1517466996322-2668610a3309?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDM3fHxMRVRURVIlMjBEfGVufDB8fHx8MTcyMTE3NDUzNnww&ixlib=rb-4.0.3&q=80&w=2000" alt="img" className="object-cover w-full h-full" />
         </div>
-        <div className="flex justify-center items-center bg-red-800 h-full w-full md:h-[250px] min-w-[160px] overflow-hidden hover:scale-105 transition">
-          <img src={img7} alt="img" className="object-cover w-full h-full" />
+        <div className="flex justify-center items-center h-full w-full md:h-[250px] min-w-[160px] overflow-hidden hover:scale-105 transition">
+          <img src="https://i0.wp.com/pontechula.co/wp-content/uploads/2023/04/Diseno-sin-titulo-73.jpg?fit=1080%2C1080&ssl=1" alt="img" className="object-cover w-full h-full" />
         </div>
       </div>
 
