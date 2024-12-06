@@ -5,12 +5,12 @@ import PageSeparator from '../components/PageSeparator';
 import PilaresCard from "../components/PilaresInfo/PilaresCard";
 import imageTemp from "../assets/Home/pd21-34-07-kwan-a-1.jpg";
 import iconCard from "../assets/icons/tb-icon-fill-lightBrown.png";
-import imageTempNuestrosPilares from "../assets/Home/hands.jpg";
 import Match from "../components/Match/Match";
 import Banner from "../components/Match/Banner";
 import  {SearchBar2} from "../components/SearchBar/Bar2";
 import { ActivityHeader } from "../components/Match/ActivityHeader";
 import backgroundImage from "../assets/background-home.svg";
+import videoPilares from "../assets/Pilares/pilares_720p.mp4";
 
 const Pilares: React.FC = () => {
 
@@ -25,7 +25,7 @@ const Pilares: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const videoHeight =
-        document.getElementById("home-video")?.clientHeight || 0;
+        document.getElementById("pilaresvideo")?.clientHeight || 0;
       if (window.scrollY > videoHeight) {
         setIsNavbarFixed(false);
       } else {
@@ -41,6 +41,8 @@ const Pilares: React.FC = () => {
 
 
   return (
+    <>
+    
     <div className='flex flex-col min-h-screen'
     style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -51,12 +53,14 @@ const Pilares: React.FC = () => {
         <Navbar />
       </div>
 
-      <div className="relative bg-white border border-gray-200 mt-10 mb-10 h-auto pt-4 flex flex-wrap">
-          <img 
-            src={imageTempNuestrosPilares}
-            alt="Imagen Temporal"
-            className="w-full md:w-1/2 h-64 md:h-full object-cover"
-          />
+      <div className="relative bg-white border border-gray-200 mt-10 mb-10 h-auto pt-20 flex flex-wrap">
+          <video
+          src={videoPilares}
+          autoPlay
+          muted
+          loop
+          className="w-full md:w-1/2 h-64 md:h-full object-cover"
+        ></video>
           <div className="w-full md:w-1/2 flex flex-col items-start justify-center pl-6 md:pl-16 pr-6 md:pr-12 py-6">
             <h1 className="text-tbc-primarybrown-400 text-3xl md:text-5xl font-serif font-semibold mb-4 md:mb-6">
               Nuestros Pilares
@@ -182,6 +186,7 @@ Asesorías."
     
       <Footer />
     </div>
+    </>
   );
 };
 
