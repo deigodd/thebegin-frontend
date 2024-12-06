@@ -108,7 +108,7 @@ const ActivitiesColumn = ({
           {activitiesByDay[selectedDay].map((activity, index) => (
             <motion.div
               key={index}
-              className="p-4 sm:p-5 rounded-lg shadow-md cursor-pointer"
+              className="p-4 sm:p-5 shadow-md cursor-pointer"
               style={{
                 backgroundColor: activityBg,
                 color: activityText,
