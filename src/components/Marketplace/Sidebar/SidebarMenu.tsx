@@ -42,7 +42,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ onClose, onCategorySelect }) 
       {/* Botón de cierre, visible solo en pop-up */}
       {onClose && (
         <button
-          className="mt-4 w-full bg-red-500 text-white p-2 rounded-sm"
+          className="mt-4 w-full bg-tbc-primaryred-600 text-white p-2 rounded-sm"
           onClick={onClose}
         >
           Cerrar

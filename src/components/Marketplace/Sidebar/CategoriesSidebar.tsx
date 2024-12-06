@@ -24,7 +24,7 @@ const CategoriesSidebar: React.FC<CategoriesSidebarProps> = ({ onCategorySelect 
       {/* Sidebar o pop-up según el tamaño de pantalla */}
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 xs:hidden">
-          <div className="bg-white w-3/4 max-w-xs">
+          <div className="bg-tbc-primaryred-100 rounded w-3/4 max-w-xs">
             <SidebarMenu onClose={toggleMenu} onCategorySelect={onCategorySelect}/>
           </div>
         </div>
