@@ -1,5 +1,5 @@
-// pages/Home.tsx
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import InfoCard from './InfoCard';
 import ContentDisplay from './ContentDisplay';
 
@@ -32,18 +32,34 @@ const InformationComponent: React.FC = () => {
     };
 
     return (
-        <div className="sm:flex gap-4 w-full">
-            <div className="sm:w-2/3 h-fill">
-                <ContentDisplay title={selectedContent.title} content={selectedContent.content} />
+        <div className="flex flex-col md:flex-row gap-8 p-8">
+            <div className="md:w-2/3">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={selectedContent.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <ContentDisplay title={selectedContent.title} content={selectedContent.content} />
+                    </motion.div>
+                </AnimatePresence>
             </div>
-            <div className="grid sm:gap-y-2 sm:py-8 sm:w-1/3">
+            <div className="md:w-1/3 flex flex-col gap-4">
                 {contentData.map((item, index) => (
-                    <InfoCard
-                        key={index}
-                        title={item.title}
-                        imagePath={item.image}
-                        onClick={() => handleCardClick(item.title, item.content)}
-                    />
+                    <motion.div
+                        key={item.title}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1, duration: 0.3 }}
+                    >
+                        <InfoCard
+                            title={item.title}
+                            imagePath={item.image}
+                            onClick={() => handleCardClick(item.title, item.content)}
+                        />
+                    </motion.div>
                 ))}
             </div>
         </div>
@@ -51,3 +67,4 @@ const InformationComponent: React.FC = () => {
 };
 
 export default InformationComponent;
+

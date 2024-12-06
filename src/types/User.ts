@@ -85,7 +85,7 @@ export interface User {
       bio: 'Soy comunicadora apasionada por el marketing digital. Me encanta ayudar a las marcas a conectar con su audiencia a través de contenido auténtico y creativo.',
       profileImage: 'https://cdn.pixabay.com/photo/2018/03/06/22/57/portrait-3204843_960_720.jpg',
       interests: ['Marketing Digital', 'Redes Sociales', 'Fotografía'],
-      location: 'Buenos Aires, Argentina', 
+      location: 'Buenos Aires', 
       nationality: 'Argentina',
       countryCode: 'AR'
     }

@@ -152,7 +152,7 @@ const HippieChat: React.FC = () => {
               {chats
                 .find((chat) => chat.id === currentChat)
                 ?.messages.map((msg, index) => (
-                  <div key={index} className="flex justify-start">
+                  <div key={index} className="flex justify-start py-1">
                     <div className="bg-white rounded-lg p-3 max-w-[70%] shadow-md">
                       <p className="text-lg">{msg}</p>
                     </div>
