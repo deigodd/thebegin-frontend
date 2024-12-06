@@ -782,8 +782,8 @@ const Register: React.FC = () => {
                   </button>
                 )}
                 <button
-                  type={step === 3 ? "submit" : "button"}
-                  onClick={handleNext}
+                  type={step === 3 ? "submit" : "button"} // Cambia a "submit" solo en el paso 3
+                  onClick={step === 3 ? undefined : handleNext} // Evita interferir con el envío
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-tbc-pilarorange-600 hover:bg-tbc-pilarorange-700 rounded-md"
                 >
                   {step === 3 ? "Enviar" : "Siguiente"}
