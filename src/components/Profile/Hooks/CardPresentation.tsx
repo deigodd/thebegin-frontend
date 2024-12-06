@@ -42,14 +42,14 @@ const CardPresentation = ({
   }
 
   return (
-    <div className={`${bgColor} p-8 ${className} transition-transform hover:scale-105 relative`}>
+    <div className={`${bgColor} p-14 ${className} transition-transform hover:scale-105 relative`}>
       {title && (
-        <h2 className={`${titleTextColor} text-4xl font-serif mb-6`}>
+        <h2 className={`${titleTextColor} text-6xl font-serif mb-6`}>
           {title}
         </h2>
       )}
       {subtitle && (
-        <span className="text-3xl font-script">
+        <span className="">
           {subtitle}
         </span>
       )}
