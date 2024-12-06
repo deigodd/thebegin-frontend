@@ -36,7 +36,7 @@ const Trueque: React.FC = () => {
                 </div>    
               </div>
             </div>
-            <div className='lg:hidden'>
+            <div className='lg:hidden -translate-y-10 scale-95 sm:scale-100'>
               <ChangingView selectedPilar={selectedPilar} selectedCategory={selectedCategory}/>
             </div> 
           </div>

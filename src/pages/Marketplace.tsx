@@ -39,10 +39,10 @@ const Marketplace: React.FC = () => {
                 </div>    
               </div>
             </div>
-            <div className='lg:hidden'>
+            <div className='lg:hidden scale-95 sm:scale-100'>
               <ChangingView selectedPilar={selectedPilar}/>
             </div> 
-            <div className='flex flex-col space-y-8 mt-8'>
+            <div className='flex flex-col space-y-8 mt-8 scale-95 sm:scale-100'>
               <Offers/>
               <MarketVisual/> 
               <MarketProducts selectedCategory={selectedCategory}/>
