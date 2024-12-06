@@ -30,6 +30,7 @@ const Navbar: React.FC = () => {
     <nav className="border-gray-200 bg-tbc-pilarorange-600">
       {/*padre*/}
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        {/* Logo */}
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={tbIcon} className="h-16" alt="The Begin Logo" />
           <span className="self-center text-2xl whitespace-nowrap">
@@ -37,6 +38,7 @@ const Navbar: React.FC = () => {
             <span className="text-white">Begin</span>
           </span>
         </a>
+        
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           {isLoggedIn ? (
             <a
