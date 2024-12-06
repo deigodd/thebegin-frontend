@@ -28,55 +28,39 @@ const CardPresentation = ({
 }: CardPresentationProps) => {
   if (image) {
     return (
-      <div className={`${bgColor} ${className} transition-transform hover:scale-105 relative`}>
-        {/* Contenedor principal con la imagen de fondo */}
-        <div className="relative w-full h-full object-cover">
-          {/* Imagen en la parte superior */}
-          <div className="w-full h-64 overflow-hidden transition-transform hover:scale-105">
-            <img
-              src={image}
-              alt={imageAlt}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Contenedor para el texto */}
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center p-8">
-            {title && (
-              <h2 className={`${titleTextColor} text-4xl font-serif mb-6`}>
-                {title}
-              </h2>
-            )}
-            {subtitle && (
-              <span className="text-3xl font-script">{subtitle}</span>
-            )}
-            {content && (
-              <p className={`${contentTextColor} text-lg`}>{content}</p>
-            )}
-            {children}
-          </div>
+      <div className={`${bgColor}  ${className} transition-transform hover:scale-105`}>
+        <div className="h-64 w-full relative overflow-hidden">
+          <img 
+            src={image} 
+            alt={imageAlt} 
+            className="w-full h-full object-cover object-center"
+          />
+          {children}
         </div>
       </div>
     );
   }
 
   return (
-    <div className={`${bgColor} p-8 ${className} transition-transform hover:scale-105 relative`}>
+    <div className={`${bgColor} p-14 ${className} transition-transform hover:scale-105 relative`}>
       {title && (
-        <h2 className={`${titleTextColor} text-4xl font-serif mb-6`}>
+        <h2 className={`${titleTextColor} text-6xl font-serif mb-6`}>
           {title}
         </h2>
       )}
       {subtitle && (
-        <span className="text-3xl font-script">{subtitle}</span>
+        <span className="">
+          {subtitle}
+        </span>
       )}
       {content && (
-        <p className={`${contentTextColor} text-lg`}>{content}</p>
+        <p className={`${contentTextColor} text-lg`}>
+          {content}
+        </p>
       )}
       {children}
     </div>
   );
 };
-
 
 export default CardPresentation;
