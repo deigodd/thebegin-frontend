@@ -39,7 +39,7 @@ export interface User {
       name: 'Camila',
       age: 26,
       bio: 'Soy diseñadora de moda y me encanta experimentar con nuevos estilos y tendencias. Vivo entre telas, colores y texturas, siempre buscando mi próxima inspiración.',
-      profileImage: 'https://i.pravatar.cc/150?u=perez',
+      profileImage: 'https://cdn.pixabay.com/photo/2016/11/19/17/45/woman-1840538_1280.jpg',
       interests: ['Moda', 'Diseño', 'Viajes'],
       location: 'Buenos Aires',
       nationality: 'Argentina',
@@ -50,7 +50,7 @@ export interface User {
       name: 'Valentina',
       age: 27,
       bio: 'Vivo la vida con una mentalidad positiva y siempre estoy buscando maneras de mejorarme. Me encanta viajar, conocer nuevas culturas y aprender idiomas.',
-      profileImage: 'https://i.pravatar.cc/150?u=alexa',
+      profileImage: 'https://cdn.pixabay.com/photo/2020/10/22/06/09/woman-5674995_1280.jpg',
       interests: ['Viajes', 'Idiomas', 'Cultura'],
       location: 'Santiago',
       nationality: 'Chilena',
@@ -61,7 +61,7 @@ export interface User {
       name: 'Gabriela',
       age: 29,
       bio: 'Soy psicóloga y me apasiona ayudar a las personas a alcanzar su bienestar mental. También disfruto de la música en vivo, el cine independiente y la naturaleza.',
-      profileImage: 'https://i.pravatar.cc/150?u=gabriela',
+      profileImage: 'https://cdn.pixabay.com/photo/2018/07/29/23/05/woman-3571298_1280.jpg',
       interests: ['Psicología', 'Música', 'Cine'],
       location: 'Lima',
       nationality: 'Peruana',
@@ -72,7 +72,7 @@ export interface User {
       name: 'Renata',
       age: 24,
       bio: 'Trabajo en comunicación y marketing digital. Mi pasión es crear contenido auténtico y conectar con personas de diferentes partes del mundo.',
-      profileImage: 'https://i.pravatar.cc/150?u=diego',
+      profileImage: 'https://cdn.pixabay.com/photo/2021/06/29/07/35/woman-6373424_1280.jpg',
       interests: ['Marketing Digital', 'Redes Sociales', 'Fotografía'],
       location: 'Ciudad de México',
       nationality: 'Mexicana',
@@ -81,13 +81,13 @@ export interface User {
     {
       id: '9',
       name: 'Andrea',
-      age: 24,
-      bio: 'Trabajo en comunicación y marketing digital. Mi pasión es crear contenido auténtico y conectar con personas de diferentes partes del mundo.',
-      profileImage: 'https://i.pravatar.cc/150?u=gabi',
+      age: 25,
+      bio: 'Soy comunicadora apasionada por el marketing digital. Me encanta ayudar a las marcas a conectar con su audiencia a través de contenido auténtico y creativo.',
+      profileImage: 'https://cdn.pixabay.com/photo/2018/03/06/22/57/portrait-3204843_960_720.jpg',
       interests: ['Marketing Digital', 'Redes Sociales', 'Fotografía'],
-      location: 'Ciudad de México',
+      location: 'Buenos Aires, Argentina', 
       nationality: 'Argentina',
-      countryCode: "AR"
+      countryCode: 'AR'
     }
   ];
   

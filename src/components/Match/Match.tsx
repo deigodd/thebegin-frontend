@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { MatchGrid } from "./MatchGrid";
 import { ProfileDialog } from "./MatchGrid";
 import { User, MOCK_USERS } from "../../types/User";
 
 interface MatchProps {
-  searchQuery: string; // Adding searchQuery as a prop
+  searchQuery: string;
 }
 
 const MatchesPage: React.FC<MatchProps> = ({ searchQuery }) => {
@@ -14,30 +15,40 @@ const MatchesPage: React.FC<MatchProps> = ({ searchQuery }) => {
   const [users, setUsers] = useState(MOCK_USERS);
 
   useEffect(() => {
-    // Filter users based on the search query whenever it changes
     if (searchQuery) {
-      const filteredUsers = MOCK_USERS.filter(user =>
+      const filteredUsers = MOCK_USERS.filter((user) =>
         user.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
       setUsers(filteredUsers);
     } else {
-      setUsers(MOCK_USERS); // Reset to all users if no search query
+      setUsers(MOCK_USERS);
     }
-  }, [searchQuery]); // Re-run the effect when searchQuery changes
+  }, [searchQuery]);
 
   const handleIgnore = (userId: string) => {
-    setUsers(users.filter(user => user.id !== userId));
+    setUsers(users.filter((user) => user.id !== userId));
     setSelectedUser(null);
   };
 
   const handleMatch = (userId: string) => {
-    // Handle navigation, you can replace this with your preferred routing solution
     window.location.href = `/profile/${userId}`;
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
-      <h1 className="text-tbc-pilarbrown-600 text-2xl font-serif font-bold my-6">Nuevos Matches</h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-7xl mx-auto px-4"
+    >
+      <motion.h1
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="text-tbc-pilarbrown-600 text-2xl font-serif font-bold my-6"
+      >
+        Nuevos Matches
+      </motion.h1>
 
       <MatchGrid
         users={users}
@@ -53,8 +64,9 @@ const MatchesPage: React.FC<MatchProps> = ({ searchQuery }) => {
         onIgnore={handleIgnore}
         onMatch={handleMatch}
       />
-    </div>
+    </motion.div>
   );
 };
 
 export default MatchesPage;
+
