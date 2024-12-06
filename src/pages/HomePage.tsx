@@ -42,7 +42,10 @@ const HomePage: React.FC = () => {
       <div className={`fixed-navbar ${!isNavbarFixed ? "hidden-navbar" : ""}`}>
         <Navbar />
       </div>
-      <div className="relative h-104" id="home-video">
+      <div
+        className="relative mt-24 md:mt-0 h-128 sm:h-144 md:h-128 lg:h-144"
+        id="home-video"
+      >
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
         <video
           src={videoHome}
@@ -50,6 +53,7 @@ const HomePage: React.FC = () => {
           muted
           loop
           className="w-full h-full object-cover z-0"
+          playsInline
         ></video>
         <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
           <h1 className="text-white text-7xl font-serif text-center ">
@@ -169,8 +173,12 @@ const HomePage: React.FC = () => {
                   ¿Qué es y para qué TB?
                 </h5>
                 <p className="font-normal text-justify text-gray-700 dark:text-gray-400 flex-grow">
-                Una plataforma y red social diseñada exclusivamente para mujeres, masiva y multifuncional, que impulsa conexiones valiosas para fomentar el crecimiento individual y colectivo.
-                Con el propósito de potenciar la energía creadora de cada mujer, esta plataforma busca ser el espacio donde cada una pueda alcanzar sus metas personales y profesionales.
+                  Una plataforma y red social diseñada exclusivamente para
+                  mujeres, masiva y multifuncional, que impulsa conexiones
+                  valiosas para fomentar el crecimiento individual y colectivo.
+                  Con el propósito de potenciar la energía creadora de cada
+                  mujer, esta plataforma busca ser el espacio donde cada una
+                  pueda alcanzar sus metas personales y profesionales.
                 </p>
               </Card>
             </div>
@@ -184,8 +192,12 @@ const HomePage: React.FC = () => {
                   Como funciona TB
                 </h5>
                 <p className="font-normal text-justify text-gray-700 dark:text-gray-400 flex-grow">
-                Nuestra plataforma es un espacio colaborativo basado en afinidades y coincidencias.
-                Regístrate y conecta según tus intereses, profesión, ocupación, modelo de negocio, necesidades específicas de información o preferencias de interacción. Cada conexión está diseñada para maximizar el valor y la relevancia en tu experiencia.
+                  Nuestra plataforma es un espacio colaborativo basado en
+                  afinidades y coincidencias. Regístrate y conecta según tus
+                  intereses, profesión, ocupación, modelo de negocio,
+                  necesidades específicas de información o preferencias de
+                  interacción. Cada conexión está diseñada para maximizar el
+                  valor y la relevancia en tu experiencia.
                 </p>
               </Card>
             </div>
@@ -199,10 +211,16 @@ const HomePage: React.FC = () => {
                   Beneficios para ti
                 </h5>
                 <p className="font-normal text-justify text-gray-700 dark:text-gray-400 flex-grow">
-                The Begin es la comunidad en línea más completa para mujeres.
-                Su núcleo, la app The Begin, integra múltiples segmentos: trueque, bolsa de trabajo, marketplace, cuidado personal, salud mental y más. Desde soluciones prácticas hasta aspiraciones soñadoras, esta plataforma inclusiva promueve la colaboración sin discriminación.
-                Con tecnologías avanzadas de vinculación, The Begin facilita la construcción de una red de apoyo y el logro de metas colectivas e individuales, fortaleciendo la comunidad de mujeres en un entorno único y transformador.
-
+                  The Begin es la comunidad en línea más completa para mujeres.
+                  Su núcleo, la app The Begin, integra múltiples segmentos:
+                  trueque, bolsa de trabajo, marketplace, cuidado personal,
+                  salud mental y más. Desde soluciones prácticas hasta
+                  aspiraciones soñadoras, esta plataforma inclusiva promueve la
+                  colaboración sin discriminación. Con tecnologías avanzadas de
+                  vinculación, The Begin facilita la construcción de una red de
+                  apoyo y el logro de metas colectivas e individuales,
+                  fortaleciendo la comunidad de mujeres en un entorno único y
+                  transformador.
                 </p>
               </Card>
             </div>
@@ -230,7 +248,10 @@ const HomePage: React.FC = () => {
                 <br />
                 entre mujeres
               </p>
-              <Link to="/register" className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
+              <Link
+                to="/register"
+                className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out"
+              >
                 <span className="text-2xl tracking-tight text-[#d2bb90]">
                   REGISTRARME
                 </span>
@@ -311,11 +332,14 @@ const HomePage: React.FC = () => {
                 price={120}
               />
 
-              <Link to="/marketplace" className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out">
+              <Link
+                to="/marketplace"
+                className="bg-white border-2 border-[#d2bb90] px-6 py-2 mt-8 hover:bg-tbc-pilarorange-600 transition-colors duration-300 ease-in-out"
+              >
                 <span className="text-2xl tracking-tight text-[#d2bb90]">
                   VER MÁS
                 </span>
-              </Link >
+              </Link>
             </div>
           </div>
         </div>
