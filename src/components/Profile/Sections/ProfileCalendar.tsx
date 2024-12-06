@@ -15,11 +15,11 @@ const ProfileCalendar = () => {
           </div>
 
           {/* Activities */}
-          <div className="flex-1 bg-[#504c4c] bg-opacity-70 p-5">
+          <div className="flex-1 bg-[#504c4c] bg-opacity-70 p-5 mt-10">
             <ActivitiesColumn
               selectedDayBg="#282c2c"
               selectedDayText="white"
-
+              arrowColor='white'
               dayBg="#5d6062"
               dayText="white"
               activityBg="#282c2c"
