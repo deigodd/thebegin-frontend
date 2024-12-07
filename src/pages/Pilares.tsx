@@ -13,6 +13,14 @@ import backgroundImage from "../assets/background-home.svg";
 import videoPilares from "../assets/Pilares/pilares_720p.mp4";
 
 const Pilares: React.FC = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    // Aqui verificamos si hay token, despúes hay que implementar para validar si el token esta vigente -> TO-DO
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -163,7 +171,7 @@ Asesorías."
   </div>
 </div>  
 
-      <div className="flex-1">
+      { isLoggedIn && <div className="flex-1">
         {/* Banner Section */}
         <Banner />
 
@@ -182,7 +190,7 @@ Asesorías."
             </div>
           </div>
         </div>
-      </div>
+      </div>}
     
       <Footer />
     </div>
