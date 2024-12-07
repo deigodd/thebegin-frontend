@@ -5,6 +5,7 @@ import Footer2 from '@/components/Footer/Footer'
 import bg from '../assets/background-marketplace.svg'
 import Formulario from '@/components/BeginFest/Formulario'
 import PageSeparator from '@/components/PageSeparator'
+import videoPilares from "../assets/Pilares/begin-fest.mp4";
 
 export default function FestivalPage() {
   return (
@@ -30,26 +31,27 @@ export default function FestivalPage() {
       </div>
         {/* Hero Section with Images and Video */}
         <div
-        className="bg-tbc-primaryred-600 text-white text-justify w-full flex justify-center items-center text-center pt-20 lg:px-64 mb-20"
+        className="bg-tbc-primaryred-100 text-white text-justify w-full flex justify-center items-center text-center mb-20"
         style={{
           clipPath: "polygon(0% 0%, 100% 12%, 100% 98%, 0% 100%)",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="relative h-96">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="relative">
             <img
               src="https://www.zonanortediario.com.ar/wp-content/uploads/2024/04/2-festival-yoga-exhale-san-fernando-2024-696x464.jpg"
               alt="Festival main stage"
-              className="rounded-lg"
+              className="h-full object-cover"
             />
           </div>
-          <div className="relative h-96">
-            <iframe
-              src="https://player.vimeo.com/video/891975114?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              title="Festival highlight video"
-              className="w-full h-full rounded-lg"
-              allowFullScreen
-            />
+          <div className="relative">
+            <video
+              src={videoPilares}
+              autoPlay
+              muted
+              loop
+              className="h-full object-cover"
+          ></video>
           </div>
         </div>
       </div>
