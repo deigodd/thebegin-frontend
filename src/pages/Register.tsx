@@ -231,6 +231,7 @@ const Register: React.FC = () => {
           console.log("Datos guardados con éxito");
           // Redirigir al inicio de sesión o mostrar un mensaje de éxito
           alert("Datos guardados con éxito");
+          navigate("/login");
         } else {
           console.error("Error al guardar los datos");
         }
