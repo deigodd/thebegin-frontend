@@ -1,5 +1,4 @@
 // src/App.tsx
-import {useEffect, useState} from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Marketplace from "./pages/Marketplace";
 import Trueque from "./pages/Trueque";
@@ -19,14 +18,6 @@ import BeginFest from "./pages/BeginFest";
 // Mantener el orden, ty
 
 const App: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  useEffect(() => {
-    // Aqui verificamos si hay token, despúes hay que implementar para validar si el token esta vigente -> TO-DO
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
 
   return (
     <Router>
