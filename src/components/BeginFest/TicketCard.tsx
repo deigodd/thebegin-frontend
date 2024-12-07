@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
+import { CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import TicketPopup from './TicketPopup'
 
@@ -10,7 +10,7 @@ const TicketCard: React.FC = () => {
 
   return (
     <>
-      <Card className="max-w-md mx-auto bg-tbc-primaryred-100 text-tbc-primaryred-600">
+      <div className="rounded-xl shadow-md max-w-2xl mx-auto bg-tbc-primaryred-100 text-tbc-primaryred-600">
         <CardContent className="p-6">
           <h3 className="text-2xl font-bold mb-4">Pase al Festival</h3>
           <p className="mb-4">¡No te pierdas la oportunidad de reunirte con miles de mujeres!</p>
@@ -20,7 +20,7 @@ const TicketCard: React.FC = () => {
             Ver detalles y comprar
           </Button>
         </CardFooter>
-      </Card>
+      </div>
       <TicketPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </>
   )

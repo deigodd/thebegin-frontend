@@ -23,7 +23,7 @@ const TheBeginPage: React.FC = () => {
     >
       <Navbar />
       {/* Contenido principal */}
-      <main className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8">
         <motion.h1 
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -44,9 +44,10 @@ const TheBeginPage: React.FC = () => {
             <Info />
           </div>
         </motion.section>
-        
+      </div>
+
         <PageSeparator title='Desafío LATAM' />
-        
+      <div className='container mx-auto px-4 py-8'>
         {/* Sección del desafío LATAM */}
         <motion.section 
           initial={{ y: 50, opacity: 0 }}
@@ -58,7 +59,7 @@ const TheBeginPage: React.FC = () => {
             <DesafioLatam />
           </div>
         </motion.section>
-      </main>
+      </div>
       
       <Footer />
     </motion.div>
