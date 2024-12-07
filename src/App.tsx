@@ -12,7 +12,6 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import Tecito from "./pages/Tecito";
-import MatchPage from './pages/MatchPage'
 import Profile from "./pages/Profile1";
 import Profile2 from "./pages/Profile2";
 import BeginFest from "./pages/BeginFest";
@@ -149,16 +148,6 @@ const App: React.FC = () => {
             <>
               <Profile2/>
               <PageTitle title="Profile 2" />
-            </>
-          }
-        />
-        {/* Ruta de comunidad */}
-        <Route
-          path="/comunidad"
-          element={
-            <>
-              {isLoggedIn && <MatchPage/>}
-              <PageTitle title="Comunidad" />
             </>
           }
         />
