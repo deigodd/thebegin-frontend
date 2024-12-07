@@ -14,6 +14,7 @@ import Tecito from "./pages/Tecito";
 import Profile from "./pages/Profile1";
 import Profile2 from "./pages/Profile2";
 import BeginFest from "./pages/BeginFest";
+import ArtisticProfile from "./pages/DefaultProfile";
 
 // Mantener el orden, ty
 
@@ -149,6 +150,16 @@ const App: React.FC = () => {
             <>
               <BeginFest/>
               <PageTitle title="Begin Fest" />
+            </>
+          }
+        />
+        {/* Ruta de mi-perfil */}
+        <Route
+          path="/mi-perfil"
+          element={
+            <>
+              <ArtisticProfile/>
+              <PageTitle title="Perfil" />
             </>
           }
         />

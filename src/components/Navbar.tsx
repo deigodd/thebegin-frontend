@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           } w-full xl:flex xl:w-auto xl:order-1`}
           id="navbar-cta"
         >
-          <ul className="flex flex-col font-medium p-4 xl:p-0 mt-4 border border-gray-100 rounded-lg  xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0 bg-[#D1B190] xl:bg-tbc-pilarorange-600">
+          <ul className="flex flex-col font-medium p-4 xl:p-0 mt-4 border border-gray-100 rounded-lg  xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0 bg-tbc-pilarorange-500 xl:bg-tbc-pilarorange-600">
             <li>
               <a
                 href="/"
