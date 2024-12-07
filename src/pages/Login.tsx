@@ -1,19 +1,55 @@
 import React, { useState } from "react";
 import backgroundImage from "../assets/background-home.svg";
 import logo from "../assets/icons/svg/tb-icon-fill-orange.svg";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const token = () => {localStorage.setItem("token","TB") ; navigate('/#', { replace: true });}
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors] = useState<{ email?: string; password?: string }>(
-    {}
-  );
+  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+  const [loginError, setLoginError] = useState<string | null>(null);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
+    // Validación simple de campos vacíos
+    if (!email || !password) {
+      setErrors({
+        email: email ? undefined : "El correo electrónico es obligatorio",
+        password: password ? undefined : "La contraseña es obligatoria",
+      });
+      return;
+    }
 
+    try {
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user: email, password }),
+      });
+
+      if (response.ok) {
+        // Login exitoso
+        console.log("Inicio de sesión exitoso");
+        localStorage.setItem("token", "TB");
+        localStorage.setItem("email", email); // Almacena un token temporal
+        navigate("/#"); // Redirige a la página principal
+      } else {
+        // Maneja errores de login
+        const message =
+          response.status === 401
+            ? "Usuario o contraseña incorrectos"
+            : "Error al procesar la solicitud";
+        setLoginError(message);
+      }
+    } catch (error) {
+      console.error("Error al enviar la solicitud:", error);
+      setLoginError("Error al conectar con el servidor");
+    }
+  };
 
   return (
     <>
@@ -36,7 +72,7 @@ const Login: React.FC = () => {
           </div>
 
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white border rounded-lg p-10">
-            <form onSubmit={token} className="space-y-6" noValidate>
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               <div>
                 <label
                   htmlFor="email"
@@ -104,6 +140,10 @@ const Login: React.FC = () => {
                   )}
                 </div>
               </div>
+
+              {loginError && (
+                <p className="mt-2 text-sm text-red-600">{loginError}</p>
+              )}
 
               <div>
                 <button
