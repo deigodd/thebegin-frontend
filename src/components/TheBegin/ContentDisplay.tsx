@@ -9,7 +9,7 @@ interface ContentDisplayProps {
 const ContentDisplay: React.FC<ContentDisplayProps> = ({ title, content }) => {
     return (
         <motion.div 
-            className="p-8 bg-white bg-opacity-90 rounded-lg"
+            className="md:p-8 text-justify bg-white bg-opacity-90 rounded-lg"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
