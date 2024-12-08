@@ -23,7 +23,7 @@ const TheBeginPage: React.FC = () => {
     >
       <Navbar />
       {/* Contenido principal */}
-      <div className="container mx-auto px-4 py-8">
+      <div id='InfoCard' className="container mx-auto px-4 py-8">
         <motion.h1 
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

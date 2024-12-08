@@ -29,6 +29,10 @@ const InformationComponent: React.FC = () => {
 
     const handleCardClick = (title: string, content: string) => {
         setSelectedContent({ title, content });
+        const marketProductsDiv = document.getElementById("InfoCard");
+        if (marketProductsDiv) {
+          marketProductsDiv.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     return (
