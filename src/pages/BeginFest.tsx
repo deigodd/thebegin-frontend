@@ -75,12 +75,12 @@ export default function FestivalPage() {
 
       {/* Ticket Card Section */}
       <PageSeparator title="Obtén tu Ticket" />
-      <div className="mt-16 mb-16">
+      <div className="mt-16 mb-16 p-4">
         <TicketCard />
       </div>
 
       <PageSeparator title="¿Quieres Participar?" />
-      <div className="mt-16 mb-10">
+      <div className="mt-16 mb-10 p-4">
         <Formulario />
       </div>
 
