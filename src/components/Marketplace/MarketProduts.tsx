@@ -40,7 +40,7 @@ const MarketProducts: React.FC<{ selectedCategory: string | null }> = ({ selecte
     };
 
     return (
-        <div className='bg-tbc-secondarybrown-200 rounded-md'>
+        <div id='MarketProducts' className='bg-tbc-secondarybrown-200 rounded-md'>
             <div className="grid grid-cols-2 justify-items-center xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 pb-4">
                 {currentProducts.map((product) => (
                     <SmallCards key={product.id} product={product} />
