@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Contenedor del formulario */}
-      <div className="flex flex-col mx-auto justify-center w-full 2xl:translate-x-0 md:max-w-7xl pb-20">
+      <div className="flex flex-col mx-auto justify-center w-full 2xl:translate-x-0 md:max-w-7xl p-4 pb-20">
         <Form onSubmit={handleFormSubmit} />
       </div>
 
