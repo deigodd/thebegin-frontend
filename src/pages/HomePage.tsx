@@ -159,6 +159,7 @@ const HomePage: React.FC = () => {
                   loop
                   autoPlay
                   muted
+                  playsInline
                   className="w-full h-full object-cover"
                 ></video>
               </Card>
@@ -234,6 +235,7 @@ const HomePage: React.FC = () => {
             src={comunidadVideo}
             autoPlay
             muted
+            playsInline
             loop
             className="w-full h-full object-cover z-0"
           ></video>
