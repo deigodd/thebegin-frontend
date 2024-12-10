@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import tbIcon from "../assets/icons/svg/tb-icon-outline-brown.svg";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Aqui verificamos si hay token, despúes hay que implementar para validar si el token esta vigente -> TO-DO
@@ -17,6 +18,14 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogout = () => {
+    //Cerrar sesion
+    localStorage.removeItem("token");
+    localStorage.removeItem("email");
+    setIsLoggedIn(false);
+    navigate("/login");
   };
 
   const isActive = (path: string) => location.pathname === path;
@@ -41,12 +50,20 @@ const Navbar: React.FC = () => {
         
         <div className="flex xl:order-2 space-x-3 xl:space-x-0 rtl:space-x-reverse">
           {isLoggedIn ? (
+            <>
             <a
               href="/mi-perfil"
               className="text-white focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center bg-[#a56441] hover:bg-[#7c513a]"
             >
               MI PERFIL
             </a>
+            <button
+              onClick={handleLogout}
+              className="text-white focus:ring-1 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 bg-red-600 hover:bg-red-500 transition-colors duration-300 ease-in-out"
+            >
+              CERRAR SESIÓN
+            </button>
+          </>
           ) : (
             <a
               href="/login"
