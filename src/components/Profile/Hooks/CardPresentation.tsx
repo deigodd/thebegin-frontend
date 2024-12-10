@@ -11,6 +11,7 @@ interface CardPresentationProps {
   image?: string;
   imageAlt?: string;
   className?: string;
+  fontSize?: string;
   children?: ReactNode;
 }
 
@@ -21,6 +22,7 @@ const CardPresentation = ({
   bgColor = '',
   titleTextColor = 'text-gray-800',  // Valor por defecto
   contentTextColor = 'text-gray-800', // Valor por defecto
+  fontSize = 'text-6xl',
   image,
   imageAlt,
   className = '',
@@ -41,10 +43,13 @@ const CardPresentation = ({
     );
   }
 
+//text-6xl 
+//text-lg
+
   return (
     <div className={`${bgColor} p-14 ${className} transition-transform hover:scale-105 relative`}>
       {title && (
-        <h2 className={`${titleTextColor} text-6xl font-serif mb-6`}>
+        <h2 className={`${titleTextColor} ${fontSize} font-serif mb-6`}>
           {title}
         </h2>
       )}
